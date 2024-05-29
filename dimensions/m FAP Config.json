@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m FAP Config",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m FAP Config')/Hierarchies('m FAP Config')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m FAP Config.hierarchies/m FAP Config.json"
+	]
+}

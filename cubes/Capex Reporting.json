@@ -1,0 +1,40 @@
+{
+	"@type":"Cube",
+	"Name":"Capex Reporting",
+	"Rules@Code.link":"Capex Reporting.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Capex Type')"
+		},
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Asset Category')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Capex Input Rows')"
+		},
+		{
+			"@id":"Dimensions('m Capex Reporting')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Capex Reporting.views/Capex Summary with Description.json",
+		"Capex Reporting.views/Capex Summary without Description.json",
+		"Capex Reporting.views/Capex Variance with Description.json",
+		"Capex Reporting.views/Default.json",
+		"Capex Reporting.views/Summary Drill Down.json"
+	]
+}

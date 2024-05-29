@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m FAP Config",
+	"Elements":
+	[
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

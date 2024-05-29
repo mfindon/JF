@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Reporting Cube FAP to Reporting_Target1",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('201801')"
+		}
+	]
+}

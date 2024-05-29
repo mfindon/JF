@@ -1,0 +1,4 @@
+
+['Current Year'] = S: SUBST ( DB ( 'Admin', 'Current Month', !'m zAdmin' ), 1, 4 );
+
+['Current Month YTD'] = S: DB ( 'Admin', 'Current Month', !'m zAdmin' ) | ' YTD';

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Capex Type List",
+	"Expression":"{TM1FILTERBYLEVEL( {TM1SUBSETALL( [Capex Type] )}, 0)}"
+}

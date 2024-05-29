@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Company Date LookUp",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Company Date LookUp')/Hierarchies('m Company Date LookUp')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Company Date LookUp.hierarchies/m Company Date LookUp.json"
+	]
+}

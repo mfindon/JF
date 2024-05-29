@@ -1,0 +1,40 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Accrued Revenue by Customer",
+	"Elements":
+	[
+		{
+			"Name":"Significant Customer",
+			"Type":"String"
+		},
+		{
+			"Name":"Geographical Region",
+			"Type":"String"
+		},
+		{
+			"Name":"Accured Revenue Amount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Prior Month Accrued Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"When is the revenue expected to be billed?",
+			"Type":"String"
+		},
+		{
+			"Name":"Individual responsible",
+			"Type":"String"
+		},
+		{
+			"Name":"Current Month Outstanding",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Month Ageing",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

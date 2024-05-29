@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"F_Counter Company",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('F_Counter Company')/Hierarchies('F_Counter Company')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"F_Counter Company.hierarchies/F_Counter Company.json"
+	]
+}

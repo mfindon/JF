@@ -1,0 +1,96 @@
+Skipcheck;
+Feedstrings;
+
+['GBP','YTD < X','Capex YTD < X'] = N: ['All Capex Rows','Capex Spend'] - ['All Capex Rows'];
+
+['GBP','Capex YTD < X', 'Total Capex incl < X' ] = C: Stet;
+['GBP','Capex YTD < X'] = C: IF ( ELLEV ( 'Company', !Company ) > 0, 0, CONTINUE );
+['GBP','Capex YTD < X'] = N: IF ( DB('Capex Input',!Version,'GBP',!Company, DB('Admin','Current Month YTD','Input') ,!Capex Input Rows,'Capex Spend') >= 30000, ['Capex Spend'], 0 );
+
+#Significant Projects
+['Description Significant Projects'] = S:
+  if ( ['Capex YTD > X','All Periods'] <> 0,
+    DB( 'Capex Input', !Version, !Currency, !Company, !Period, !'Capex Input Rows', 'Description'  ),
+    '' );
+['Capex YTD > X'] = N: IF ( DB('Capex Input',!Version,'GBP',!Company, SUBST ( !Period, 1, 4), !Capex Input Rows,'Capex Spend') >= 500000, ['Capex Spend'], 0 );
+
+['Approved (Significant Projects)'] = N: IF ( DB('Capex Input',!Version,'GBP',!Company, SUBST ( !Period, 1, 4), !Capex Input Rows,'Capex Spend') >= 500000, ['Approved'], 0 );
+['Committed (Significant Projects)'] = N: IF ( DB('Capex Input',!Version,'GBP',!Company, SUBST ( !Period, 1, 4), !Capex Input Rows,'Capex Spend') >= 500000, ['Committed'], 0 );
+['Impact on EBITDA (Significant Projects)'] = N: IF ( DB('Capex Input',!Version,'GBP',!Company, SUBST ( !Period, 1, 4), !Capex Input Rows,'Capex Spend') >= 500000, ['Impact on EBITDA'], 0 );
+
+
+['Description', 'GBP'] = S: DB( 'Capex Input', !Version, 'LC', !Company, !Period, !'Capex Input Rows', !'m Capex Input' );
+['Description','NA'] = S: DB( '}ElementAttributes_Capex Input Rows', !'Capex Input Rows', 'Reporting' );
+['Description','Capex spend under £x'] = S: DB( '}ElementAttributes_Capex Input Rows', !'Capex Input Rows', 'Reporting' );
+
+#Copy Descriptions to other versions
+['YTD < X','Description'] = S: 'Spend < £30K';
+['Total Capex incl < X','Description'] = S: 'Total';
+
+
+['Description', 'Actual'] = S: STET;
+['Description'] = S: IF ( ELISANC( 'Capex Input Rows', 'Capex spend under £x', !'Capex Input Rows' ) = 1,
+                       DB( 'Capex Input', 'Actual', !Currency, !Company, !Period, !'Capex Input Rows', !'m Capex Input'  ),
+                       STET );
+
+['LC','_', 'Description', 'Actual'] = S: stet;
+['LC','_', 'Asset Category', 'Actual'] = S: stet;
+
+['LC','_', 'Description'] = S: IF ( SUBST( !'Capex Input Rows', 1,1 ) @= 'A', DB('Capex Input', 'Actual', !Currency, !Company, !Period, !'Capex Input Rows', !'m Capex Input' ), stet);
+['LC','_', 'Asset Category'] = S: IF ( SUBST( !'Capex Input Rows', 1,1 ) @= 'A', DB('Capex Input', 'Actual', !Currency, !Company, !Period, !'Capex Input Rows', !'m Capex Input' ), STET);
+
+['Capex Spend', 'LC' ] = N:
+	IF ( ELISANC ( 'Version', 'All Forecasts', !Version ) = 1,
+		IF ( !Period @< DB('}ElementAttributes_Version',!Version,'Start Period'),
+			['Actual'],
+			CONTINUE
+		),
+		CONTINUE
+	);
+
+# Currency Rules
+['Actual','Capex Spend', 'GBP' ] = N: ['LC'] \ DB('FX Rates', 'AC' , DB('}ElementAttributes_Company',!Company,'Local Currency'), DB( 'Admin', 'Current Month', 'Input'  ),'Rate');
+['Capex Spend', 'GBP' ] = N: IF ( ELISANC( 'Version', 'All Budgets', !Version) = 1,
+                                  ['LC'] \  DB('FX Rates',ATTRS( 'Version', !Version, 'Actuality' ),DB('}ElementAttributes_Company',!Company,'Local Currency'),!Period,'Rate'),
+                                  CONTINUE
+                                  );
+
+['Capex Spend', 'GBP' ] = N: ['LC'] \  DB('FX Rates',
+                                        IF (!Period @>= ATTRS( 'Version', !Version, 'Start Period' ),
+#                                            ATTRS( 'Period Number', SUBST(!Version, 14, 5), 'Forecast Rate' ),
+                                             ATTRS( 'Version', !Version, 'Actuality' ),
+                                            'AC' ),
+                                        DB('}ElementAttributes_Company',!Company,'Local Currency'),
+                                        #Actuals are converted at the latest actual rate
+                                        IF (!Period @>= ATTRS( 'Version', !Version, 'Start Period' ),
+                                          !Period,
+                                          SUBST (ATTRS( 'Version', !Version, 'To Date Actuals' ),1 , 6 )
+                                          ),
+
+                                        'Rate');
+
+['Capex Spend to Date', 'GBP' ] = N: ['LC'] \  DB('FX Rates','AC',DB('}ElementAttributes_Company',!Company,'Local Currency'),!Period,'Rate');
+
+
+['GBP' ] = S: DB('Capex Input',!Version,'LC',!Company,!Period,!Capex Input Rows,!m Capex Input);
+
+
+Feeders;
+
+['GBP','Capex Spend' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'Capex YTD < X'), DB('Capex Input',!Version,'GBP',!Company,!Period,!Capex Input Rows,'Capex YTD < X');
+['GBP','Capex Spend' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'YTD < X' ), DB('Capex Input',!Version,'GBP',!Company,!Period,'YTD < X','Capex YTD < X');
+
+['GBP','Capex Spend' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'Capex YTD > X'), DB('Capex Input',!Version,'GBP',!Company,!Period,!Capex Input Rows,'Capex YTD > X');
+['GBP','Capex Spend' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'YTD > X' ), DB('Capex Input',!Version,'GBP',!Company,!Period,'YTD < X','Capex YTD > X');
+
+
+['GBP','Approved' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'Approved (Significant Projects)');
+['GBP','Committed' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'Committed (Significant Projects)');
+['GBP','Impact on EBITDA' ] => DB('Capex Input',!Version,'GBP',!Company,!Period | ' YTD',!Capex Input Rows,'Impact on EBITDA (Significant Projects)');
+
+[] => DB('Capex Summary',!Version,!Currency,!Company,'All Asset Categories',!Period,!Capex Input Rows,!m Capex Input);
+[] => DB('Capex Reporting', 'All Capex Types', !Version,!Currency,!Company,'All Asset Categories',!Period,!Capex Input Rows,!m Capex Input);
+
+['LC'] => ['GBP'];
+
+['Capex Spend','Actual','LC'] => ['All Forecasts'];

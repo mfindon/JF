@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m zManagement Analysis Mapping",
+	"Elements":
+	[
+		{
+			"Name":"Dashboard Mapping",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

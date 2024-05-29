@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{[Mgmt Analysis].[@Aggr_@TOT], [Mgmt Analysis].[@Aggr_@TOT].children }"
+}

@@ -1,0 +1,55 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Cashflow",
+	"Elements":
+	[
+		{
+			"Name":"Monthly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Monthly (k)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD (k)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Monthly (m)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD (m)",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Monthly (k)",
+			"ComponentName":"Monthly",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD (k)",
+			"ComponentName":"YTD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Monthly (m)",
+			"ComponentName":"Monthly",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD (m)",
+			"ComponentName":"YTD",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

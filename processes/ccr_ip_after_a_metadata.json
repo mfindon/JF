@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"ccr_ip_after_a_metadata",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"ccr_ip_after_a_metadata.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30=€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Current Month and Prior 11 months",
+	"Expression":"{HEAD(ORDER(FILTER(TM1FILTERBYLEVEL(TM1SUBSETALL([Period].[Period]) , 0) , [Period].CURRENTMEMBER.NAME <= [Admin].([m zAdmin].[Input],[Admin Line].[Current Month])) , [Period].[Period].CURRENTMEMBER.PROPERTIES(\"MEMBER_NAME\") , BDESC) , 12)}"
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{[Days Grouping].[Days Grouping].[Total],EXCEPT(DISTINCT(DESCENDANTS([Days Grouping].[Days Grouping].[All Day Groupings])) , {[Days Grouping].[Days Grouping].[All Day Groupings]}),[Days Grouping].[Days Grouping].[Unaccrued]}"
+}

@@ -1,0 +1,19 @@
+Skipcheck;
+
+
+['% complete as at Year End'] = C: ['Historic cost - Closing balance'] \ ['Approved budget'];
+
+['Gross margin %'] = C: ['Gross margin'] \ ['Gross revenue'];
+
+['GBP'] = S: db('Devex', 'LC', !Company, !Period, !'Devex Project', !'m Devex' );
+[ 'GBP', {'% complete as at Year End', 'Gross margin %', 'Product lifecycle (months)' } ] = N: ['LC'];
+['GBP'] = N: IF ( DB( 'Devex', 'LC', !Company, !Period, !'Devex Project', 'Currency' ) @= '', ['LC'], CONTINUE );
+['GBP'] = N: ['LC'] \ DB('FX Rates','AC', DB( 'Devex', 'LC', !Company, !Period, !'Devex Project', 'Currency' ),!Period,'Rate');
+
+['Gross margin'] = N: ['Gross margin %'] * ['Gross revenue'];
+
+Feeders;
+
+['Gross margin %'] => ['Gross margin'];
+
+['LC'] => ['GBP'];

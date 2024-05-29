@@ -1,0 +1,29 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Company Region Hierarchy",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Company Region Hierarchy.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30=€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForClient":"Company:Company",
+		"dataSourceNameForServer":"Company:Company",
+		"subset":"All"
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vCompany",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

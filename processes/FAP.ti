@@ -1,0 +1,223 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+Synchronized('FAP');
+
+####################################################################
+# Created by HAYNE Solutions 2020
+#
+# SOW - 2239/000 
+#
+# Loads data from MonthlyCompanyDetails to HA_EXT Company Reporting
+#####################################################################
+
+
+### Variables
+
+# Source Variables
+
+c.HAControlCube.Name = '}HA_ADMIN_DataSourceConfig';
+
+c.DataMart.Name = CellGetS(c.HAControlCube.Name,'FAP Datamart','ValueString');
+
+c.SourceCube.Name = c.DataMart.Name  |'MonthlyCompanyDetails';
+
+
+c.SourceView.Name = GetProcessName() | '_Source';
+c.SourceSub.Name = c.SourceView.Name;
+
+# Target Variables
+c.TargetCube.Name = 'HA_EXT Company Reporting';
+c.TargetView.Name = GetProcessName() | '_Target';
+c.TargetSub.Name = c.TargetView.Name;
+
+r.CompanyDim.Name = 'R_Company';
+
+#### Get the total elments for dimensions that do not belong in HA
+
+# Control cube
+c.MappingCube.Name = '}ElementAttributes_}HA_ADMIN_DimensionCubeMapping';
+
+# Counter dimension
+vCounterTotal = CellGetS(c.MappingCube.Name,'Counter Dimension','tot_element');
+
+# Transaction Currency dimension
+vTransCurTotal = CellGetS(c.MappingCube.Name,'Transaction Currency','tot_element');
+
+# Origin Company dimension
+vOriginTotal = CellGetS(c.MappingCube.Name,'Origin Company','tot_element');
+
+# Counter Company dimension
+vCountCompTotal = CellGetS(c.MappingCube.Name,'Counter Company','tot_element');
+
+# Journal Number dimension
+vJourNumTotal = CellGetS(c.MappingCube.Name,'Journal Number','tot_element');
+
+##### SOURCE VIEW
+
+### Check if source objects exist and delete them if they do, before creating the source view
+
+If(ViewExists(c.SourceCube.Name,c.SourceView.Name)=1);
+
+	ViewDestroy(c.SourceCube.Name,c.SourceView.Name);
+
+Endif;
+
+ViewCreate(c.SourceCube.Name,c.SourceView.Name);
+
+## Loop through the source cube and create a source subset for each dimension
+
+x = 1;
+
+While(TABDIM(c.SourceCube.Name,x)@<>'');
+
+	vDim = TABDIM(c.SourceCube.Name,x);
+
+	vDimSize = DIMSIZ(vDim);
+
+	If(SubsetExists(vDim,c.SourceSub.Name)=1);
+
+		SubsetDestroy(vDim,c.SourceSub.Name);
+
+	EndIf;
+
+	SubsetCreate(vDim,c.SourceSub.Name);
+
+	### For all dimensions that do not belong to the HA Company reporting cube, insert toal elements
+
+	If(vDim@='Counter Dimension');
+
+		SubsetElementInsert(vDim,c.SourceSub.Name,vCounterTotal,1);
+
+	ElseIf(vDim@='Transaction Currency');
+
+		SubsetElementInsert(vDim,c.SourceSub.Name,vTransCurTotal,1);
+
+	ElseIf(vDim@='Origin Company');
+
+		SubsetElementInsert(vDim,c.SourceSub.Name,vOriginTotal,1);
+
+	ElseIf(vDim@='Counter Company');
+
+		SubsetElementInsert(vDim,c.SourceSub.Name,vCountCompTotal,1);
+
+	ElseIf(vDim@='Journal Number');
+
+		SubsetElementInsert(vDim,c.SourceSub.Name,vJourNumTotal,1);
+
+	### Only include YTD and Monthly measures
+	ElseIf(vDim@='Measures');
+
+		SubsetElementInsert(vDim,c.SourceSub.Name,'YTD',1);
+
+	### insert lowest level elements 
+
+	Else;
+
+		y = 1;
+
+		While(y<=	vDimSize);
+
+			vEl = DIMNM(vDim,y);
+
+			If(ELLEV(vDim,vEl)=0);
+
+				SubsetElementInsert(vDim,c.SourceSub.Name,vEl,0);
+
+			EndIf;
+
+			y = y + 1;
+
+		End;	
+
+	EndIf;
+
+	ViewSubsetAssign(c.SourceCube.Name,c.SourceView.Name,vDim,c.SourceSub.Name);
+
+	x = x + 1;
+
+End;
+
+
+## Skip zero values but include consolidations and calculations
+ViewExtractSkipZeroesSet (c.SourceCube.Name,c.SourceView.Name,1);
+ViewExtractSkipCalcsSet (c.SourceCube.Name,c.SourceView.Name,0);
+ViewExtractSkipRuleValuesSet (c.SourceCube.Name,c.SourceView.Name,0);
+
+
+ViewCreate ( c.TargetCube.Name, 'Zero Cube', 1 );
+BatchUpdateStart;
+ViewZeroOut ( c.TargetCube.Name, 'Zero Cube');
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#########################################################
+
+
+### IF company is not in R_Company (Ad hoc FAP issue) then skip the item
+
+If(DIMIX(r.CompanyDim.Name,vCompany)=0);
+
+	ItemSkip;
+
+EndIf;
+
+###
+
+If(CellIsUpdateable(c.TargetCube.Name,'MR',vSchool,vCostCentre,vNotes,vCurrency,vConsPEr,vClosVer,vContVer,vAccount,vAct,vCompany,vPeriod,vMeasures)=1);
+
+	CellPutN(vValue,c.TargetCube.Name,'MR',vSchool,vCostCentre,vNotes,vCurrency,vConsPEr,vClosVer,vContVer,vAccount,vAct,vCompany,vPeriod,vMeasures);
+
+EndIf;
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+BatchUpdateFinishWait (0);
+
+### Clear out source and target objects
+
+## Source
+
+If(ViewExists(c.SourceCube.Name,c.SourceView.Name)=1);
+
+	ViewDestroy(c.SourceCube.Name,c.SourceView.Name);
+
+Endif;
+
+
+
+x = 1;
+
+While(TABDIM(c.SourceCube.Name,x)@<>'');
+
+	vDim = TABDIM(c.SourceCube.Name,x);
+
+	vDimSize = DIMSIZ(vDim);
+
+	If(SubsetExists(vDim,c.SourceSub.Name)=1);
+
+		SubsetDestroy(vDim,c.SourceSub.Name);
+
+	EndIf;
+
+	x = x + 1;
+
+End;
+#endregion

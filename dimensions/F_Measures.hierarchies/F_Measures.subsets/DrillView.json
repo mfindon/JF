@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"DrillView",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('F_Measures')/Hierarchies('F_Measures')/Elements('Monthly')"
+		},
+		{
+			"@id":"Dimensions('F_Measures')/Hierarchies('F_Measures')/Elements('YTD')"
+		}
+	]
+}

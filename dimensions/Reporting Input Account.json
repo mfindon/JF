@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Reporting Input Account",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Reporting Input Account')/Hierarchies('Reporting Input Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Reporting Input Account.hierarchies/Reporting Input Account.json"
+	]
+}

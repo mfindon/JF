@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Asset Category List",
+	"Expression":"{TM1FILTERBYLEVEL( {TM1SUBSETALL( [Asset Category] )}, 0)}"
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Closing Version",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Closing Version')/Hierarchies('Closing Version')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Closing Version.hierarchies/Closing Version.json"
+	]
+}

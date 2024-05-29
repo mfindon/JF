@@ -1,0 +1,64 @@
+{
+	"@type":"Cube",
+	"Name":"FAPMonthlyCompanyDetails",
+	"Rules@Code.link":"FAPMonthlyCompanyDetails.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('F_Mgmt Analysis')"
+		},
+		{
+			"@id":"Dimensions('F_Counter Dimension')"
+		},
+		{
+			"@id":"Dimensions('F_Dim 2')"
+		},
+		{
+			"@id":"Dimensions('F_Currency')"
+		},
+		{
+			"@id":"Dimensions('F_Transaction Currency')"
+		},
+		{
+			"@id":"Dimensions('F_Consolidation Perspective')"
+		},
+		{
+			"@id":"Dimensions('F_Closing Version')"
+		},
+		{
+			"@id":"Dimensions('F_Contribution Version')"
+		},
+		{
+			"@id":"Dimensions('F_Account')"
+		},
+		{
+			"@id":"Dimensions('F_ActualityMonthly')"
+		},
+		{
+			"@id":"Dimensions('F_Origin Company')"
+		},
+		{
+			"@id":"Dimensions('F_Counter Company')"
+		},
+		{
+			"@id":"Dimensions('F_Company')"
+		},
+		{
+			"@id":"Dimensions('F_Journal Number')"
+		},
+		{
+			"@id":"Dimensions('F_PeriodMonthly')"
+		},
+		{
+			"@id":"Dimensions('F_Measures')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"FAPMonthlyCompanyDetails.views/Counter Company.json",
+		"FAPMonthlyCompanyDetails.views/DrillView.json",
+		"FAPMonthlyCompanyDetails.views/November Revenue.json",
+		"FAPMonthlyCompanyDetails.views/test extract.json",
+		"FAPMonthlyCompanyDetails.views/zWhole Cube.json"
+	]
+}

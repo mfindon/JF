@@ -1,0 +1,22 @@
+Skipcheck;
+
+['GBP' ] = N: ['LC'] \  DB('FX Rates','AC', DB('}ElementAttributes_Company', !Company, 'Local Currency'), !Period,'Rate');
+['GBP' ] = S: DB('Trade Debtors','LC',!Company,!Days Grouping,!Period,!m Trade Debtors);
+
+#Get Trade Debtor Balances
+['Days Grouping':'Total', 'Trade debtors'] = -DB('Reporting','@Aggr_@TOT','@Aggr_@TOT',!Currency,'CL ALL','CO ALL','B251000','AC',
+			!Company,
+			!Period,
+			'YTD (k)' );
+
+['Days Grouping':'Total', 'Fair view' ] = -DB('Reporting','@Aggr_@TOT','@Aggr_@TOT',!Currency,'CL ALL','CO ALL','B252400','AC',
+			!Company,
+			!period,
+			'YTD (k)' );
+
+['Outstanding %'] = ['Outstanding £000'] \ ['Invoiced'];
+
+
+FEEDERS;
+
+['LC' ] => ['GBP' ];

@@ -1,0 +1,16 @@
+
+['FAP Status'] = S: IF ( ['Status'] = 10, 'Under definition', continue );
+['FAP Status'] = S: IF ( ['Status'] = 20, 'Ready to publish', continue );
+['FAP Status'] = S: IF ( ['Status'] = 30, 'Initial publish running', continue );
+['FAP Status'] = S: IF ( ['Status'] = 40 & ['Structure Status'] = 20, 'Running - structure update required', continue );
+['FAP Status'] = S: IF ( ['Status'] = 40, 'Running', continue );
+['FAP Status'] = S: IF ( ['Status'] = 50, 'Stopped', continue );
+['FAP Status'] = S: IF ( ['Status'] = 50, 'Error', continue );
+['FAP Status'] = S: IF ( ['Status'] = 70, 'Updating Structure', continue );
+['FAP Status'] = S: IF ( ['Status'] = 71, 'Partial initial publish', continue );
+['FAP Status'] = S: IF ( ['Status'] = 72, 'Publishing new children', continue );
+['FAP Status'] = S: IF ( ['Status'] = 73, 'Publishing new data', continue );
+['FAP Status'] = S:'Error';
+
+
+['Latest Actual Period Read Only'] = S: DB( 'FAP Status', !'m FAP Status', 'Latest Actual Period' );

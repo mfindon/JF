@@ -1,0 +1,121 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+####################################################################
+
+#####################################################################
+Synchronized('FAP');
+
+#sDataSourceConfigCube = '}HA_ADMIN_DataSourceConfig' ;
+
+#----------------------------------------------------------
+#-- Use relevant Controller Details
+#---------------------------------------------------------
+
+#sODBC = CELLGETS ( sDataSourceConfigCube, 'FAP ODBC Connection Name', 'ValueString' ) ;
+#sUserId = CELLGETS ( sDataSourceConfigCube, 'FAP DB Username', 'ValueString' ) ;
+#sPasswd = CELLGETS ( sDataSourceConfigCube, 'FAP DB Password', 'ValueString' ) ;
+
+#DataSourceType='ODBC'; 
+#DatasourceNameForServer = sODBC;
+#DatasourceUserName = sUserId ; 
+#DatasourcePassword = sPasswd ; 
+
+sActualityDim = 'F_ActualityMonthly';
+sPeriodDim = 'F_PeriodMonthly';
+sCompanyDim = 'F_Company';
+
+pSequence = NumberToString ( CellGetN ( 'FAP Status', 'Value', 'Last Sequence No' ) );
+nMaxSequence = CellGetN ( 'FAP Status', 'Value', 'Last Sequence No' );
+
+sActualalityMDX = '';
+sPeriodMDX = '';
+sCompanyMDX = '';
+
+sLastActulality = '';
+sLastCompany = '';
+sLastPeriod = '';
+
+nRow = 0;
+
+LogOutput ( 'INFO', 'FAP Trickle Sequence No Start: ' | pSequence ) ;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+IF ( DIMIX ( sPeriodDim, vPeriod ) = 0 );  ItemReject ( 'Period ' | vPeriod ) ; ENDIF;
+IF ( DIMIX ( sActualityDim, vActuality ) = 0 ); ItemReject ( 'Actuality  ' | vActuality ); ENDIF;
+
+
+IF ( DIMIX ( sPeriodDim, vPeriod ) = 0 );  Itemskip; ENDIF;
+IF ( DIMIX ( sActualityDim, vActuality ) = 0 );  ItemSkip; ENDIF;
+
+nRow = nRow + 1;
+
+IF ( vActuality @<> sLastActulality );
+IF ( nRow > 1 );
+   #sActualalityMDX = sActualalityMDX | ' }';
+   sPeriodMDX = sPeriodMDX | ' }';
+   sCompanyMDX = sCompanyMDX | ' }';
+   IF ( LONG ( sPeriodMDX) > 500 ); sPeriodMDX = ''; ENDIF; 
+   IF ( LONG ( sCompanyMDX ) > 500 ); sSchoolMDX = ''; ENDIF; 
+   #ExecuteProcess ( 'Cube FAP to Company Reporting', 'pMDXPeriod', sPeriodMDX, 'pMDXSchool', sSchoolMDX, 'pMDXActuality', sActualalityMDX , 'pSeq', NumberToString ( nRow ) );
+ENDIF;
+
+sActualalityMDX = '{[' | sActualityDim | '].[' | vActuality | ']}';
+sPeriodMDX = ' {[' | sPeriodDim | '].[' | vPeriod  | ']';
+sCompanyMDX = ' {[' | sCompanyDim | '].[' | vCompany | ']';
+
+ELSE;
+
+#sActualalityMDX = sActualalityMDX | ', ' | vActuality ;
+IF ( sLastPeriod @<> vPeriod ); sPeriodMDX = sPeriodMDX | ',[' | sPeriodDim | '].[' | vPeriod  | ']'; ENDIF;
+IF ( sLastCompany @<> vCompany );  sCompanyMDX = sCompanyMDX | ',[' | sCompanyDim | '].[' | vCompany | ']'; ENDIF;
+
+ENDIF;
+
+sLastActulality = vActuality;
+sLastCompany = vCompany;
+sLastPeriod = vPeriod;
+
+nMaxSequence = MAX ( nMaxSequence, StringToNumber ( vSeq ) );
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+IF ( nRow > 0 );
+   nRow = nRow + 1;
+   sPeriodMDX = sPeriodMDX | '}';
+   sCompanyMDX = sCompanyMDX | '}';
+   IF ( LONG ( sPeriodMDX ) > 500 ); sPeriodMDX = ''; ENDIF; 
+   IF ( LONG ( sCompanyMDX ) > 500 ); sCompanyMDX = ''; ENDIF; 
+
+   LogOutput ( 'INFO', 'FAP Periods: ' | sPeriodMDX );
+   LogOutput ( 'INFO', 'FAP sCompanies: ' | sCompanyMDX );
+   LogOutput ( 'INFO', 'FAP Actualities: ' | sActualalityMDX ) ;
+
+#   ExecuteProcess ( 'Cube FAP to Company Reporting', 'pMDXPeriod', sPeriodMDX, 'pMDXSchool', sSchoolMDX, 'pMDXActuality', sActualalityMDX , 'pSeq', NumberToString ( nRow ) );
+
+ENDIF;
+
+#Store latest sequence Number
+CellPutN ( nMaxSequence , 'FAP Status', 'Value', 'Last Sequence No' );
+CellPutS ( TIMST ( NOW(), '\Y-\m-\d \h:\i:\s' ) , 'FAP Status', 'Value', 'Last Trickle Feed Update' );
+
+LogOutput ( 'INFO', 'FAP Trickle Sequence No End: ' | NumberToString ( nMaxSequence ) ) ;
+#endregion

@@ -1,0 +1,40 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Trade Debtors by Customer",
+	"Elements":
+	[
+		{
+			"Name":"Significant Customer",
+			"Type":"String"
+		},
+		{
+			"Name":"Geographical region",
+			"Type":"String"
+		},
+		{
+			"Name":"Outstanding",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Outstanding Prior Month",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Recovery Actions",
+			"Type":"String"
+		},
+		{
+			"Name":"Individual Responsible",
+			"Type":"String"
+		},
+		{
+			"Name":"Current Month Outstanding",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current month Ageing",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Commentary",
+	"Elements":
+	[
+		{
+			"Name":"Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Definition",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

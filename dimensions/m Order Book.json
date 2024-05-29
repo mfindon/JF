@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Order Book",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Order Book')/Hierarchies('m Order Book')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Order Book.hierarchies/m Order Book.json"
+	]
+}

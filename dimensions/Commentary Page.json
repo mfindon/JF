@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Commentary Page",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Commentary Page')/Hierarchies('Commentary Page')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Commentary Page.hierarchies/Commentary Page.json"
+	]
+}

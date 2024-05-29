@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"Dimension R_ActualityMonthly - Add variance consolidations",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension R_ActualityMonthly - Add variance consolidations.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

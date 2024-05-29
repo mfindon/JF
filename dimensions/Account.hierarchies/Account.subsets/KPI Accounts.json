@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"KPI Accounts",
+	"Expression":"{EXCEPT(DRILLDOWNMEMBER({[Account].[Account].[Non Controller Accounts]} , {[Account].[Account].[Non Controller Accounts]} , RECURSIVE) , {[Account].[Account].[Non Controller Accounts]})}"
+}

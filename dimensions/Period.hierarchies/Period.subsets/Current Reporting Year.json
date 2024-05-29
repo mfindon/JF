@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Current Reporting Year",
+	"Expression":"{STRTOMEMBER(\"Period].[\" + [Admin].([m zAdmin].[Input],[Admin Line].[Current Year]) + \"]\")}"
+}

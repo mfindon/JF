@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"Company Date Lookup",
+	"Rules@Code.link":"Company Date Lookup.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m Company Date LookUp')"
+		}
+	],
+	"Views@Code.links":[]
+}

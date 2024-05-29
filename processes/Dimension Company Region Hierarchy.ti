@@ -1,0 +1,53 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sDim = 'Company';
+
+sSubsetName = GetProcessName() | '_Source ' | sDim ;
+
+sTopConsolidation = 'All Regions';
+
+#Check dimensions exist
+IF ( DimensionExists ( sDim ) = 0 ); ProcessQuit; ENDIF;
+
+#Create a subset of existing elements.  This enable to check if the company is a new company. 
+SubsetCreatebyMDX ( sSubsetName, '{FILTER(TM1FILTERBYLEVEL(TM1SUBSETALL([Company].[Company]) , 0), ([Company].[Company].CURRENTMEMBER.PROPERTIES("Region") <> ""))}', 1 );
+
+DimensionElementInsert ( sDim, '', sTopConsolidation, 'C' );
+
+nNoofElements =ELCOMPN( sDim, sTopConsolidation );
+nElement = nNoofElements;
+
+WHILE ( nElement > 0 );
+  sElement = ELCOMP ( sDim, sTopConsolidation, nElement );
+  DimensionElementComponentDelete ( sDim, sTopConsolidation, sElement );
+  nElement = nElement - 1;
+END;
+
+DataSourceType = 'SUBSET';
+DatasourceDimensionSubset = sSubsetName;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sRegion = ATTRS( sDim, vCompany, 'Region' );
+
+DimensionElementInsert ( sDim, '', sRegion, 'C' );
+DimensionElementComponentAdd ( sDim, sTopConsolidation, sRegion, 1 );
+DimensionElementComponentAdd ( sDim, sRegion, vCompany, 1 );
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

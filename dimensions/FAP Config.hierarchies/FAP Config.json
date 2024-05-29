@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"FAP Config",
+	"Elements":
+	[
+		{
+			"Name":"FAP ODBC Connection Name",
+			"Type":"String"
+		},
+		{
+			"Name":"FAP DB Username",
+			"Type":"String"
+		},
+		{
+			"Name":"FAP DB Password",
+			"Type":"String"
+		},
+		{
+			"Name":"FAP Datamart",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,20 @@
+{
+	"@type":"Chore",
+	"Name":"FAP UPdate Status",
+	"StartTime":"2023-04-19T10:00Z",
+	"DSTSensitive":false,
+	"Active":true,
+	"ExecutionMode":"SingleCommit",
+	"Frequency":"P0DT00H30M00S",
+	"Tasks":
+	[
+		{
+			"Step":0,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('FAP Status Update')"
+			}
+		}
+	]
+}

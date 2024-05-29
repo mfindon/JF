@@ -1,0 +1,179 @@
+{
+	"@type":"Hierarchy",
+	"Name":"KPI",
+	"Elements":
+	[
+		{
+			"Name":"Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross Profit Margin %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Operating Profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Operating Profit %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Operating cash",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash conversion",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Overdue receivables",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Return on NOA",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total order intake",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total orderbook",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Project order intake",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Products order intake",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Quality: Corrective Action Reports",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Productivity",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee engagement - Gallup",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee engagement - Clear review",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Employee Turnover rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Health & Safety - Total recordable injury frequency rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Health & Safety - Lost Time Incident Frequency",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"P260000",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"P100000",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Operating profit + FX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Open Cash",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EBITDA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overdue Rec",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"B251100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"B800000",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budgeted revenue coverage by order/ project / contract",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Gross Profit Margin %",
+			"ComponentName":"P260000",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Profit Margin %",
+			"ComponentName":"P100000",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Profit %",
+			"ComponentName":"Operating profit + FX",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating Profit %",
+			"ComponentName":"P100000",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash conversion",
+			"ComponentName":"Open Cash",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash conversion",
+			"ComponentName":"EBITDA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Overdue receivables",
+			"ComponentName":"Overdue Rec",
+			"Weight":1
+		},
+		{
+			"ParentName":"Overdue receivables",
+			"ComponentName":"B251100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Return on NOA",
+			"ComponentName":"Operating profit + FX",
+			"Weight":1
+		},
+		{
+			"ParentName":"Return on NOA",
+			"ComponentName":"B800000",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"KPI.subsets/Input KPI per Division.json",
+		"KPI.subsets/KPI Division List.json",
+		"KPI.subsets/KPI In Order.json",
+		"KPI.subsets/KPI that can be deleted.json"
+	]
+}

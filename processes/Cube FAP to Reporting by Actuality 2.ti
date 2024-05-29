@@ -1,0 +1,42 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sDim = 'F_ActualityMonthly';
+
+nDimElementsCount = DIMSIZ(sDim);
+
+nElem = 1;
+
+while( nElem <= nDimElementsCount );
+
+  sElem = DIMNM( sDim, nElem );
+  
+  LogOutput( 'INFO', 'Loading ' | sElem | ' into Reporting cube' );
+
+  ExecuteProcess( 'Cube FAP to Reporting 2', 'pMDXActuality', '{[F_ActualityMonthly].[' | sElem | ']}' );
+
+  nElem = nElem + 1;
+
+end;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion
+#region Epilog
+
+
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

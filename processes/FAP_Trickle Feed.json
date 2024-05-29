@@ -1,0 +1,64 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Trickle Feed",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"FAP_Trickle Feed.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€MeasuresDim=F_Currency€MeasuresDimAction=As Is€MeasuresDimElemSortType=ByInput€MeasuresDimElemSortSense=DESCENDING€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"uz7d=JgOi^glgbFAqdl`FuJ[npZzflsyWFy5O?SDZIWmHpadoZ_JeyvsdoIfmnO[Zmq1Sg;9C4\\Df6F1D5I;ryfFXdi;SM_VkL0MxWbaHdjRxlgF8ooUc`iBekG\\@TmOgakK?sEaKBFFe{hkaR:V2T<nl9<q6]yoe?B4n3QUK_94P4OEOO0Kn^H:BXLDBQF\\HOL9mk",
+		"query":"SELECT  '20' + SUBSTRING ( perakt, 1, 2) + SUBSTRING ( perakt, 3, 2) as vPeriod, SUBSTRING ( perakt, 5, 2) as vActuality, bol as vCompany, max( sequenceno ) as vSeq\r\nFROM Production_TRICKLE\r\nWHERE sequenceno > ?pSequence? \r\nGroup by perakt, bol\r\norder by SUBSTRING ( perakt, 5, 2), SUBSTRING ( perakt, 1, 4) ",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pSequence",
+			"Prompt":"Last Seqence Number",
+			"Value":"0",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vPeriod",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vActuality",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vCompany",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vSeq",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

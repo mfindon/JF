@@ -1,0 +1,72 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Reporting Input Account",
+	"Elements":
+	[
+		{
+			"Name":"Shares - Current Number of Shares for James Fisher PLC Basic",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Shares - Diluted Number of Shares",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tax Movement",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Operating Cash Flow",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Operating Cash Flow Conversion (%)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Litigation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation of acquired intangibles",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Impairment Charges / (Reversals)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Refinancing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Restructuring Charges",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Business Disposals",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Business Disposals & assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Available cash",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Borrowings",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Leverage",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

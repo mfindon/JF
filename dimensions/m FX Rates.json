@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m FX Rates",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m FX Rates')/Hierarchies('m FX Rates')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m FX Rates.hierarchies/m FX Rates.json"
+	]
+}

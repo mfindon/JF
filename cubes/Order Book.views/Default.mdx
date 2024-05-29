@@ -1,0 +1,1 @@
+SELECT {[m Order Book].[m Order Book].MEMBERS} ON 0, NON EMPTY {{DISTINCT({[Company].[Company].[S1000], DESCENDANTS([Company].[Company].[S1000], 99 , LEAVES)})}}*{[Order Book Row].[Order Book Row].MEMBERS} ON 1 FROM [Order Book] WHERE ([Currency].[Currency].[LC], [Period].[Period].[2024])

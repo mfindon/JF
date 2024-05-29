@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Reporting Balance Sheet Adjustments",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Reporting Balance Sheet Adjustments')/Hierarchies('m Reporting Balance Sheet Adjustments')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Reporting Balance Sheet Adjustments.hierarchies/m Reporting Balance Sheet Adjustments.json"
+	]
+}

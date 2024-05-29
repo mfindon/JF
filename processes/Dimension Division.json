@@ -1,0 +1,29 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Division",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Division.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForClient":"Company",
+		"dataSourceNameForServer":"Company",
+		"subset":"Divisions"
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vCompany",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

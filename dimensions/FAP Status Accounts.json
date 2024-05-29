@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"FAP Status Accounts",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('FAP Status Accounts')/Hierarchies('FAP Status Accounts')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"FAP Status Accounts.hierarchies/FAP Status Accounts.json"
+	]
+}

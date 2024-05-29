@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Company Test",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Company Test')/Hierarchies('Company Test')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Company Test.hierarchies/Company Test.json"
+	]
+}

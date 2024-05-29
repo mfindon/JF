@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Non Controller Accounts",
+	"Expression":"{{DRILLDOWNMEMBER({[Account].[Account].[Non Controller Accounts]} , {[Account].[Account].[Non Controller Accounts]} , RECURSIVE)}}"
+}

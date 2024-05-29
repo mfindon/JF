@@ -1,0 +1,31 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('Monthly')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('YTD')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('Monthly (k)')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('YTD (k)')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('QTD (k)')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('Monthly (m)')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('YTD (m)')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('QTD (m)')"
+		}
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"@type":"Cube",
+	"Name":"Demo Reporting",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Test Division')"
+		},
+		{
+			"@id":"Dimensions('Year')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Demo Reporting.views/Default.json"
+	]
+}

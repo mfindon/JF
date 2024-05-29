@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Admin Line",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Admin Line')/Hierarchies('Admin Line')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Admin Line.hierarchies/Admin Line.json"
+	]
+}

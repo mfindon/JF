@@ -1,0 +1,31 @@
+
+['Filter','Capex Month'] = S:
+	IF ( DIMIX ( 'Period', DB('zUserSelection',!}Clients,'Selection',!m zUserSelection) ) > 0,
+		DB('zUserSelection',!}Clients,'Selection', !m zUserSelection ),
+		AttrS ( 'Period', DB('Admin','Current Month','Input'), 'MMM-YYYY' )
+	);
+
+['Filter','Capex Version 1'] = S:
+	IF ( DIMIX ( 'Version', DB('zUserSelection',!}Clients,'Selection',!m zUserSelection) ) > 0,
+		DB('zUserSelection',!}Clients,'Selection', !m zUserSelection ),
+		'Budget 2024'
+	);
+
+['Filter','Capex Version 2'] = S:
+	IF ( DIMIX ( 'Version', DB('zUserSelection',!}Clients,'Selection',!m zUserSelection) ) > 0,
+		DB('zUserSelection',!}Clients,'Selection', !m zUserSelection ),
+		'Forecast 202402'
+	);
+    
+['Filter','Dashboard Month'] = S:
+	IF ( DIMIX ( 'Period', DB('zUserSelection',!}Clients,'Selection',!m zUserSelection) ) > 0,
+		DB('zUserSelection',!}Clients,'Selection', !m zUserSelection ),
+		AttrS ( 'Period', DB('Admin','Current Month','Input'), 'MMM-YYYY' )
+	);
+    
+['Filter','Dashboard Company Prefix'] = S:
+        'MN.' |
+		SUBST ( DIMNM ( 'Period', DIMIX ( 'Period', DB('zUserSelection',!}Clients,'Filter', 'Dashboard Month' ) ) ), 1, 4 ) |
+        '-' |
+        SUBST ( DIMNM ( 'Period', DIMIX ( 'Period', DB('zUserSelection',!}Clients,'Filter', 'Dashboard Month' ) ) ), 5, 2 ) |
+        '.' ;

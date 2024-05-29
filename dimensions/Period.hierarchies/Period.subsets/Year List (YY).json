@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Year List (YY)",
+	"Expression":"{ORDER(EXCEPT(DRILLDOWNMEMBER({[Period].[Period].[All Periods]} , {[Period].[Period].[All Periods]} , RECURSIVE) , {[Period].[Period].[All Periods]}) , IIF([Period].[Period].CURRENTMEMBER.PROPERTIES(\"YYMM\")=\"\", [Period].[Period].CURRENTMEMBER.PROPERTIES(\"MEMBER_CAPTION\"), [Period].[Period].CURRENTMEMBER.PROPERTIES(\"YYMM\")) , BASC)}"
+}

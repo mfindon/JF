@@ -1,0 +1,21 @@
+{
+	"@type":"Process",
+	"Name":"Dimension KPI Add KPI",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension KPI Add KPI.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pKPIName",
+			"Prompt":"KPI Name",
+			"Value":"0",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

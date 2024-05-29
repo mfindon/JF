@@ -1,0 +1,23 @@
+#region Prolog
+
+sDim = 'KPI';
+
+if( pAreYouSure @= '' );
+  ItemReject( 'User did not confirm they were sure they wanted to delete the KPI' );
+endif;
+
+
+
+#Check KPI name is blank
+IF ( pKPIName @= '' );
+  ItemReject( 'KPI Name is blank' );
+ENDIF;
+
+#Check if KPI  exist
+If (DimensionElementExists ( sDim, pKPIName) = 0 );
+  ItemReject( 'KPI does not exist:' | pKPIName );
+endif;
+
+DimensionElementDeleteDirect( sDim, pKPIName);
+
+#endregion

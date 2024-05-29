@@ -1,0 +1,27 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Period",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Period.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30=€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pYearFrom",
+			"Prompt":"",
+			"Value":2018,
+			"Type":"Numeric"
+		},
+		{
+			"Name":"pYearTo",
+			"Prompt":"",
+			"Value":0,
+			"Type":"Numeric"
+		}
+	],
+	"Variables":[]
+}

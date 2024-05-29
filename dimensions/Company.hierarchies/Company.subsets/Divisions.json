@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Divisions",
+	"Expression":"{FILTER(TM1SUBSETALL([Company].[Company]) , ([Company].[Company].CURRENTMEMBER.PROPERTIES(\"Is Division\") <> \"\")),[Company].[Company].[S3000],[Company].[Company].[S2000]}"
+}

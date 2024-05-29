@@ -1,0 +1,20 @@
+#region Prolog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+IF ( sGroupName @<> '');
+    AddGroup( 'PA_' | sGroupName );
+ENDIF;
+#endregion
+#region Metadata
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

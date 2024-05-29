@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Product Line Hierarchy",
+	"Expression":"{TM1DRILLDOWNMEMBER( { [Company].[PL.S1000] }, ALL, RECURSIVE )}"
+}

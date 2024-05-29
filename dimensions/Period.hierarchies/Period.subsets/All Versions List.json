@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Versions List",
+	"Expression":"{TM1SORT( { [Period].[All Periods].children }, ASC)}"
+}

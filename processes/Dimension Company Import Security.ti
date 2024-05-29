@@ -1,0 +1,34 @@
+#region Prolog
+
+nCount = 1;
+
+sCube = '}ElementSecurity_' | pDimensionFrom;
+sView = 'Copy Security';
+
+sPrefix = 'FAP_';
+
+ViewCreate( sCube, sView, 1 );
+
+DatasourceNameForServer = sCube;
+DatasourceCubeview = sView;
+#endregion
+#region Metadata
+
+if ( DimensionElementExists( '}Groups', sPrefix | vGroup ) = 0);
+  AddGroup( sPrefix | vGroup );
+endif;
+#endregion
+#region Data
+
+if ( DimensionElementExists ( pDimensionTo, vElement ) = 1 );
+  ElementSecurityPut( vSecurity, pDimensionTo, vElement, sPrefix | vGroup );
+endif;
+
+if ( DimensionElementExists ( pDimensionTo, SUBST( vElement, 12, 999 ) ) = 1 );
+  ElementSecurityPut( vSecurity, pDimensionTo, SUBST( vElement, 12, 999 ), sPrefix | vGroup );
+endif;
+
+if ( DimensionElementExists ( pDimensionTo, vElement | 'FAP_' ) = 1 );
+  ElementSecurityPut( vSecurity, pDimensionTo, vElement | 'FAP_' , sPrefix | vGroup );
+endif;
+#endregion

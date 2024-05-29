@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Order Book Row",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Order Book Row')/Hierarchies('Order Book Row')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Order Book Row.hierarchies/Order Book Row.json"
+	]
+}

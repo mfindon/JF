@@ -1,0 +1,21 @@
+{
+	"@type":"Process",
+	"Name":"zGroups Add",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"zGroups Add.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30=€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"sGroupName",
+			"Prompt":"Group Name ( Not including PA_ prefix )",
+			"Value":"",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

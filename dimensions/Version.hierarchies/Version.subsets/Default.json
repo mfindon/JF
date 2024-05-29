@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{[Version].[Version].[Actual],{DRILLDOWNMEMBER({[Version].[Version].[All Forecasts]} , {[Version].[Version].[All Forecasts]} , RECURSIVE)},{DRILLDOWNMEMBER({[Version].[Version].[All Budgets]} , {[Version].[Version].[All Budgets]} , RECURSIVE)},{DRILLDOWNMEMBER({[Version].[Version].[All Variances]} , {[Version].[Version].[All Variances]} , RECURSIVE)}}"
+}

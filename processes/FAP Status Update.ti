@@ -1,0 +1,117 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+####################################################################
+
+#####################################################################
+
+Sleep ( 5000 );
+
+
+sLastFAPStatus = CellGetS ( 'FAP Status', 'Value', 'FAP Status' );
+
+
+sDataSourceConfigCube = 'FAP Config' ;
+
+sODBC = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP ODBC Connection Name' );
+sUserId = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Username' );
+sPasswd = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Password'  );
+sDataMart = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP Datamart' );
+
+
+DataSourceType='ODBC'; 
+DatasourceNameForServer = sODBC;
+DatasourceUserName = sUserId ; 
+DatasourcePassword = sPasswd ; 
+
+sSQL = 'SELECT Status, StructStatus FROM NRTR_DATAMART WHERE Name= ''' | sDataMart | ''' ' ;
+
+DatasourceQuery = sSQL ;
+
+CellPutS ( TIMST ( NOW(), '\Y-\m-\d \h:\i:\s' ) , 'FAP Status', 'Value', 'FAP Status Updated' );
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+CellPutN ( vStatus, 'FAP Status', 'Value', 'Status' );
+CellPutN ( vStructStatus, 'FAP Status', 'Value', 'Structure Status' );
+
+
+
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+
+
+sFAPStatus = CellGetS ( 'FAP Status', 'Value', 'FAP Status' );
+sFAPStatusChange = CellGetS ( 'FAP Status', 'Value', 'FAP Status Changed' );
+nFAPStatusChange = DayNo( SUBST ( sFAPStatusChange, 1,  10 ) );
+
+
+
+
+
+IF ( sLastFAPStatus @<> sFAPStatus  );
+   CellPutS ( TIMST ( NOW(), '\Y-\m-\d \h:\i:\s' ) , 'FAP Status', 'Value', 'FAP Status Changed' );
+ENDIF;
+
+
+#Send Email
+sRecipient = CellGetS ( 'zControl',  'Email Alert Address', 'Value' );
+
+IF ( sLastFAPStatus @<> 'Stopped' & sLastFAPStatus @<> 'Error'  );
+
+   IF ( sFAPStatus @= 'Stopped' );
+      RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - has been stopped', 'pBody', 'FAP trickle feed has been stopped.' );
+      Itemskip;
+   ENDIF;
+   IF ( sFAPStatus @= 'Error' );
+      RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Error', 'pBody', 'There has been an error in the FAP trickle feed' );
+      #RunProcess ( 'FAP_Trigger_IP' );
+      Itemskip;
+   ENDIF;
+
+ENDIF;
+
+
+IF ( sLastFAPStatus @<> 'Initial publish running' &  sFAPStatus @= 'Initial publish running' );
+    RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Initial publish is in progress', 'pBody', 'An Initial publish is in progress.  An email will be sent when it is complete.' );
+    Itemskip;
+ENDIF;
+
+IF ( sLastFAPStatus @<> 'Ready to publish' &  sFAPStatus @= 'Ready to publish' );
+    RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Initial publish is in progress', 'pBody', 'An Initial publish is in progress.  An email will be sent when it is complete.' );
+    Itemskip;
+ENDIF;
+
+IF ( sLastFAPStatus @<> 'Updating Structure' &  sFAPStatus @= 'Updating Structure' );
+    IF ( SUBST ( sFAPStatusChange, 1,  10 ) @< Today( 1));
+        RunProcess ( 'Send Email', 'pRecipient','martin.findon@sempreanalytics.com', 'pSubject', 'FAP - Warning - A structure update has been running since ' | sFAPStatusChange, 'pBody', 'A structure update has been running since ' | sFAPStatusChange | '.' );
+    else;
+        RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Structure update is in progress', 'pBody', 'An structure update is in progress.  An email will be sent when it is complete.' );        
+    endif;
+
+ENDIF;
+
+
+
+
+
+#endregion

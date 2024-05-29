@@ -1,0 +1,117 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+################################################################
+#                    Creates all posible variance consolidations in Verison dimension
+################################################################
+
+sDimName = 'Actuality';
+
+sTopConsol = 'All Variances';
+sTopConsol1 = 'All Variances %';
+sTopConsol2 = 'All Actualities';
+sTopConsol3 = 'PY Growth %';
+
+nElem1 = 1;
+
+WHILE ( nElem1 <= DIMSIZ ( sDimName ) );
+   sElem1 = DIMNM ( sDimName, nElem1 );
+   sType = DTYPE ( sDimName, sElem1 );
+   IF ( sType @= 'C' & 
+      ( SCAN ( ' v ', sElem1 ) <> 0 % SUBST ( sElem1, LONG ( sElem1 ), 1 ) @= '%' ) );
+      DimensionElementDelete( sDimName, sElem1 );
+   ELSE;
+      nElem1 = nElem1 + 1;
+   ENDIF;
+END;
+
+DimensionElementInsert(sDimName, '', sTopConsol1, 'C');
+DimensionElementInsert(sDimName, '', sTopConsol2, 'C');
+DimensionElementInsert(sDimName, '', sTopConsol, 'C');
+DimensionElementInsert(sDimName, '', sTopConsol3, 'C');
+
+DimensionElementInsert(sDimName, '', 'PY AC Growth %', 'C');
+DimensionElementComponentAdd(sDimName, sTopConsol3, 'PY AC Growth %', 0);
+
+DimensionElementComponentAdd(sDimName, 'PY AC Growth %', 'AC', 0);
+DimensionElementComponentAdd(sDimName, 'PY AC Growth %', 'PY AC', 0);
+
+nElem1 = 1;
+
+WHILE ( nElem1 <= DIMSIZ ( sDimName ) );
+
+    sElem1 = DIMNM ( sDimName, nElem1 );
+
+   IF ( ELLEV ( sDimName, sElem1 ) = 0 );
+
+        DimensionElementComponentAdd(sDimName, sTopConsol2, sElem1, 0);
+       
+      nElem2 = 1;
+
+      WHILE ( nElem2 <= DIMSIZ ( sDimName ) );
+
+         sElem2 = DIMNM ( sDimName, nElem2 );
+
+             IF ( ELLEV ( sDimName, sElem2 ) = 0 );
+
+               sVarConsole = sElem1 | ' v ' | sElem2;
+
+               #Create vs consolidation
+               DimensionElementInsert(sDimName, '', sVarConsole, 'C');
+
+               DimensionElementComponentAdd(sDimName, sTopConsol, sVarConsole, 0);
+               DimensionElementComponentAdd(sDimName, sVarConsole, sElem1, 1);
+               DimensionElementComponentAdd(sDimName, sVarConsole, sElem2, -1);
+
+               #Create vs % consolidation
+               DimensionElementInsert(sDimName, '', sVarConsole | ' %', 'C');
+
+               DimensionElementComponentAdd(sDimName, sTopConsol1, sVarConsole | ' %', 0);
+               DimensionElementComponentAdd(sDimName, sVarConsole | ' %', sVarConsole, 1);
+               DimensionElementComponentAdd(sDimName, sVarConsole | ' %', sElem2, 1);
+
+            ENDIF;
+
+         nElem2 = nElem2 + 1;
+
+      END;
+
+   ENDIF;
+
+   IF ( ELLEV ( sDimName, sElem1 ) = 0  & sElem1 @<> 'PY AC' );
+
+      sVarConsole = 'PY ' | sElem1 | ' Growth %';
+
+      #Create vs consolidation
+      DimensionElementInsert(sDimName, '', sVarConsole, 'C');
+
+      DimensionElementComponentAdd(sDimName, sTopConsol3, sVarConsole, 0);
+      DimensionElementComponentAdd(sDimName, sVarConsole, sElem1, 1);
+      DimensionElementComponentAdd(sDimName, sVarConsole, 'PY AC', -1);
+
+   ENDIF;
+
+   nElem1 = nElem1 + 1;
+
+END;
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

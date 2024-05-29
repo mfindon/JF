@@ -1,0 +1,30 @@
+{
+	"@type":"Cube",
+	"Name":"Cashflow",
+	"Rules@Code.link":"Cashflow.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Division')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('CF Account')"
+		},
+		{
+			"@id":"Dimensions('m Cashflow')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Cashflow.views/Default.json"
+	]
+}

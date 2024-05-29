@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Version - Create Variances",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Version - Create Variances.ti",
+	"UIData":"_ParameterConstraints=e30=€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

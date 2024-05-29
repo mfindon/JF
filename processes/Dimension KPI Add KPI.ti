@@ -1,0 +1,44 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sDim = 'KPI';
+
+#Check KPI name is blank
+IF ( pKPIName @= '' );
+  ItemReject( 'KPI Name is blank' );
+ENDIF;
+
+#Check if KPI already exist
+If (DimensionElementExists ( sDim, pKPIName) = 1 );
+  ItemReject( 'KPI already exist:' | pKPIName );
+endif;
+
+DimensionElementInsertDirect( sDim, '', pKPIName, 'N');
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#Check KPI name is blank
+IF ( pKPIName @= '' );
+  ItemReject( 'KPI Name is blank' );
+ENDIF;
+
+
+AttrPutS ( 'Yes', 'KPI',  pKPIName, 'Is KPI' );
+#endregion

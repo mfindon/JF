@@ -1,0 +1,32 @@
+{
+	"@type":"Cube",
+	"Name":"Commentary",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Commentary Page')"
+		},
+		{
+			"@id":"Dimensions('Commentary Line')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m Commentary')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Commentary.views/Default.json",
+		"Commentary.views/Executive Summary.json",
+		"Commentary.views/GFR Operating Profit.json",
+		"Commentary.views/GFR Revenue.json"
+	]
+}

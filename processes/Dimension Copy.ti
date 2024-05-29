@@ -1,0 +1,151 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+sSubsetName = GetProcessName() | '_Source ' | pDimensionFrom | ' to ' | pDimensionTo ;
+
+#Check dimensions exist
+IF ( DimensionExists ( pDimensionFrom ) = 0 ); ProcessQuit; ENDIF;
+IF ( DimensionExists ( pDimensionTo  ) = 0 ); DimensionCreate ( pDimensionTo ); ENDIF;
+
+
+#Unwind consolidations if they exists in the source dimension. If they do not exist then they are elements that have been added for planning/reporting.
+nElement = 1;
+nNoofElements = DIMSIZ( pDimensionTo );
+
+WHILE ( nElement <= nNoofElements );
+   sElement = DIMNM ( pDimensionTo, nElement );
+   IF ( ELLEV ( pDimensionTo, sElement ) > 0 );
+      IF ( DIMIX ( pDimensionFrom, sElement ) <> 0 );
+
+       WHILE ( ELCOMPN ( pDimensionTo, sElement ) > 0  );
+          sElementChild = ELCOMP ( pDimensionTo, sElement, 1 );
+          DimensionElementComponentDelete ( pDimensionTo, sElement, sElementChild );
+       END;
+
+      ENDIF;
+   ENDIF;
+   nElement = nElement +1;
+END;
+
+SubsetCreatebyMDX ( sSubsetName,  '{ HIERARCHIZE( {TM1SUBSETALL( [' | pDimensionFrom | '] )} ) }', 1 );
+
+nAttributes = 1;
+nMatchedAttributes = 0;
+
+IF ( DIMIX ( '}Dimensions', '}ElementAttributes_' | pDimensionFrom ) <> 0 );
+
+SubsetCreate( '}ElementAttributes_' | pDimensionFrom, sSubsetName, 1 );
+
+nNoOfAttributes = DIMSIZ ( '}ElementAttributes_' | pDimensionFrom );
+
+WHILE ( nAttributes <= nNoOfAttributes );
+   sAttribute = DIMNM ( '}ElementAttributes_' | pDimensionFrom, nAttributes );
+   IF ( DIMIX ( '}ElementAttributes_' | pDimensionTo, sAttribute ) <> 0);
+      SubsetElementInsert(  '}ElementAttributes_' | pDimensionFrom, sSubsetName, sAttribute, 1);
+      nMatchedAttributes = nMatchedAttributes + 1;
+   ENDIF;
+   nAttributes = nAttributes +1;
+END;
+
+ENDIF;
+
+#Contribution Version has manual adustment that need to be added to All consolidation
+IF ( pDimensionTo @= 'Contribution Version' );
+   DimensionElementInsert ( pDimensionTo, '', 'CO ALL', 'c' );
+   DimensionElementInsert ( pDimensionTo, '', 'Adjustments', 'c' );
+   DimensionElementComponentAdd ( pDimensionTo, 'CO ALL', 'Adjustments', 1);
+ENDIF;
+
+DatasourceNameForServer = pDimensionFrom ;
+DataSourceType = 'SUBSET';
+DatasourceDimensionSubset = sSubsetName;
+
+BatchUpdateStart;
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+sElementType = DTYPE ( pDimensionFrom, vElement );
+sPriorElement = DIMNM ( pDimensionFrom, DIMIX ( pDimensionFrom, vElement ) - 1);
+
+DimensionElementInsert ( pDimensionTo, sPriorElement, vElement, sElementType );
+
+nElementChild = 1;
+IF ( sElementType @= 'C' );
+ 
+       WHILE ( nElementChild <= ELCOMPN ( pDimensionFrom, vElement )  );
+          sElementChild = ELCOMP ( pDimensionFrom, vElement, nElementChild );
+           nWeight = ELWEIGHT( pDimensionFrom, vElement, sElementChild );
+
+          sPriorChildElement = DIMNM ( pDimensionFrom, DIMIX ( pDimensionFrom, sElementChild ) - 1);
+          sChildElementType = DTYPE ( pDimensionFrom, sElementChild );
+          DimensionElementInsert ( pDimensionTo, sPriorChildElement, sElementChild, sChildElementType );
+
+          DimensionElementComponentAdd ( pDimensionTo, vElement, sElementChild, nWeight );
+
+          #Alternative Hierachy for school dimension
+          IF ( pDimensionFrom @= 'School' );
+             IF ( vElement @= '@Aggr_5000' & sElementChild @<> '@Aggr_5700' );
+                DimensionElementInsert ( pDimensionTo, '', 'Alternative Consolidations', 'C' );
+                DimensionElementInsert ( pDimensionTo, '', 'Latam.', 'C' );
+                DimensionElementComponentAdd ( pDimensionTo, 'Alternative Consolidations', 'Latam.', 1 );
+                DimensionElementComponentAdd ( pDimensionTo, 'Latam.', sElementChild, 1 );
+             ENDIF;
+          ENDIF;
+
+          nElementChild = nElementChild + 1;
+       END;
+
+ENDIF;
+
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+IF ( nMatchedAttributes = 0 ); Itemskip; ENDIF;
+
+
+
+nAttribute = 1;
+WHILE ( nAttribute <= SubsetGetSize( '}ElementAttributes_' | pDimensionFrom, sSubsetName ) );
+#WHILE ( nAttribute <= 1 );
+
+
+   sAttribute = SubsetGetElementName ( '}ElementAttributes_' | pDimensionFrom, sSubsetName, nAttribute );
+   sAttributeType = DTYPE ( '}ElementAttributes_' | pDimensionFrom, sAttribute );
+
+   IF ( sAttributeType @= 'AN' );
+      nAttributeValue = AttrN ( pDimensionFrom, vElement, sAttribute );
+      AttrPutN ( nAttributeValue, pDimensionTo, vElement, sAttribute );
+   ELSE;
+      sAttributeValue = AttrS ( pDimensionFrom, vElement, sAttribute );
+      AttrPutS ( sAttributeValue, pDimensionTo, vElement, sAttribute );
+   ENDIF;
+   nAttribute = nAttribute + 1;
+END;
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+BatchUpdateFinishWait (0);
+#endregion

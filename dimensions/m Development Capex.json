@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Development Capex",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Development Capex')/Hierarchies('m Development Capex')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Development Capex.hierarchies/m Development Capex.json"
+	]
+}

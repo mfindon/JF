@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Mgmt Analysis",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Mgmt Analysis.hierarchies/Mgmt Analysis.json"
+	]
+}

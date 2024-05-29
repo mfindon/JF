@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m KPI Division Mapping",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m KPI Division Mapping')/Hierarchies('m KPI Division Mapping')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m KPI Division Mapping.hierarchies/m KPI Division Mapping.json"
+	]
+}

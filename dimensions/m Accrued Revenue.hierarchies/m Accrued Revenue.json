@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Accrued Revenue",
+	"Elements":
+	[
+		{
+			"Name":"Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Accrued Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"% of total accrued revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Comments",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,594 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+pDimensionFrom = 'F_Company';
+
+vAttrToCheck = 'Last Year';  IF ( DIMIX ('}ElementAttributes_' | pDimensionTo, vAttrToCheck ) = 0); ATTRINSERT ( pDimensionTo,'',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'Last Year End';  IF ( DIMIX ('}ElementAttributes_' | pDimensionTo, vAttrToCheck ) = 0); ATTRINSERT ( pDimensionTo,'Last Year',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'Next Year';  IF ( DIMIX ('}ElementAttributes_' | pDimensionTo, vAttrToCheck ) = 0); ATTRINSERT ( pDimensionTo,'',  vAttrToCheck ,'s'); ENDIF;
+
+
+sSubsetName = GetProcessName() | '_Source ' | pDimensionFrom | ' to ' | pDimensionTo ;
+sSubsetNameLastPeriod = GetProcessName() | '_Source ' | pDimensionFrom | ' to ' | pDimensionTo | ' Last period';
+
+sSubsetDestination =GetProcessName() | '_Source Current ' | pDimensionFrom | ' to ' | pDimensionTo ;
+
+#Check dimensions exist
+IF ( DimensionExists ( pDimensionFrom ) = 0 ); ProcessQuit; ENDIF;
+IF ( DimensionExists ( pDimensionTo  ) = 0 ); DimensionCreate (  pDimensionTo ); ENDIF;
+
+#Create a subset of existing elements.  This enable to check if the company is a new company. 
+SubsetCreatebyMDX ( sSubsetDestination, '{ HIERARCHIZE( {TM1SUBSETALL( [' | pDimensionTo | '] )} ) }', 1 );
+SubsetMDXSet ( pDimensionTo, sSubsetDestination, '' );
+
+SubsetCreatebyMDX ( sSubsetNameLastPeriod,  '{ TAIL ( { [' | pDimensionFrom | '].[CT MN].children } )}', 1 );
+sLastPeriod = SUBST ( SubsetGetElementName ( pDimensionFrom, sSubsetNameLastPeriod,  1 ), 4,  7 );
+
+
+#Unwind consolidations if they exists in the source dimension. If they do not exist then they are elements that have been added for planning/reporting.
+nElement = 1;
+nNoofElements = DIMSIZ( pDimensionTo );
+
+WHILE ( nElement <= nNoofElements );
+   sElement = DIMNM ( pDimensionTo, nElement );
+   IF ( ELLEV ( pDimensionTo, sElement ) > 0 );
+#      IF ( DIMIX ( pDimensionFrom, sElement ) <> 0 % ELISANC ( pDimensionTo, 'Additional Consolidations',  sElement ) = 1 ) ;
+
+       WHILE ( ELCOMPN ( pDimensionTo, sElement ) > 0  );
+          sElementChild = ELCOMP ( pDimensionTo, sElement, 1 );
+          DimensionElementComponentDelete ( pDimensionTo, sElement, sElementChild );
+       END;
+
+#      ENDIF;
+   ENDIF;
+   nElement = nElement +1;
+END;
+
+SubsetCreatebyMDX ( sSubsetName,  '{ HIERARCHIZE( {TM1SUBSETALL( [' | pDimensionFrom | '] )} ) }', 1 );
+
+
+#Get subset of attributes that are in both the source and Target System
+
+nAttributes = 1;
+nMatchedAttributes = 0;
+
+IF ( DIMIX ( '}Dimensions', '}ElementAttributes_' | pDimensionFrom ) <> 0 );
+
+   SubsetCreate( '}ElementAttributes_' | pDimensionFrom, sSubsetName, 1 );
+
+   nNoOfAttributes = DIMSIZ ( '}ElementAttributes_' | pDimensionFrom );
+
+   WHILE ( nAttributes <= nNoOfAttributes );
+     sAttribute = DIMNM ( '}ElementAttributes_' | pDimensionFrom, nAttributes );
+      IF ( DIMIX ( '}ElementAttributes_' | pDimensionTo, sAttribute ) <> 0);
+         SubsetElementInsert(  '}ElementAttributes_' | pDimensionFrom, sSubsetName, sAttribute, 1);
+         nMatchedAttributes = nMatchedAttributes + 1;
+      ENDIF;
+      nAttributes = nAttributes +1;
+   END;
+
+ENDIF;
+
+DimensionElementInsert ( pDimensionTo, '', 'Current Reporting Structure', 'C' );
+DimensionElementInsert ( pDimensionTo, '', 'All Contingency Companies', 'C' );
+DimensionElementInsert ( pDimensionTo, '', 'Additional Consolidations', 'C' );
+
+DimensionElementInsert ( pDimensionTo, '', 'M400C + M500C', 'C' );
+DimensionElementInsert ( pDimensionTo, '', 'M400C', 'C' );
+DimensionElementInsert ( pDimensionTo, '', 'M500C', 'C' );
+DimensionElementComponentAdd ( pDimensionTo, 'M400C + M500C', 'M400C', 1 );
+DimensionElementComponentAdd ( pDimensionTo, 'M400C + M500C', 'M500C', 1 );
+
+DimensionElementInsert ( pDimensionTo, '', 'All Company Structures Excl', 'C' );
+DimensionElementInsert ( pDimensionTo, '', 'All Company Structures Excl S5200', 'C' );
+DimensionElementInsert ( pDimensionTo, '', 'All Company Structures Excl M900C', 'C' );
+DimensionElementComponentAdd ( pDimensionTo, 'All Company Structures Excl', 'All Company Structures Excl S5200', 1 );
+DimensionElementComponentAdd ( pDimensionTo, 'All Company Structures Excl', 'All Company Structures Excl M900C', 1 );
+
+DatasourceNameForServer = pDimensionFrom ;
+DataSourceType = 'SUBSET';
+DatasourceDimensionSubset = sSubsetName;
+
+
+BatchUpdateStart ;
+
+
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+IF ( SUBST ( vElement, 1, 2 ) @= 'CT' ); 
+   sAltElementName = 'All Company Structures';
+ELSE;
+   sAltElementName = vElement;
+ENDIF;
+
+
+sElementType = DTYPE ( pDimensionFrom, vElement );
+sPriorElement = DIMNM ( pDimensionFrom, DIMIX ( pDimensionFrom, vElement ) - 1);
+
+DimensionElementInsert ( pDimensionTo, sPriorElement, sAltElementName , sElementType );
+
+          ### Current Company Structures ###
+          IF (  SUBST ( vElement, 3, 9 )  @= '.' |sLastPeriod | '.' );
+              IF ( DIMIX ( pDimensionTo,  SUBST (vElement, 12, 6 ) ) = 0 );
+              DimensionElementInsert ( pDimensionTo, '', SUBST (vElement, 12, 6) , sElementType );
+              ENDIF;
+          ENDIF;
+
+nElementChild = 1;
+IF ( sElementType @= 'C' );
+ 
+       WHILE ( nElementChild <= ELCOMPN ( pDimensionFrom, vElement )  );
+
+           ### All Company Structures ###
+          sElementChild = ELCOMP ( pDimensionFrom, vElement, nElementChild );
+
+           nWeight = ELWEIGHT( pDimensionFrom, vElement, sElementChild );
+
+          sPriorChildElement = DIMNM ( pDimensionFrom, DIMIX ( pDimensionFrom, sElementChild ) - 1);
+          sChildElementType = DTYPE ( pDimensionFrom, sElementChild );
+
+          IF ( sElementChild @= SUBST ( vElement, 12, 6 ) ); sElementChild = sElementChild | 'FAP_'; ENDIF;
+
+          IF ( DIMIX ( pDimensionTo, sElementChild ) = 0 );
+             DimensionElementInsert ( pDimensionTo, sPriorChildElement, sElementChild, sChildElementType );
+          ENDIF;
+
+          DimensionElementComponentAdd ( pDimensionTo, sAltElementName, sElementChild, nWeight );
+          nElementChild = nElementChild + 1;
+
+          ### Current Company Structures ###
+          IF (  SUBST ( vElement, 4, 7 )  @= sLastPeriod );
+             IF ( SUBST ( sElementChild, 4, 7 )  @= sLastPeriod );
+                sElementChild = SUBST ( sElementChild, 12, 6);
+             ENDIF;
+
+          IF ( DIMIX ( pDimensionTo, sElementChild ) = 0 );
+             DimensionElementInsert ( pDimensionTo, '', sElementChild, sChildElementType );
+          ENDIF;
+             IF (  SUBST ( vElement, 12, 6) @= '' );
+                DimensionElementComponentAdd ( pDimensionTo, 'Current Reporting Structure', sElementChild, nWeight );
+             ELSE;
+                DimensionElementComponentAdd ( pDimensionTo, SUBST ( vElement, 12, 6), sElementChild, nWeight );
+             ENDIF;
+          ENDIF;
+
+       END;
+
+ENDIF;
+
+
+################################################################################################################################
+# Create Hierarchy Excluding Companies 
+################################################################################################################################
+
+nExclComp = 1;
+while ( nExclComp <= 2);
+    
+    if ( nExclComp = 1 );
+        sExcludedCompany = 'S5200';
+    else;
+        sExcludedCompany = 'M900C';
+    endif;
+    
+        
+    nElementChild = 1;
+    IF ( sElementType @= 'C');
+        if ( SUBST( vElement, LONG( vElement ) - LONG( sExcludedCompany )+1,LONG( sExcludedCompany ) ) @<> sExcludedCompany
+           # & ELISANC( pDimensionFrom, SUBST( vElement, 1, 11 ) |sExcludedCompany, vElement ) = 0
+           );
+            DimensionElementInsert ( pDimensionTo, '', vElement | ' Excl ' | sExcludedCompany, sElementType );
+            WHILE ( nElementChild <= ELCOMPN ( pDimensionFrom, vElement )  );
+    
+                ### All Company Structures ###
+                sElementChild = ELCOMP ( pDimensionFrom, vElement, nElementChild );
+    
+                    if ( SUBST( sElementChild, LONG( sElementChild ) - LONG( sExcludedCompany )+1,LONG( sExcludedCompany ) ) @<> sExcludedCompany 
+                        #& ELISANC( pDimensionFrom, sElementChild, SUBST( sElementChild, 1, 11 ) |sExcludedCompany ) = 0
+                       );
+            
+                      nWeight = ELWEIGHT( pDimensionFrom, vElement, sElementChild );
+            
+                      sPriorChildElement = DIMNM ( pDimensionFrom, DIMIX ( pDimensionFrom, sElementChild ) - 1);
+                      sChildElementType = DTYPE ( pDimensionFrom, sElementChild );
+            
+                        if ( sElementChild @= SUBST ( vElement, 12, 6 ) ); sElementChild = sElementChild | 'FAP_'; ENDIF;
+            
+                        if ( DIMIX ( pDimensionTo, sElementChild ) = 0 );
+                            if ( sChildElementType @= 'C');
+                                DimensionElementInsert ( pDimensionTo, '', sElementChild | ' Excl ' | sExcludedCompany, sChildElementType );
+                              else;
+                                DimensionElementInsert ( pDimensionTo, '', sElementChild, sChildElementType );
+                            endif;
+                        endif;
+                        
+                        if ( sChildElementType @= 'C');        
+                            DimensionElementComponentAdd ( pDimensionTo, sAltElementName | ' Excl ' | sExcludedCompany, sElementChild | ' Excl ' | sExcludedCompany, nWeight );
+                        else;
+                            DimensionElementComponentAdd ( pDimensionTo, sAltElementName | ' Excl ' | sExcludedCompany, sElementChild, nWeight );
+                        endif;
+    
+                      ### Current Company Structures ###
+                      # IF (  SUBST ( vElement, 4, 7 )  @= sLastPeriod );
+                      #    IF ( SUBST ( sElementChild, 4, 7 )  @= sLastPeriod );
+                      #       sElementChild = SUBST ( sElementChild, 12, 6);
+                      #    ENDIF;
+            
+                      # IF ( DIMIX ( pDimensionTo, sElementChild ) = 0 );
+                      #    DimensionElementInsert ( pDimensionTo, '', sElementChild, sChildElementType );
+                      # ENDIF;
+                      #    IF (  SUBST ( vElement, 12, 6) @= '' );
+                      #       DimensionElementComponentAdd ( pDimensionTo, 'Current Reporting Structure', sElementChild, nWeight );
+                      #    ELSE;
+                      #       DimensionElementComponentAdd ( pDimensionTo, SUBST ( vElement, 12, 6), sElementChild, nWeight );
+                      #    ENDIF;
+                      # ENDIF;
+#                 endif;
+                        elseif ( SUBST( sElementChild, LONG( sElementChild ) - LONG( sExcludedCompany )+1,LONG( sExcludedCompany ) ) @= sExcludedCompany );
+                            #Add element for element adjustments
+                            DimensionElementInsert ( pDimensionTo, '', sExcludedCompany | ' Elim Adj', 'N' );
+                            DimensionElementInsert ( pDimensionTo, '', vElement | ' Excl ' | sExcludedCompany, sElementType );
+                            DimensionElementComponentAdd ( pDimensionTo, vElement | ' Excl ' | sExcludedCompany, sExcludedCompany | ' Elim Adj', 1 );          
+                        endif;
+                        nElementChild = nElementChild + 1;
+                   END;
+            endif;
+    ENDIF;
+    
+    nExclComp = nExclComp + 1;
+
+end;
+
+#################################################################################################################################
+
+IF ( SUBST ( vElement, 1, 1 ) @= 'M' & SUBST ( vElement, 3, 3 ) @='00C' & DTYPE ( pDimensionFrom, vElement ) @= 'N' );
+   DimensionElementComponentAdd ( pDimensionTo, 'All Contingency Companies', vElement, 1 );
+ENDIF;
+
+
+#Alternative Consolidations
+IF ( sElementType @= 'C' );
+   sLookupElement = SUBST ( vElement, 12, 6 );
+   IF ( DIMIX ( pDimensionTo, sLookupElement ) = 0 );
+      sLookupElement = vElement;
+   ENDIF;
+ELSE;
+   sLookupElement = vElement;
+ENDIF;
+
+IF ( SubsetElementExists( pDimensionTo, sSubsetDestination, sLookupElement ) = 1);
+
+   sAltConsol = AttrS ( pDimensionTo, sLookupElement, 'Alt Consol' );
+   IF ( sAltConsol @<> '' );
+        if ( sElementType @= 'C' );
+          IF ( SUBST ( vElement, 12, 6 ) @= sLookupElement );
+             sAltConsolElem = SUBST ( vElement, 1, 11 )  | sAltConsol;
+          ELSE;
+             sAltConsolElem = vElement | '.' | sAltConsol;
+          ENDIF;
+
+          DimensionElementInsert ( pDimensionTo, '', sAltConsol, 'n' );
+          DimensionElementInsert ( pDimensionTo, '', sAltConsolElem, 'n' );
+          DimensionElementComponentAdd ( pDimensionTo, 'Additional Consolidations', sAltConsol, 0 );
+          DimensionElementComponentAdd ( pDimensionTo, sAltConsol, sAltConsolElem, 0 );
+          DimensionElementComponentAdd ( pDimensionTo, sAltConsolElem, vElement, 1 );
+
+        else;
+            IF ( SUBST ( vElement, 1, 1) @<> 'S');
+                nPeriodCount = 1;
+                nNoOfPeriods = ELCOMPN( pDimensionFrom, 'CT MN' );
+                while (nPeriodCount <= nNoOfPeriods);
+                    sPeriod = ELCOMP( pDimensionFrom, 'CT MN', nPeriodCount );
+                    sAltConsolElem = sPeriod | '.' | sAltConsol;
+                    
+                    nPeriodCount = nPeriodCount + 1; 
+    
+                    DimensionElementComponentAdd ( pDimensionTo, 'Additional Consolidations', sAltConsol, 0 );
+                    DimensionElementComponentAdd ( pDimensionTo, sAltConsol, sAltConsolElem, 0 );
+                    DimensionElementComponentAdd ( pDimensionTo, sAltConsolElem, vElement, 1 );
+                    
+                end;
+            endif;
+        endif;
+
+   ENDIF;
+
+   sAltConsol = AttrS ( pDimensionTo, sLookupElement, 'Alt Consol 2' );
+   IF ( sAltConsol @<> '' );
+        if ( sElementType @= 'C' );
+          IF ( SUBST ( vElement, 12, 6 ) @= sLookupElement );
+             sAltConsolElem = SUBST ( vElement, 1, 11 )  | sAltConsol;
+          ELSE;
+             sAltConsolElem = vElement | '.' | sAltConsol;
+          ENDIF;
+    
+          DimensionElementInsert ( pDimensionTo, '', sAltConsol, 'n' );
+          DimensionElementInsert ( pDimensionTo, '', sAltConsolElem, 'n' );
+          DimensionElementComponentAdd ( pDimensionTo, 'Additional Consolidations', sAltConsol, 0 );
+          DimensionElementComponentAdd ( pDimensionTo, sAltConsol, sAltConsolElem, 0 );
+          DimensionElementComponentAdd ( pDimensionTo, sAltConsolElem, vElement, 1 );
+        else;
+            IF ( SUBST ( vElement, 1, 1) @<> 'S');
+                nPeriodCount = 1;
+                nNoOfPeriods = ELCOMPN( pDimensionFrom, 'CT MN' );
+                while (nPeriodCount <= nNoOfPeriods);
+                    sPeriod = ELCOMP( pDimensionFrom, 'CT MN', nPeriodCount );
+                    sAltConsolElem = sPeriod | '.' | sAltConsol  ;
+                    
+                    DimensionElementComponentAdd ( pDimensionTo, 'Additional Consolidations', sAltConsol, 0 );
+                    DimensionElementComponentAdd ( pDimensionTo, sAltConsol, sAltConsolElem, 0 );
+                    DimensionElementComponentAdd ( pDimensionTo, sAltConsolElem, vElement, 1 );
+    
+                    nPeriodCount = nPeriodCount + 1; 
+                    
+                end;
+            endif;
+        endif;
+   ENDIF;
+    
+   sAltConsol = AttrS ( pDimensionTo, sLookupElement, 'Alt Consol 3' );
+   IF ( sAltConsol @<> '' );
+        if ( sElementType @= 'C' );
+          IF ( SUBST ( vElement, 12, 6 ) @= sLookupElement );
+             sAltConsolElem = SUBST ( vElement, 1, 11 )  | sAltConsol;
+          ELSE;
+             sAltConsolElem = vElement | '.' | sAltConsol;
+          ENDIF;
+    
+          DimensionElementInsert ( pDimensionTo, '', sAltConsol, 'n' );
+          DimensionElementInsert ( pDimensionTo, '', sAltConsolElem, 'n' );
+          DimensionElementComponentAdd ( pDimensionTo, 'Additional Consolidations', sAltConsol, 0 );
+          DimensionElementComponentAdd ( pDimensionTo, sAltConsol, sAltConsolElem, 0 );
+          DimensionElementComponentAdd ( pDimensionTo, sAltConsolElem, vElement, 1 );
+        else;
+            IF ( SUBST ( vElement, 1, 1) @<> 'S');
+                nPeriodCount = 1;
+                nNoOfPeriods = ELCOMPN( pDimensionFrom, 'CT MN' );
+                while (nPeriodCount <= nNoOfPeriods);
+                    sPeriod = ELCOMP( pDimensionFrom, 'CT MN', nPeriodCount );
+                    sAltConsolElem = sPeriod | '.' | sAltConsol  ;
+                    
+                    DimensionElementComponentAdd ( pDimensionTo, 'Additional Consolidations', sAltConsol, 0 );
+                    DimensionElementComponentAdd ( pDimensionTo, sAltConsol, sAltConsolElem, 0 );
+                    DimensionElementComponentAdd ( pDimensionTo, sAltConsolElem, vElement, 1 );
+    
+                    nPeriodCount = nPeriodCount + 1; 
+                    
+                end;
+            endif;
+        endif;
+   ENDIF;
+
+
+    
+ENDIF;
+
+
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+IF ( nMatchedAttributes = 0 ); Itemskip; ENDIF;
+
+IF ( SUBST ( vElement, 1, 2 ) @= 'CT' ); itemskip; ENDIF;
+
+nAttribute = 1;
+
+WHILE ( nAttribute <= SubsetGetSize( '}ElementAttributes_' | pDimensionFrom, sSubsetName ) );
+#WHILE ( nAttribute <= nMatchedAttributes );
+#WHILE ( nAttribute <= 1 );
+
+   sAttribute = SubsetGetElementName ( '}ElementAttributes_' | pDimensionFrom, sSubsetName, nAttribute );
+   sAttributeType = DTYPE ( '}ElementAttributes_' | pDimensionFrom, sAttribute );
+
+   IF ( sAttributeType @= 'AN' );
+      nAttributeValue = AttrN ( pDimensionFrom, vElement, sAttribute );
+      AttrPutN ( nAttributeValue, pDimensionTo, vElement, sAttribute );
+   ELSEIF ( sAttributeType @= 'AA' );
+      sAttributeValue = AttrS ( pDimensionFrom, vElement, sAttribute );
+      #Ignore alias for LE - need to resolve issue why these do not update.
+      IF ( DIMIX ( pDimensionTo, sAttributeValue ) = 0 & SUBST ( vElement, 1, 2 ) @<> 'LE' );
+         AttrPutS ( sAttributeValue, pDimensionTo, vElement, sAttribute ); 
+      ENDIF;
+   ELSE;
+      sAttributeValue = AttrS ( pDimensionFrom, vElement, sAttribute );
+      IF ( sAttributeValue @<> AttrS ( pDimensionTo, vElement, sAttribute ) );
+         AttrPutS ( sAttributeValue, pDimensionTo, vElement, sAttribute );
+      ENDIF;
+   ENDIF;
+   nAttribute = nAttribute + 1;
+END;
+
+
+#Last / Next Year Attributes
+IF ( vElement @<> 'AllCompanies' & SUBST ( vElement, 1, 2 ) @<> 'CT' & ELLEV ( pDimensionFrom, vElement ) > 0 );
+
+   sYear = SUBST ( vElement, 4, 4 );
+
+   sNextYear = STR ( NUMBR ( sYear ) + 1, 4, 0 );
+   sNextYearElement = SUBST ( vElement, 1, 3 ) | sNextYear | SUBST ( vElement, 8, 999 );
+   AttrPutS ( sNextYearElement , pDimensionTo, vElement, 'Next Year' );
+
+   sLastYear = STR ( NUMBR ( sYear ) - 1, 4, 0 );
+   sLastYearElement = SUBST ( vElement, 1, 3 ) | sLastYear | SUBST ( vElement, 8, 999 );
+   sLastYearEndElement = SUBST ( vElement, 1, 3 ) | sLastYear | '-12' | SUBST ( vElement, 11, 999 );
+   AttrPutS ( sLastYearElement , pDimensionTo, vElement, 'Last Year' );
+   AttrPutS ( sLastYearEndElement , pDimensionTo, vElement, 'Last Year End' );
+
+    #Add next / prior year attributes for prior hiercharcies with excluded elements
+    nExclComp = 1;
+    while ( nExclComp <= 2);
+    
+        if ( nExclComp = 1 );
+            sExcludedCompany = 'S5200';
+        else;
+            sExcludedCompany = 'M900C';
+        endif;
+        if ( dimix ( pDimensionTo, vElement | ' Excl ' | sExcludedCompany) <> 0 );
+            AttrPutS ( sNextYearElement | ' Excl ' | sExcludedCompany, pDimensionTo, vElement | ' Excl ' | sExcludedCompany, 'Next Year' );
+            AttrPutS ( sLastYearElement | ' Excl ' | sExcludedCompany, pDimensionTo, vElement | ' Excl ' | sExcludedCompany, 'Last Year' );
+            AttrPutS ( sLastYearEndElement | ' Excl ' | sExcludedCompany, pDimensionTo, vElement | ' Excl ' | sExcludedCompany, 'Last Year End' );
+        endif;
+        
+        nExclComp = nExclComp + 1;
+    end;
+  
+ELSE;
+
+   IF ( CellIsUpdateable ( '}ElementAttributes_' | pDimensionTo, vElement,  'Next Year' ) = 1 );
+      AttrPutS ( vElement, pDimensionTo, vElement, 'Next Year' );
+   ENDIF;
+
+   IF ( CellIsUpdateable ( '}ElementAttributes_' | pDimensionTo, vElement,  'Last Year' ) = 1 );
+      AttrPutS ( vElement, pDimensionTo, vElement, 'Last Year' );
+      AttrPutS ( vElement, pDimensionTo, vElement, 'Last Year End' );
+   ENDIF;
+
+   IF ( DIMIX ( pDimensionTo, vElement | 'FAP_' ) > 0 );
+      AttrPutS ( vElement | 'FAP_', pDimensionTo, vElement | 'FAP_' , 'Next Year' );
+      AttrPutS ( vElement | 'FAP_', pDimensionTo, vElement | 'FAP_' , 'Last Year' );
+      AttrPutS ( vElement | 'FAP_', pDimensionTo, vElement | 'FAP_' , 'Last Year End' );
+   ENDIF; 
+
+ENDIF;
+
+#Alternative Consolidations
+sElementType = DTYPE ( pDimensionFrom, vElement );
+IF ( sElementType @= 'C' );
+   sLookupElement = SUBST ( vElement, 12, 99 );
+   IF ( DIMIX ( pDimensionTo, sLookupElement ) = 0 );
+      sLookupElement = vElement;
+   ENDIF;
+ELSE;
+   sLookupElement = vElement;
+ENDIF;
+
+if ( SubsetElementExists( pDimensionTo, sSubsetDestination, sLookupElement ) = 1);
+
+   sAltConsol = AttrS ( pDimensionTo, sLookupElement, 'Alt Consol' );
+   if ( sAltConsol @<> '' );
+        if ( sElementType @= 'C' );
+            if ( SUBST ( vElement, 12, 6 ) @= sLookupElement );
+                sAltConsolElem = SUBST ( vElement, 1, 11 )  | sAltConsol;
+            else;
+                sAltConsolElem = vElement | '.' | sAltConsol;
+            endif;
+
+            if ( vElement @<> 'AllCompanies' & SUBST ( vElement, 1, 2 ) @<> 'CT' & ELLEV ( pDimensionFrom, vElement ) > 0 );
+
+                sYear = SUBST ( vElement, 4, 4 );
+
+                sNextYear = STR ( NUMBR ( sYear ) + 1, 4, 0 );
+                sNextYearElement = SUBST ( sAltConsolElem, 1, 3 ) | sNextYear | SUBST ( vElement, 8, 999 );
+                AttrPutS ( sNextYearElement , pDimensionTo, sAltConsolElem, 'Next Year' );
+
+                sLastYear = STR ( NUMBR ( sYear ) - 1, 4, 0 );
+                sLastYearElement = SUBST ( sAltConsolElem, 1, 3 ) | sLastYear | SUBST ( vElement, 8, 999 );
+                sLastYearEndElement = SUBST ( sAltConsolElem, 1, 3 ) | sLastYear | '-12' | SUBST ( vElement, 11, 999 );
+                AttrPutS ( sLastYearElement , pDimensionTo, sAltConsolElem, 'Last Year' );
+                AttrPutS ( sLastYearEndElement , pDimensionTo, sAltConsolElem, 'Last Year End' );
+            endif;
+
+            sAttribute = ATTRS( pDimensionTo, sAltConsol, 'EN_long' );
+            AttrPutS( sAttribute, pDimensionTo, sAltConsolElem, 'EN_long' );
+
+        endif;
+    endif;
+
+   sAltConsol = AttrS ( pDimensionTo, sLookupElement, 'Alt Consol 2' );
+   if ( sAltConsol @<> '' );
+        if ( sElementType @= 'C' );
+            if ( SUBST ( vElement, 12, 6 ) @= sLookupElement );
+                sAltConsolElem = SUBST ( vElement, 1, 11 )  | sAltConsol;
+            else;
+                sAltConsolElem = vElement | '.' | sAltConsol;
+            endif;
+
+            if ( vElement @<> 'AllCompanies' & SUBST ( vElement, 1, 2 ) @<> 'CT' & ELLEV ( pDimensionFrom, vElement ) > 0 );
+
+                sYear = SUBST ( vElement, 4, 4 );
+
+                sNextYear = STR ( NUMBR ( sYear ) + 1, 4, 0 );
+                sNextYearElement = SUBST ( sAltConsolElem, 1, 3 ) | sNextYear | SUBST ( vElement, 8, 999 );
+                AttrPutS ( sNextYearElement , pDimensionTo, sAltConsolElem, 'Next Year' );
+
+                sLastYear = STR ( NUMBR ( sYear ) - 1, 4, 0 );
+                sLastYearElement = SUBST ( sAltConsolElem, 1, 3 ) | sLastYear | SUBST ( vElement, 8, 999 );
+                sLastYearEndElement = SUBST ( sAltConsolElem, 1, 3 ) | sLastYear | '-12' | SUBST ( vElement, 11, 999 );
+                AttrPutS ( sLastYearElement , pDimensionTo, sAltConsolElem, 'Last Year' );
+                AttrPutS ( sLastYearEndElement , pDimensionTo, sAltConsolElem, 'Last Year End' );
+            endif;
+
+            sAttribute = ATTRS( pDimensionTo, sAltConsol, 'EN_long' );
+            AttrPutS( sAttribute, pDimensionTo, sAltConsolElem, 'EN_long' );
+
+        endif;
+    endif;
+
+   sAltConsol = AttrS ( pDimensionTo, sLookupElement, 'Alt Consol 3' );
+   if ( sAltConsol @<> '' );
+        if ( sElementType @= 'C' );
+            if ( SUBST ( vElement, 12, 6 ) @= sLookupElement );
+                sAltConsolElem = SUBST ( vElement, 1, 11 )  | sAltConsol;
+            else;
+                sAltConsolElem = vElement | '.' | sAltConsol;
+            endif;
+
+            if ( vElement @<> 'AllCompanies' & SUBST ( vElement, 1, 2 ) @<> 'CT' & ELLEV ( pDimensionFrom, vElement ) > 0 );
+
+                sYear = SUBST ( vElement, 4, 4 );
+
+                sNextYear = STR ( NUMBR ( sYear ) + 1, 4, 0 );
+                sNextYearElement = SUBST ( sAltConsolElem, 1, 3 ) | sNextYear | SUBST ( vElement, 8, 999 );
+                AttrPutS ( sNextYearElement , pDimensionTo, sAltConsolElem, 'Next Year' );
+
+                sLastYear = STR ( NUMBR ( sYear ) - 1, 4, 0 );
+                sLastYearElement = SUBST ( sAltConsolElem, 1, 3 ) | sLastYear | SUBST ( vElement, 8, 999 );
+                sLastYearEndElement = SUBST ( sAltConsolElem, 1, 3 ) | sLastYear | '-12' | SUBST ( vElement, 11, 999 );
+                AttrPutS ( sLastYearElement , pDimensionTo, sAltConsolElem, 'Last Year' );
+                AttrPutS ( sLastYearEndElement , pDimensionTo, sAltConsolElem, 'Last Year End' );
+            endif;
+
+            sAttribute = ATTRS( pDimensionTo, sAltConsol, 'EN_long' );
+            AttrPutS( sAttribute, pDimensionTo, sAltConsolElem, 'EN_long' );
+
+        endif;
+    endif;    
+
+endif;
+
+#Copy Long name to En long for consolidations
+if ( ELLEV ( pDimensionTo, vElement ) > 0 );
+    sAttributeValue = SUBST ( AttrS ( pDimensionFrom, vElement, 'Long Name' ), LONG ( vElement ) + 4, 999 );
+    AttrPutS ( sAttributeValue, pDimensionTo, vElement, 'EN_long' );
+endif;
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+BatchUpdateFinishWait (0);
+
+ExecuteProcess( 'Dimension Company Region Hierarchy');
+
+
+
+#endregion

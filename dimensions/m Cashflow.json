@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Cashflow",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Cashflow')/Hierarchies('m Cashflow')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Cashflow.hierarchies/m Cashflow.json"
+	]
+}

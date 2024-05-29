@@ -1,0 +1,160 @@
+{
+	"@type":"Process",
+	"Name":"FAPMonthlyCompanyDetails_UpdateData test",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"FAPMonthlyCompanyDetails_UpdateData test.ti",
+	"UIData":"CubeAction=1500€DataAction=1503€CubeName=FAPMonthlyCompanyDetails€CubeLogChanges=0€MeasuresDim=F_Measures€MeasuresDimAction=AsIs€MeasuresDimElemSortType=ByInput€MeasuresDimElemSortSense=ASCENDING€_ParameterConstraints=e30=€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=825€VarDimension=F_PeriodMonthly€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_ActualityMonthly€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Company€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Currency€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Transaction Currency€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Account€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Mgmt Analysis€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING",
+		"VarType=32€ColType=825€VarDimension=F_Counter Dimension€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING",
+		"VarType=32€ColType=825€VarDimension=F_Dim 2€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING",
+		"VarType=32€ColType=825€VarDimension=F_Consolidation Perspective€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Closing Version€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Contribution Version€VarDimAction=AsIs€VarElemType=Numeric€ VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Origin Company€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Counter Company€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=32€ColType=825€VarDimension=F_Journal Number€VarDimAction=AsIs€VarElemType=Numeric€VarDimElemSortType=ByInput€VarDimElemSortSense=ASCENDING€",
+		"VarType=33€ColType=826€MeasuresElemVar=YTD€MeasuresElemVarType=Numeric€",
+		"VarType=33€ColType=826€MeasuresElemVar=Transaction YTD€MeasuresElemVarType=Numeric€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"wHL7KzWqsa>bL5dxd=YU=Eeu=ieTeXH}gm51qK\\u_v]YK}q5cqRYxP4e9nijjn@[j0i4cVlG;TVDt0FAbvkFC`DCghsYwe7AE9<2V^2c?pyUC_igV4Lz>selyTWqaKTuYiqk[>4A<QCx6KV{8zrW_`A=ZkmB1a=?IFd?Vo`coPO]84OJk?9>4D^vf7EFbDBZV20RfP3n",
+		"query":"SELECT period, actuality, company, currency, transaction_currency, account, dim1,counter_dimension,dim2, cons_type, clos_ver, cont_ver, origin_company, ico_counter_company, journal_number, ytd, transaction_ytd  FROM f_md_FAP order by sequenceno",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"period",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"actuality",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"company",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"currency",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"transaction_currency",
+			"Type":"String",
+			"Position":5,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"account",
+			"Type":"String",
+			"Position":6,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"dim1",
+			"Type":"String",
+			"Position":7,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"counter_dimension",
+			"Type":"String",
+			"Position":8,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"dim2",
+			"Type":"String",
+			"Position":9,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"cons_type",
+			"Type":"String",
+			"Position":10,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"clos_ver",
+			"Type":"String",
+			"Position":11,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"cont_ver",
+			"Type":"String",
+			"Position":12,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"origin_company",
+			"Type":"String",
+			"Position":13,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"ico_counter_company",
+			"Type":"String",
+			"Position":14,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"journal_number",
+			"Type":"String",
+			"Position":15,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"ytd",
+			"Type":"Numeric",
+			"Position":16,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"transaction_ytd",
+			"Type":"Numeric",
+			"Position":17,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m KPI Division Mapping",
+	"Elements":
+	[
+		{
+			"Name":"Responsible",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

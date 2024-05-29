@@ -1,0 +1,21 @@
+{
+	"@type":"Cube",
+	"Name":"zManagement Analysis Mapping",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Mgmt Analysis')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('m zManagement Analysis Mapping')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"zManagement Analysis Mapping.views/Default.json",
+		"zManagement Analysis Mapping.views/MDX Test.json"
+	]
+}

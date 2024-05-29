@@ -1,0 +1,45 @@
+{
+	"@type":"Process",
+	"Name":"Cube }ClientGroups Copy Security",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Cube }ClientGroups Copy Security.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForClient":"}ClientGroups",
+		"dataSourceNameForServer":"}ClientGroups",
+		"view":"zWhole Cube"
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"zClient",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vGroup",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"Value",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

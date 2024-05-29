@@ -1,0 +1,257 @@
+{
+	"@type":"Hierarchy",
+	"Name":"CF Account",
+	"Elements":
+	[
+		{
+			"Name":"Profit before tax",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Depreciation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Ebitda",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Loss / (profit) on disposal of fixed assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Finance (income) / costs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Share of joint ventures",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Movement in working capital",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Movement in stock",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Movement in debtors",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Movement in intercompany debtors",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Movement in creditors",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Movement in intercompany creditors",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DB pensions paid",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Operating cash flow",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Tax paid",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dividends from joint ventures",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Interest paid net",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Asset disposal proceeds",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Intercompany loan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dividends",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net movement",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Opening net cash/ (borrowings)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Closing cash",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash conversion",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net working capital movement (Excl Interco)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ROU Lease payments (IFRS 16)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other (please specify)",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Amortisation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Ebitda",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Loss / (profit) on disposal of fixed assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Finance (income) / costs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Share of joint ventures",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Movement in working capital",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Movement in stock",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Movement in debtors",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Movement in intercompany debtors",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Movement in creditors",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"Movement in intercompany creditors",
+			"Weight":1
+		},
+		{
+			"ParentName":"Operating cash flow",
+			"ComponentName":"DB pensions paid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Operating cash flow",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Tax paid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Dividends from joint ventures",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Interest paid net",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Capex",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"ROU Lease payments (IFRS 16)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Asset disposal proceeds",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Intercompany loan",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Dividends",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net movement",
+			"ComponentName":"Other (please specify)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Closing cash",
+			"ComponentName":"Net movement",
+			"Weight":1
+		},
+		{
+			"ParentName":"Closing cash",
+			"ComponentName":"Opening net cash/ (borrowings)",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash conversion",
+			"ComponentName":"Ebitda",
+			"Weight":1
+		},
+		{
+			"ParentName":"Cash conversion",
+			"ComponentName":"Operating cash flow",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

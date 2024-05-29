@@ -1,0 +1,135 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Asset Category",
+	"Elements":
+	[
+		{
+			"Name":"All Asset Categories",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Vessels",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Refit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ROU Refit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freehold Prop",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Lease Prop",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Plant & Mach",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Office Equip",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Motor Vehs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fix&Fits Cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Comp Equip",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AssetsInCons",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other TanFA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unallocated",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Vessels",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Refit",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Freehold Prop",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Lease Prop",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Plant & Mach",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Office Equip",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Motor Vehs",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Fix&Fits Cost",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Comp Equip",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"AssetsInCons",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Other TanFA",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"Unallocated",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Categories",
+			"ComponentName":"ROU Refit",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Asset Category.subsets/Asset Category List.json"
+	]
+}

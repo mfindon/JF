@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"F_Journal Number",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('F_Journal Number')/Hierarchies('F_Journal Number')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"F_Journal Number.hierarchies/F_Journal Number.json"
+	]
+}

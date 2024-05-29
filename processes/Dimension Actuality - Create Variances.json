@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Actuality - Create Variances",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Actuality - Create Variances.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

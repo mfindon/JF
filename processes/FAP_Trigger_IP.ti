@@ -1,0 +1,41 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+sDataSourceConfigCube = 'FAP Config' ;
+
+sODBC = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP ODBC Connection Name' );
+sUserId = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Username' );
+sPasswd = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Password'  );
+sDataMart = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP Datamart' );
+
+
+sSQL = 'UPDATE [NRTR_DATAMART] set status = 20 where name = ''' | sDataMart | '''' ;
+
+LogOutput ( 'INFO', 'Triggering IP for datamart ' | sDataMart ) ;
+
+ODBCOpen ( sODBC, sUserId, sPasswd ) ;
+
+ODBCOutput ( sODBC, sSQL ) ;
+
+ODBCClose ( sODBC ) ;
+
+ExecuteProcess ( 'FAP Status Update' );
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

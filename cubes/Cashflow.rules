@@ -1,0 +1,23 @@
+
+
+['Profit before tax'] = DB('Reporting','@Aggr_@TOT','@TOT',!Currency,'CL ALL','CO ALL','Operating profit + FX',!Actuality,DB('Company Date Lookup',!Division,!Period,'Current Period'),!Period,!m Cashflow );
+['Depreciation'] = DB('Reporting','@Aggr_@TOT','@TOT',!Currency,'CL ALL','CO ALL','DEPN',!Actuality,DB('Company Date Lookup',!Division,!Period,'Current Period'),!Period,!m Cashflow );
+['Amortisation'] = DB('Reporting','@Aggr_@TOT','@TOT',!Currency,'CL ALL','CO ALL','AMORT',!Actuality,DB('Company Date Lookup',!Division,!Period,'Current Period'),!Period,!m Cashflow );
+['EBITDA'] = DB('Reporting','@Aggr_@TOT','@TOT',!Currency,'CL ALL','CO ALL','EBITDA',!Actuality,DB('Company Date Lookup',!Division,!Period,'Current Period'),!Period,!m Cashflow );
+
+['Cash conversion'] = ['Operating cash flow'] \ ['EBITDA'] ;
+
+#K / M conversion
+['YTD (k)'] = ['YTD'] \ 1000;
+['Monthly (k)'] = ['Monthly'] \ 1000;
+['YTD (m)'] = ['YTD'] \ 1000000;
+['Monthly (m)'] = ['Monthly'] \ 1000000;
+
+['Monthly'] = N: IF ( SUBST ( !Period, 5, 2 ) @= '01', ['YTD'] , CONTINUE ) ;
+['Monthly'] = N: ['YTD']
+- DB('Cashflow',!Currency,!Actuality,!Division,ATTRS( 'Period', !Period, '-1' ),!CF Account,'YTD' );
+
+Feeders;
+
+['YTD'] => ['Monthly'] ;
+['YTD'] => DB( IF ( SUBST ( !Period, 5, 2 ) @<> '12', 'Cashflow', '' ),!Currency,!Actuality,!Division,ATTRS( 'Period', !Period, '+1' ),!CF Account,'YTD' );

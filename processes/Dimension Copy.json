@@ -1,0 +1,43 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Copy",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Copy.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForClient":"Account",
+		"dataSourceNameForServer":"Account",
+		"subset":"All"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimensionFrom",
+			"Prompt":"Source dimension",
+			"Value":"F_Mgmt Analysis",
+			"Type":"String"
+		},
+		{
+			"Name":"pDimensionTo",
+			"Prompt":"Target dimension",
+			"Value":"Mgmt Analysis",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vElement",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

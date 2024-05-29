@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Capex Summary",
+	"Elements":
+	[
+		{
+			"Name":"Description",
+			"Type":"String"
+		},
+		{
+			"Name":"Asset Category",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex Spend to Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex Spend",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"FAP Status",
+	"Rules@Code.link":"FAP Status.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('m FAP Status')"
+		},
+		{
+			"@id":"Dimensions('FAP Status Accounts')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"FAP Status.views/Default.json"
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"@type":"Cube",
+	"Name":"KPI Division Mapping",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Division')"
+		},
+		{
+			"@id":"Dimensions('KPI')"
+		},
+		{
+			"@id":"Dimensions('m KPI Division Mapping')"
+		}
+	],
+	"Views@Code.links":[]
+}

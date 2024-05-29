@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Company Date LookUp",
+	"Elements":
+	[
+		{
+			"Name":"Current Period",
+			"Type":"String"
+		},
+		{
+			"Name":"Prior Year End",
+			"Type":"String"
+		},
+		{
+			"Name":"Prior Year",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

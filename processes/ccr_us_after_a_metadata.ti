@@ -1,0 +1,48 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+Synchronized('FAP');
+
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Mgmt Analysis', 'pDimensionTo', 'Mgmt Analysis' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Dim 2', 'pDimensionTo', 'Currency 2' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Closing Version', 'pDimensionTo', 'Closing Version' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Currency', 'pDimensionTo', 'Currency' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Consolidation Perspective', 'pDimensionTo', 'Consolidation Perspective' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Contribution Version', 'pDimensionTo', 'Contribution Version' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_Account', 'pDimensionTo', 'Account' );
+ExecuteProcess ( 'Dimension Copy', 'pDimensionFrom', 'F_ActualityMonthly', 'pDimensionTo', 'Actuality' );
+
+ExecuteProcess ( 'Dimension Company Copy', 'pDimensionTo', 'Company' );
+ExecuteProcess ( 'Dimension Company Import Security','pDimensionFrom', 'F_Company', 'pDimensionTo', 'Company' );
+
+ExecuteProcess ( 'Dimension Division' );
+
+
+
+ExecuteProcess ( 'Cube }ClientGroups Copy Security');
+
+CellPutS ( TIMST ( NOW(), '\Y-\m-\d \h:\i:\s' ) , 'FAP Status', 'Value', 'Last Structure Update' );
+
+
+
+#Send Email
+sRecipient = CellGetS ( 'zControl',  'Email Alert Address', 'Value' );
+RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Structure Update Completed', 'pBody', 'A structure update has finished' );
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

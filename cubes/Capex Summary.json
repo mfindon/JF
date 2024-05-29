@@ -1,0 +1,36 @@
+{
+	"@type":"Cube",
+	"Name":"Capex Summary",
+	"Rules@Code.link":"Capex Summary.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Asset Category')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Capex Input Rows')"
+		},
+		{
+			"@id":"Dimensions('m Capex Summary')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Capex Summary.views/Actual Summary Report.json",
+		"Capex Summary.views/Energy Summary Report.json",
+		"Capex Summary.views/Summary Report.json",
+		"Capex Summary.views/Summary Report with Description.json"
+	]
+}

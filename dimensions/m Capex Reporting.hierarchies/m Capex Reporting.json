@@ -1,0 +1,36 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Capex Reporting",
+	"Elements":
+	[
+		{
+			"Name":"Description",
+			"Type":"String"
+		},
+		{
+			"Name":"Asset Category",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex Spend to Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex Spend",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Committed",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Approved",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Impact on EBITDA",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

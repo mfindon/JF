@@ -1,0 +1,56 @@
+{
+	"@type":"Hierarchy",
+	"Name":"FAP Status Accounts",
+	"Elements":
+	[
+		{
+			"Name":"Last Sequence No",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Status",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Structure Status",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FAP Status",
+			"Type":"String"
+		},
+		{
+			"Name":"FAP Status Changed",
+			"Type":"String"
+		},
+		{
+			"Name":"FAP Status Updated",
+			"Type":"String"
+		},
+		{
+			"Name":"Last Trickle Feed Update",
+			"Type":"String"
+		},
+		{
+			"Name":"Last Initial Publish",
+			"Type":"String"
+		},
+		{
+			"Name":"Last Structure Update",
+			"Type":"String"
+		},
+		{
+			"Name":"Actual Actualities",
+			"Type":"String"
+		},
+		{
+			"Name":"Latest Actual Period",
+			"Type":"String"
+		},
+		{
+			"Name":"Latest Actual Period Read Only",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

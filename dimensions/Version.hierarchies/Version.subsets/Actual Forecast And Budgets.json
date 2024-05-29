@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Actual Forecast And Budgets",
+	"Expression":"{[Version].[Version].[Actual],EXCEPT(DRILLDOWNMEMBER({[Version].[Version].[All Forecasts]} , {[Version].[Version].[All Forecasts]} , RECURSIVE) , {[Version].[Version].[All Forecasts]}),EXCEPT(DRILLDOWNMEMBER({[Version].[Version].[All Budgets]} , {[Version].[Version].[All Budgets]} , RECURSIVE) , {[Version].[Version].[All Budgets]})}"
+}

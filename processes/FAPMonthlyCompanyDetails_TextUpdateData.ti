@@ -1,0 +1,23 @@
+#region Prolog
+#****Begin: Generated Statements***
+OldCubeLogChanges = CUBEGETLOGCHANGES('FAPMonthlyCompanyDetails');
+CUBESETLOGCHANGES('FAPMonthlyCompanyDetails', 0);
+#****End: Generated Statements****
+#endregion
+#region Metadata
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+#****Begin: Generated Statements***
+
+CellPutS(comment,'FAPMonthlyCompanyDetails',dim1,counter_dimension,dim2,currency,transaction_currency,cons_type,clos_ver,cont_ver,account,actuality,origin_company,ico_counter_company,company,journal_number,period,'Comment');
+CellPutS(transaction_comment,'FAPMonthlyCompanyDetails',dim1,counter_dimension,dim2,currency,transaction_currency,cons_type,clos_ver,cont_ver,account,actuality,origin_company,ico_counter_company,company,journal_number,period,'Transaction Comment');
+CellPutN(comment_count,'FAPMonthlyCompanyDetails',dim1,counter_dimension,dim2,currency,transaction_currency,cons_type,clos_ver,cont_ver,account,actuality,origin_company,ico_counter_company,company,journal_number,period,'Comment Count');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+#****Begin: Generated Statements***
+CUBESETLOGCHANGES('FAPMonthlyCompanyDetails', OldCubeLogChanges);
+#****End: Generated Statements****
+#endregion

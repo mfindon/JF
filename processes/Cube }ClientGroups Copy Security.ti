@@ -1,0 +1,69 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+Synchronized('FAP');
+
+####################################################################
+#
+# 
+#####################################################################
+
+sSourceCube = '}ClientGroups';
+sSourceView = sSourceCube | ' '|  GetProcessName() | '_Source ' | numberToString ( RAND () ) ;
+sSourceSub  = sSourceView;
+
+sTargetCube =  '}ClientGroups';
+sTargetView = sTargetCube | ' '|  GetProcessName() | '_Target' | numberToString ( RAND () )  ;
+sTargetSub  = sTargetView;
+
+nTemp = 1;
+
+sPrefix = 'FAP_';
+
+###################### Source View ######################
+ViewCreate ( sSourceCube, sSourceView, nTemp );
+
+SUBSETCREATEBYMDX( sSourceSub , '{ EXCEPT ( {TM1SUBSETALL( [}Groups] )}, {TM1FILTERBYPATTERN( {TM1SUBSETALL( [}Groups] )}, "FAP*")} )}', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, '}Groups', sSourceSub );
+
+
+DatasourceCubeview = sSourceView;
+
+## Skip zero values but include consolidations and calculations
+ViewExtractSkipZeroesSet ( sSourceCube, sSourceView, 0);
+ViewExtractSkipCalcsSet ( sSourceCube, sSourceView, 1);
+ViewExtractSkipRuleValuesSet ( sSourceCube, sSourceView, 0);
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+if ( DimensionElementExists( '}Groups', sPrefix | vGroup ) = 0);
+  AddGroup( sPrefix | vGroup );
+endif;
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+sNewGroup = 'FAP_' | vGroup;
+
+IF ( DIMIX ( '}Groups', sNewGroup ) = 0 );  Itemskip; ENDIF;
+
+IF( CellIsUpdateable ( sTargetCube, zClient, sNewGroup  ) = 1);
+   CellPutS ( IF ( Value @= '', '', sNewGroup ),  sTargetCube, zClient, sNewGroup );
+ENDIF;
+#endregion
+#region Epilog
+
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

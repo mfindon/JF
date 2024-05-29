@@ -1,0 +1,8 @@
+Skipcheck;
+
+['GBP' ] = N: ['LC'] \  DB('FX Rates','AC', DB('}ElementAttributes_Company',!Company,'Local Currency'), !Period,'Rate');
+['GBP' ] = S: DB('Order Book','LC',!Company,!Period,!Order Book Row,!m Order Book);
+
+FEEDERS;
+
+['LC' ] => ['GBP' ];

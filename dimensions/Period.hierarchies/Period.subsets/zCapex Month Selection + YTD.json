@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zCapex Month Selection + YTD",
+	"Expression":"{STRTOMEMBER(\"[Period].[\" + [zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Capex Month],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) + \"]\"),STRTOMEMBER(\"[Period].[\" + [zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Capex Month],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) + \" YTD\" + \"]\")}"
+}

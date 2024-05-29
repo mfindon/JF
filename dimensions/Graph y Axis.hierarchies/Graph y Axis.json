@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Graph y Axis",
+	"Elements":
+	[
+		{
+			"Name":"OP",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

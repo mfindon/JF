@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zPickList",
+	"Expression":"{TM1SUBSETALL( [Account] )}"
+}

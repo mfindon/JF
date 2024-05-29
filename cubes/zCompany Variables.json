@@ -1,0 +1,21 @@
+{
+	"@type":"Cube",
+	"Name":"zCompany Variables",
+	"Rules@Code.link":"zCompany Variables.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m zCompany Variables')"
+		}
+	],
+	"Views@Code.links":[]
+}

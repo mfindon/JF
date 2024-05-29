@@ -1,0 +1,8 @@
+SKIPCHECK;
+
+['PY AC'] = DB( 'Reporting Balance Sheet Adjustments', 'AC', !Currency, !Account, !Company, STR ( NUMBR ( SUBST ( !Period, 1, 4 ) )-1, 4, 0 ) | SUBST ( !Period, 5, 2 ), !'m Reporting Balance Sheet Adjustments'  );
+
+
+FEEDERS;
+
+['All Adjustments'] => DB('Reporting','@TOT','@TOT',!Currency,'REPOBT','Adjustments',!Account,!Actuality,!Company,!Period,'YTD');

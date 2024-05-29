@@ -1,0 +1,42 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Reporting Adjustment",
+	"Elements":
+	[
+		{
+			"Name":"Total Adjustments",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Adjustment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustments",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Elimination Adjustment",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Elimination Adjustment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Adjustments",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Adjustment",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

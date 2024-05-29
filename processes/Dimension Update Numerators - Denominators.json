@@ -1,0 +1,29 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Update Numerators - Denominators",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Update Numerators - Denominators.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForClient":"KPI",
+		"dataSourceNameForServer":"KPI",
+		"subset":"All"
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vKPI",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

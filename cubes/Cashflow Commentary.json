@@ -1,0 +1,26 @@
+{
+	"@type":"Cube",
+	"Name":"Cashflow Commentary",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Division')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('CF Account')"
+		},
+		{
+			"@id":"Dimensions('m Cashflow')"
+		},
+		{
+			"@id":"Dimensions('m Commentary')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Cashflow Commentary.views/Default.json"
+	]
+}

@@ -1,0 +1,424 @@
+SKIPCHECK;
+
+
+#Stop Month to date calculating for periods that are not open in FAP
+['Monthly', 'AC' ] = N: IF( !Period @> db( 'FAP Status', 'Value', 'Latest Actual Period' ), 0, CONTINUE );
+#['Monthly', 'AC' ] = N: IF( !Period @> db('Admin', 'Current Month', 'Input' ), 0, CONTINUE );
+
+
+# Average Capital Employed 2
+[{'Average Capital Employed - Statutory','Average capital employed 2'},'m Reporting':'YTD'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+      (DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Capital Employed', !Actuality, !Company, !Period, 'YTD' ) +
+      DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'P750100', !Actuality, !Company, !Period, 'YTD' ) +
+
+      DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Capital Employed', 'AC', DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ), STR ( NUMBR ( SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | SUBST ( !Period, 5, 2 ), 'YTD' ) +
+      DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'P750100', 'AC', DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ), STR ( NUMBR ( SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | SUBST ( !Period, 5, 2 ), 'YTD' ) )
+      \ 2,
+#	['Account':'Account':'Capital Employed','LTM'] \ 12,
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+['EBITDA', { 'YTD', 'Monthly' }] =
+    DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'P600500', !Actuality, !Company, !Period, 'LTM'  ) +
+    ['P604500', 'YTD'] +
+    DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'DEPN', !Actuality, !Company, !Period, 'LTM'  ) +
+    DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'AMORT', !Actuality, !Company, !Period, 'LTM'  ) -
+    DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B111220015', !Actuality, !Company, !Period, 'LTM'  );
+
+#Non-Underlying adjustments
+#[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','P800100','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period,'Tax Movement','YTD');
+#[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','P750400','S100GA','YTD' ] = N: -DB('Reporting Input',!Actuality,!Period,'Tax Movement','YTD') + DB('Reporting Input',!Actuality,!Period | 'YTD','Other','Monthly');
+
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'REPOBT','BASEET','P800100','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period,'Tax Movement','YTD');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'REPOBT','BASEET','P750400','S100GA','YTD' ] = N: -DB('Reporting Input',!Actuality,!Period,'Tax Movement','YTD');
+
+#+ DB('Reporting Input',!Actuality,!Period | 'YTD','Other','Monthly');
+#[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','P750400','S100GA','YTD' ] = N: DB('Reporting Input',!Actuality,!Period | 'YTD','Tax','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Amortisation of acquired intangibles','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Amortisation of acquired intangibles','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Impairment Charges / (Reversals)','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Impairment Charges / (Reversals)','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Refinancing','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Refinancing','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Litigation',                      'S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Litigation','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Restructuring Charges',           'S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Restructuring Charges','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Business Disposals & assets',     'S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Business Disposals & assets','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'Non-underlying','BASEET','Other',                            'S100GA','YTD' ] = N: DB('Reporting Input',!Actuality,!Period | 'YTD','Other','Monthly');
+
+#Manual
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'REPOBT','BASEET','Operating Cash Flow','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Operating Cash Flow','Monthly');
+[ 'Mgmt Analysis':'@TOT', 'Currency 2':'@TOT', 'Currency':'GBP','Closing Version':'REPOBT','BASEET','Operating Cash Flow Conversion (%)','S100GA','YTD' ] = N:  DB('Reporting Input',!Actuality,!Period | 'YTD','Operating Cash Flow Conversion (%)','Monthly');
+
+
+#'REPOBT'
+
+#Consolitdation is Different for Acutuals and Budget
+['Account':'Trade Creditors and Accruals', {'AC','PY AC'} ] = ['Account':'B301000'] + ['Account':'Accruals (Excluding non purchase ledger)'];
+['Account':'Trade Creditors and Accruals' ] = ['Account':'B301000'] + ['Account':'Accruals (Excluding non purchase ledger)'] + ['B303130'];
+
+# Last 12 months (prior year is always actual)
+['m Reporting':'LTM'] =
+    IF ( ELLEV ( 'Period', !Period) >  0,
+        DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, !Actuality, !Company, ELCOMP( 'Period', !Period, ELCOMPN( 'Period', !Period ) ), !'m Reporting' ),
+        CONTINUE
+        );
+['m Reporting':'LTM'] =
+      DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, !Actuality, !Company, !Period | 'YTD', 'Monthly' ) +
+      DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, 'AC', DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ), STR ( NUMBR ( SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | SUBST ( !Period, 5, 2 ) | ' YTG', 'Monthly' );
+
+#Account that should not convert to K' or M's
+[{'Creditor days', 'Stock days', 'Stockturn (Days)', 'DSO including accrued income', 'Return on NOA', 'NOA Turn YTD (Days)', 'ROCE', 'Underlying earnings per share - Basic (pence)','Underlying earnings per share - Diluted (pence)' }, 'YTD (k)' ] = ['YTD'];
+[{'Creditor days', 'Stock days', 'Stockturn (Days)', 'DSO including accrued income', 'Return on NOA', 'NOA Turn YTD (Days)', 'ROCE', 'Underlying earnings per share - Basic (pence)','Underlying earnings per share - Diluted (pence)' }, 'QTD (k)' ] = ['QTD'];
+[{'Creditor days', 'Stock days', 'Stockturn (Days)', 'DSO including accrued income', 'Return on NOA', 'NOA Turn YTD (Days)', 'ROCE', 'Underlying earnings per share - Basic (pence)','Underlying earnings per share - Diluted (pence)' }, 'Monthly (k)' ] = ['Monthly'];
+[{'Creditor days', 'Stock days', 'Stockturn (Days)', 'DSO including accrued income', 'Return on NOA', 'NOA Turn YTD (Days)', 'ROCE', 'Underlying earnings per share - Basic (pence)','Underlying earnings per share - Diluted (pence)' }, 'YTD (m)' ] = ['YTD'];
+[{'Creditor days', 'Stock days', 'Stockturn (Days)', 'DSO including accrued income', 'Return on NOA', 'NOA Turn YTD (Days)', 'ROCE', 'Underlying earnings per share - Basic (pence)','Underlying earnings per share - Diluted (pence)' }, 'QTD (m)' ] = ['YTD'];
+[{'Creditor days', 'Stock days', 'Stockturn (Days)', 'DSO including accrued income', 'Return on NOA', 'NOA Turn YTD (Days)', 'ROCE', 'Underlying earnings per share - Basic (pence)','Underlying earnings per share - Diluted (pence)' }, 'Monthly (m)' ] = ['Monthly'];
+
+#Adjustments
+['Mgmt Analysis':'@TOT','Currency 2':'@TOT','REPOBT','Adjustments','YTD'] = N:
+  IF ( SUBST( !Account, 1, 1 ) @= 'B' % ELISANC( 'Account', 'Manual Adjustment Accounts', !Account ) = 1,
+    -DB('Reporting Balance Sheet Adjustments', !Actuality, !Currency, !Account, !Company, !Period, 'All Adjustments' ),
+    CONTINUE );
+# ['Mgmt Analysis':'@TOT','Currency 2':'@TOT','REPOBT','Adjustments','YTD'] = N: DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, !Actuality, !Company, !Period | 'YTD', 'Monthly'  );
+
+['Mgmt Analysis':'@TOT','Currency 2':'@TOT','REPOBT','Adjustments','YTD'] = N:
+  IF ( SUBST( !Account, 1, 1 ) @= 'B' % ELISANC( 'Account', 'Manual Adjustment Accounts', !Account ) = 1,
+    stet,
+    DB('Reporting Adjustment',!Actuality,!Currency,!Account,!Company,!Period | 'YTD','Total Adjustments')
+  );
+
+#KPIs not in Controller
+['Operating profit %'] =  ['P600500'] \ ['P100000'] ;
+
+['Operating margin %'] = ['Operating profit + FX'] \ ['P100000'];
+['Company Operating Margin %'] = ['P600000'] \ ['P100000'];
+
+['EBITDA Margin %'] = ['Account':'EBITDA'] \ ['Account':'P100000'];
+
+['Tax rate %'] = -['P800000'] \ ['P700000'];
+
+
+['Account':'NOA Turn YTD (Days)'] =
+    -DB ('Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'P100000', !Actuality, !Company, !Period, 'LTM' )
+    #-['Account':'P100000']
+    #\ ['Account':'B800000']
+    \ ['Account':'Account':'Average Capital Employed'];
+
+['Account':'Gearing'] = ['Account':'Total debt'] \ ['Account':'Total shareholder equity'];
+
+['Tax at underlying effective rate'] = N: -['Underlying operating profit'] * db('Reporting Balance Sheet Adjustments', !Actuality, 'LC', 'Underlying effective tax rate %', 'S100GA', !Period, 'Other' );
+['Underlying effective tax rate %'] = db('Reporting Balance Sheet Adjustments', !Actuality, 'LC', 'Underlying effective tax rate %', 'S100GA', !Period, 'Other' );
+#-  ['P750300']
+
+[ {'Monthly', 'QTD' }, 'Underlying earnings per share - Basic (pence)' ] = ( ['P950000']  ) \ DB('Reporting Input',!Actuality,!Period,'Shares - Current Number of Shares for James Fisher PLC Basic', 'Monthly') * 100;
+[ {'Monthly', 'QTD' }, 'Underlying earnings per share - Diluted (pence)' ] = ( ['P950000'] ) \ DB('Reporting Input',!Actuality,!Period,'Shares - Diluted Number of Shares', 'Monthly' ) * 100;
+
+[ {'YTD'}, 'Underlying earnings per share - Basic (pence)' ] = ( ['P950000']  ) \ DB('Reporting Input',!Actuality,!Period,'Shares - Current Number of Shares for James Fisher PLC Basic', 'YTD') * 100;
+[ {'YTD'}, 'Underlying earnings per share - Diluted (pence)' ] = ( ['P950000'] ) \ DB('Reporting Input',!Actuality,!Period,'Shares - Diluted Number of Shares', 'YTD' ) * 100;
+
+[ {'Monthly (k)','Monthly (m)'}, {'Underlying earnings per share - Basic (pence)', 'Underlying earnings per share - Diluted (pence)' } ] = [ 'Monthly'];
+[ {'YTD (k)','YTD (m)'}, {'Underlying earnings per share - Basic (pence)', 'Underlying earnings per share - Diluted (pence)' } ] = [ 'YTD'];
+[ {'QTD (k)','QTD (m)'}, {'Underlying earnings per share - Basic (pence)', 'Underlying earnings per share - Diluted (pence)' } ] = [ 'QTD'];
+
+#Prior Year for the Year Total always looks at the Company Structure at as PY P12
+['PY AC'] = C: IF ( LONG ( !Period )= 4,
+  DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,'AC',DB('}ElementAttributes_Company',!Company,'Last Year End'), STR ( NUMBR ( SUBST ( !Period, 1, 4 ) )-1, 4, 0 ),!m Reporting),
+  CONTINUE
+);
+
+#Half Year for the Year Total always looks at the Company Structure at as PY P06
+['PY AC'] = C: IF ( ELPAR( 'Period', !Period, 1 ) @= 'Half Years',
+  DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,'AC',DB( 'Company Date Lookup', !Company, !Period, 'Prior Year' ), STR ( NUMBR ( SUBST ( !Period, 1, 4 ) )-1, 4, 0 ) | SUBST ( !Period, 5, 2 ),!m Reporting),
+  CONTINUE
+);
+
+['PY AC'] = DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,'AC',DB('}ElementAttributes_Company',!Company,'Last Year'), STR ( NUMBR ( SUBST ( !Period, 1, 4 ) )-1, 4, 0 ) | SUBST ( !Period, 5, 2 ),!m Reporting);
+
+#Growth %
+['PY AC Growth %'] = IF( ['AC'] = 0, 0, ['AC'] \ ['PY AC'] - 1 );
+[] =
+  IF ( ELPAR ( 'Actuality', !Actuality, 1 ) @= 'PY Growth %' & ELLEV ( 'Actuality', !Actuality ) > 0,
+    IF( DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, ELCOMP ( 'Actuality', !Actuality, 1 ), !Company, !Period, !'m Reporting' ) = 0,
+      0,
+      DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, ELCOMP ( 'Actuality', !Actuality, 1 ), !Company, !Period, !'m Reporting' ) \ ['PY AC'] - 1 ),
+    CONTINUE
+  );
+
+#Variance %
+[] = IF ( ELPAR ( 'Actuality', !Actuality, 1 ) @= 'All Variances %' & ELLEV ( 'Actuality', !Actuality ) > 0,
+  DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, ELCOMP ( 'Actuality', !Actuality, 1 ), !Company, !Period, !'m Reporting' ) \
+  DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, ELCOMP ( 'Actuality', !Actuality, 2 ), !Company, !Period, !'m Reporting' ),
+  CONTINUE
+  );
+
+
+
+
+
+# Last 12 months (prior year is always actual)
+['m Reporting':'QTD'] =
+    IF ( ELLEV ( 'Period', !Period) >  0,
+        DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, !Actuality, !Company, ELCOMP( 'Period', !Period, ELCOMPN( 'Period', !Period ) ), !'m Reporting' ),
+        CONTINUE
+        );
+['m Reporting':'QTD'] = DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', !Account, !Actuality, !Company, !Period | ' QTD', 'Monthly' );
+
+['m Reporting':'QTD (k)'] = ['m Reporting':'QTD'] \ 1000;
+['m Reporting':'QTD (m)'] = ['m Reporting':'QTD'] \ 1000000;
+['m Reporting':'LTM (k)'] = ['m Reporting':'LTM'] \ 1000;
+['m Reporting':'LTM (m)'] = ['m Reporting':'LTM'] \ 1000000;
+
+
+['Monthly'] = N:IF ( SUBST ( !Period, 5, 2 ) @= '01', ['YTD'] , CONTINUE ) ;
+['Monthly'] = N: ['YTD']
+-DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company, ATTRS( 'Period', !Period, '-1' ),'YTD');
+
+
+# 12 Months Sales
+['12 Months Sales'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	['P110000','LTM'],
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+# DSO including accrued income
+['DSO including accrued income'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	-['Debtors including accrued income','YTD'] \ ['Average Sales','Monthly'],
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+# DSO including accrued income
+['DSO excluding accrued income'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	-['Debtors excluding accrued income','YTD'] \ ['Average Sales','Monthly'],
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+#Last 3 months purchases
+['Creditor days'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	-['Trade Creditors and Accruals','YTD'] \ ['Purchases','Monthly'],
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+['Return on NOA'] = ['Rolling 12 months operating profit'] \ ['Average capital employed'];
+
+['Prime Margin'] = ['P259999'] \ ['P100000'];
+
+['Gross Margin'] = ['P260000'] \ ['P100000'];
+
+['Account':'Gross Margin External Sales %'] = ( ['P260000'] - ['P150100'] ) \ ['Account':'Account':'P110000'];
+
+['Operating Margin'] = ['P600500'] \ ['P100000'];
+
+['SG&A:Sales'] = ['P300000'] \ ['P100000'];
+
+['Average NOA'] = IF ( ELLEV ( 'Period', !Period ) = 0,
+	 ( ['B800000','YTD'] +
+#	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'B800000',!Actuality,DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ),DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ),'YTD') )
+    DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'B800000',!Actuality,DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ), DB('}ElementAttributes_Period',!Period,'-12'),'YTD' ) )
+	\ 2,
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+['NOA Turn'] = ['12 Months Sales'] \ ['Average NOA'];
+
+['Account':'W/C days'] = ( ['B200000'] + ['B251000'] + ['B301000'] )  * 365 \ ['P100000'];
+
+#K conversion
+['YTD (k)'] = IF ( ['YTD'] <> 0, ['YTD'] \ 1000, 0);
+['Monthly (k)'] = ['Monthly'] \ 1000;
+['YTD (m)'] = ['YTD'] \ 1000000;
+['Monthly (m)'] = ['Monthly'] \ 1000000;
+
+###############################################################################################################################################################################################
+#GFR Report measures
+['Reserve movements', {'YTD', 'YTD (K)'}] =
+( ['B502000'] - DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502000', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year End'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' ) -
+ ['B502300'] + DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502300', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year End'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' ) ) -
+( ['B502400'] - DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502400', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year End'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' ) ) -
+( ['B502410'] - DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502410', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year End'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' ) ) -
+['P950001'];
+
+['Exchange differences', {'YTD', 'YTD (K)'}] =
+['B502400'] + ['B502410']
+- DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502400', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' ) -
+- DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502410', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' );
+
+
+['Shareholders Equity b/fd', {'YTD', 'YTD (K)'}] =
+DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502000', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' ) -
+DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'B502300', !Actuality, DB('}ElementAttributes_Company',!Company,'Last Year'), STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) -1, 4, 0 ) | '12' , !'m Reporting' );
+
+
+###############################################################################################################################################################################################
+
+# Average Sales
+['Average Sales'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	['P110000','LTM'] \ 365 * 1.2,
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+['Average capital employed'] = IF ( ELLEV ( 'Period', !Period ) = 0,
+    ( ['B800000','YTD' ] +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'B800000',!Actuality,DB('Company Date Lookup', !Company, !Period, 'Prior Year End' ), DB('}ElementAttributes_Period',!Period,'-12'),'YTD' ) )
+	\ 2,
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), 'YTD')
+	);
+
+['ROCE'] =
+  ( DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Underlying operating profit', !Actuality, !Company, !Period, 'LTM' ) +
+    DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Tax at underlying effective rate', !Actuality, !Company, !Period, 'LTM' ) )
+    \
+    ['Account':'Average Capital Employed - Statutory'];
+
+#Last 3 months purchases
+# ['Purchases'] =
+#   IF ( ELLEV ( 'Period', !Period ) = 0,
+#     ( ['Total Purchases','Monthly'] +
+# 	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+#            !Actuality,
+#         !Company,DB('}ElementAttributes_Period',!Period,'-1'),'Monthly') +
+# 	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+#            !Actuality,
+#         !Company,DB('}ElementAttributes_Period',!Period,'-2'),'Monthly') )
+# 	/ 90 * 1.2,
+# 	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+# 	);
+
+
+#Last 3 months purchases
+['Purchases'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+    ( ['Total Purchases','Monthly'] +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+      IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-1'), 1, 4), 'AC', !Actuality ),
+        !Company,DB('}ElementAttributes_Period',!Period,'-1'),'Monthly') +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+      IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-2'), 1, 4), 'AC', !Actuality ),
+        !Company,DB('}ElementAttributes_Period',!Period,'-2'),'Monthly') )
+	/ 90 * 1.2,
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+
+#Last 3 months purchases
+['Last 3 months purchases'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	['Total Purchases','Monthly'] +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+           !Actuality,
+          !Company,DB('}ElementAttributes_Period',!Period,'-1'),'Monthly') +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+           !Actuality,
+          !Company,DB('}ElementAttributes_Period',!Period,'-2'),'Monthly'),
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+
+#Last 3 months purchases
+['Last 3 months purchases'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	['Total Purchases','Monthly'] +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+        IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-1'), 1, 4), 'AC', !Actuality ),
+          !Company,DB('}ElementAttributes_Period',!Period,'-1'),'Monthly') +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Total Purchases',
+        IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-2'), 1, 4), 'AC', !Actuality ),
+          !Company,DB('}ElementAttributes_Period',!Period,'-2'),'Monthly'),
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+#12 Months Rolling Profit
+['Rolling 12 months operating profit'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+    ['P600500','LTM'],
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+#Last 3 months Stock
+['Last 3 months Stock'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	['P202100','Monthly'] + ['Account':'Account':'P202200','Monthly'] +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'P202100',IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-1'), 1, 4), 'AC', !Actuality ),!Company,DB('}ElementAttributes_Period',!Period,'-1'),'Monthly') +
+    DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'P202200',IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-1'), 1, 4), 'AC', !Actuality ),!Company,DB('}ElementAttributes_Period',!Period,'-1'),'Monthly') +
+    DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'P202100',IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-2'), 1, 4), 'AC', !Actuality ),!Company,DB('}ElementAttributes_Period',!Period,'-2'),'Monthly') +
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'P202200',IF ( SUBST ( !Period, 1, 4 ) @<> SUBST ( DB('}ElementAttributes_Period',!Period,'-2'), 1, 4), 'AC', !Actuality ),!Company,DB('}ElementAttributes_Period',!Period,'-2'),'Monthly'),
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+	);
+
+['Average Purchases'] =
+  IF ( ELLEV ( 'Period', !Period ) = 0,
+	(['Last 3 months Stock','Monthly'] \ 90) * 1.2,
+    DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company,ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !m Reporting)
+    );
+
+['Stock days'] = ['B200000'] \ ['Average Purchases'];
+
+['Stockturn (Days)'] = DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'K007200', !Actuality, !Company, !Period, 'LTM' ) \ ['B200000', 'YTD' ];
+
+FEEDERS;
+
+['YTD'] => ['Monthly'] ;
+['YTD'] => DB( IF ( SUBST ( !Period, 5, 2 ) @<> '12', 'Reporting', '' ),!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,!Actuality,!Company, ATTRS( 'Period', !Period, '+1' ),'Monthly') ;
+
+['Total Purchases','YTD'] => ['Purchases'];
+['Total Purchases','YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Purchases',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+1'),!m Reporting);
+['Total Purchases','YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Purchases',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+2'),!m Reporting);
+
+['Total Purchases','YTD'] => ['Last 3 months purchases'];
+['Total Purchases','YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Last 3 months purchases',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+1'),!m Reporting);
+['Total Purchases','YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Last 3 months purchases',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+2'),!m Reporting);
+
+[{'P202100','P202200'},'YTD'] => ['Last 3 months Stock'];
+[{'P202100','P202200'},'YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Last 3 months Stock',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+1'),!m Reporting);
+[{'P202100','P202200'},'YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Last 3 months Stock',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+2'),!m Reporting);
+
+
+['P600500','YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Rolling 12 months operating profit',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+11') | 'LTM',!m Reporting);
+
+['B800000','YTD'] =>
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Average capital employed',!Actuality,!Company,!Period,!m Reporting),
+	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Average capital employed',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+12'),!m Reporting);
+
+['P110000','YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'12 Months Sales',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+11') | 'LTM',!m Reporting);
+
+#['B800000','YTD'] =>
+#	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Average NOA',!Actuality,!Company,!Period,!m Reporting),
+#	DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,'Average NOA',!Actuality,!Company,DB('}ElementAttributes_Period',!Period,'+1'),!m Reporting);
+
+
+['AC', 'YTD'] => DB('Reporting',!Mgmt Analysis,!Currency 2,!Currency,!Closing Version,!Contribution Version,!Account,'PY AC',!Company, STR ( NUMBR ( SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) | SUBST ( !Period, 5, 2 ),!m Reporting);
+
+#CashFlow
+['Operating profit + FX'] => DB('Cashflow',!Currency,!Actuality,!Company,!Period,'Profit before tax',!m Reporting );
+['DEPN'] => DB('Cashflow',!Currency,!Actuality,!Company,!Period,'Depreciation',!m Reporting );
+['AMORT'] => DB('Cashflow',!Currency,!Actuality,!Company,!Period,'Amortisation',!m Reporting );
+['EBITDA'] => DB('Cashflow',!Currency,!Actuality,!Company,!Period,'EBITDA',!m Reporting );
+
+['EBITDA'] => DB('Cashflow',!Currency,!Actuality,!Company,!Period,'EBITDA',!m Reporting );
+
+######################################################################################################################################################################################
+
+['B502000', 'YTD'] => ['Reserve movements'], DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Reserve movements', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+['B502300', 'YTD'] => ['Reserve movements'], DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Reserve movements', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+['B502400', 'YTD'] => ['Reserve movements'], DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Reserve movements', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+['B502410', 'YTD'] => ['Reserve movements'], DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Reserve movements', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+['P950001', 'YTD'] => ['Reserve movements'];
+
+['B502400', 'YTD'] => ['Exchange differences'], DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Exchange differences', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+['B502410', 'YTD'] => ['Exchange differences'], DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Exchange differences', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+
+['B502000', 'YTD'] => DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Shareholders Equity b/fd', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+['B502300', 'YTD'] => DB( 'Reporting', !'Mgmt Analysis', !'Currency 2', !Currency, !'Closing Version', !'Contribution Version', 'Shareholders Equity b/fd', !Actuality,!Company, STR ( NUMBR (SUBST ( !Period, 1, 4 ) ) +1, 4, 0 ) , !'m Reporting' );
+
+######################################################################################################################################################################################
+
+['Underlying operating profit'] => ['Tax at underlying effective rate'];
+
+
+
+
+
+
+

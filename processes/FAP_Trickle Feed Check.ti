@@ -1,0 +1,36 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+####################################################################
+
+#####################################################################
+Synchronized('FAP');
+
+pSequence = NumberToString ( CellGetN ( 'FAP Status', 'Value', 'Last Sequence No' ) );
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+ASCIIOutput ( '..\Logs\' | TIMST( NOW(), '\Y \M \d \h \i \s' ) | ' FAP table check', vDesciption, vResult );
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion

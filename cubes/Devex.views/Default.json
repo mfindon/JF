@@ -1,0 +1,161 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('m Devex')/Hierarchies('m Devex')"
+				},
+				"Expression":"TM1SubsetAll([m Devex])"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Company')/Hierarchies('Company')/Subsets('Company List')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('001')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('002')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('003')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('004')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('005')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('006')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('007')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('008')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('009')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('010')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('011')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('012')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('013')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('014')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('015')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('016')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('017')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('018')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('019')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('020')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('021')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('022')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('023')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('024')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('025')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('026')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('027')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('028')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('029')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('030')"
+					},
+					{
+						"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')/Elements('Total Projects')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency')/Hierarchies('Currency')"
+				},
+				"Expression":"TM1SubsetAll([Currency])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('LC')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Period')/Hierarchies('Period')/Subsets('Current Period')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202404')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

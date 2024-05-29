@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Regions List",
+	"Expression":"{[Region].[Region].[All Regions].CHILDREN}"
+}

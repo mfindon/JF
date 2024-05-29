@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m KPIs",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m KPIs')/Hierarchies('m KPIs')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m KPIs.hierarchies/m KPIs.json"
+	]
+}

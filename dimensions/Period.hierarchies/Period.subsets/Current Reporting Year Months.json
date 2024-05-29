@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Current Reporting Year Months",
+	"Expression":"{TM1FILTERBYLEVEL(TM1DRILLDOWNMEMBER({STRTOMEMBER(\"Period].[\" + [Admin].([m zAdmin].[Input],[Admin Line].[Current Year]) + \"]\")} , ALL , RECURSIVE) , 0)}"
+}

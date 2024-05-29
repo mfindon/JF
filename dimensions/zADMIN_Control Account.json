@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"zADMIN_Control Account",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('zADMIN_Control Account')/Hierarchies('zADMIN_Control Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"zADMIN_Control Account.hierarchies/zADMIN_Control Account.json"
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S1000')"
+		},
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S2000')"
+		},
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S3000')"
+		},
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S6000')"
+		},
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S9000')"
+		},
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S1000FAP_')"
+		},
+		{
+			"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S100GA')"
+		}
+	]
+}

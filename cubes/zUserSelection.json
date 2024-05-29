@@ -1,0 +1,22 @@
+{
+	"@type":"Cube",
+	"Name":"zUserSelection",
+	"Rules@Code.link":"zUserSelection.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('}Clients')"
+		},
+		{
+			"@id":"Dimensions('m zUserFilter')"
+		},
+		{
+			"@id":"Dimensions('m zUserSelection')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"zUserSelection.views/Default.json",
+		"zUserSelection.views/Default Values.json"
+	]
+}

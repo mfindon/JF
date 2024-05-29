@@ -1,0 +1,68 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Test Division",
+	"Elements":
+	[
+		{
+			"Name":"FC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TKS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Subtech EU",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Subtech ME",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Subtech Africa",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Continental",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SBTK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EDS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RMS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SOS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SAS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JFO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AIS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JFD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JFN",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

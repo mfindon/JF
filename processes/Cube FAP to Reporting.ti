@@ -1,0 +1,235 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+Synchronized('FAP');
+
+####################################################################
+#
+# Loads data from MonthlyCompanyDetails to HA_EXT Company Reporting
+#
+# Optional Parameters to filter by Period, School and Actuality
+#####################################################################
+
+sSourceCube = 'FAPMonthlyCompanyDetails';
+sSourceView = sSourceCube | ' '|  GetProcessName() | '_Source ' | pSeq | numberToString ( RAND () ) ;
+sSourceSub  = sSourceView;
+
+sTargetCube =  'Reporting';
+sTargetView = sTargetCube | ' '|  GetProcessName() | '_Target' | pSeq | numberToString ( RAND () )  ;
+sTargetSub  = sTargetView;
+
+nTemp = 1;
+
+
+################### Delete Old Views / Subset ###################
+IF ( ViewExists ( sSourceCube, sSourceView ) = 0 );
+   ViewDestroy ( sSourceCube, sSourceView);
+ENDIF;
+nDim = 1;
+WHILE ( TABDIM ( sSourceCube, nDim ) @<> '' );
+   sDim = TABDIM ( sSourceCube, nDim );
+   IF ( SubsetExists ( sDim, sSourceSub  ) = 0 );
+      SubsetDestroy ( sDim, sSourceSub );
+   ENDIF;
+   nDim = nDim + 1;
+END;
+
+IF ( ViewExists ( sTargetCube, sTargetView ) = 0 );
+   ViewDestroy ( sTargetCube, sTargetView );
+ENDIF;
+nDim = 1;
+WHILE ( TABDIM ( sTargetCube, nDim ) @<> '' );
+   sDim = TABDIM ( sTargetCube, nDim );
+   IF ( SubsetExists ( sDim, sTargetSub  ) = 0 );
+      SubsetDestroy ( sDim, sTargetSub );
+   ENDIF;
+   nDim = nDim + 1;
+END;
+
+
+
+###################### Source View ######################
+ViewCreate ( sSourceCube, sSourceView, nTemp );
+
+
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Counter Dimension].[@Aggr_@TOT] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Counter Dimension', sSourceSub );
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Transaction Currency].[AllTransCurr] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Transaction Currency', sSourceSub );
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Consolidation Perspective].[CT MN] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Consolidation Perspective', sSourceSub );
+
+IF ( pMDXActuality @<> '' ); SUBSETCREATEBYMDX( sSourceSub, pMDXActuality, nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_ActualityMonthly', sSourceSub ); ENDIF;
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Origin Company].[AllOrigComp] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Origin Company', sSourceSub );
+
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Counter Company].[AllCounterComp] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Counter Company', sSourceSub );
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Journal Number].[AllJournals] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Journal Number', sSourceSub );
+IF ( pMDXPeriod @<> '' ); SUBSETCREATEBYMDX( sSourceSub , pMDXPeriod, nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_PeriodMonthly', sSourceSub ); ENDIF;
+IF ( pMDXCompany @<> '' ); SUBSETCREATEBYMDX( sSourceSub , pMDXCompany, nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Company', sSourceSub ); ENDIF;
+SUBSETCREATEBYMDX( sSourceSub , '{ [F_Measures].[YTD] }', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, 'F_Measures', sSourceSub );
+
+nDim = 1;
+WHILE ( TABDIM ( sSourceCube, nDim ) @<> '' );
+   sDim = TABDIM ( sSourceCube, nDim );
+   IF ( SubsetExists ( sDim, sSourceSub  ) = 0 );
+      SUBSETCREATEBYMDX( sSourceSub , '{TM1FILTERBYLEVEL( {TM1SUBSETALL( [' | sDim | '] )}, 0)}', nTemp );  ViewSubsetAssign ( sSourceCube, sSourceView, sDim, sSourceSub );
+   ENDIF;
+   nDim = nDim + 1;
+END;
+
+DatasourceCubeview = sSourceView;
+
+## Skip zero values but include consolidations and calculations
+ViewExtractSkipZeroesSet ( sSourceCube, sSourceView, 1);
+ViewExtractSkipCalcsSet ( sSourceCube, sSourceView, 0);
+ViewExtractSkipRuleValuesSet ( sSourceCube, sSourceView, 1);
+
+ViewConstruct( sSourceCube, sSourceView );
+
+###################### Target View ######################
+
+ViewCreate ( sTargetCube, sTargetView, nTemp  );
+
+sSourceDim = 'F_ActualityMonthly';  sTargetDim = 'Actuality';
+IF ( pMDXActuality @<> '' );
+   SubsetCreate ( sTargetDim, sTargetSub, nTemp );
+   nElement = 1;
+   WHILE ( nElement <= SubsetGetSize( sSourceDim, sSourceSub ) );
+      sElement = SubsetGetElementName( sSourceDim, sSourceSub, nElement );
+      IF ( DIMIX ( sTargetDim, sElement ) <> 0 );
+         SubsetElementInsert ( sTargetDim, sTargetSub, sElement, 1);
+      ENDIF;
+      nElement = nElement + 1;
+   END;
+   ViewSubsetAssign ( sTargetCube, sTargetView, sTargetDim, sTargetSub );
+ENDIF;
+
+sSourceDim = 'F_PeriodMonthly';  sTargetDim = 'Period';
+IF ( pMDXPeriod @<> '' );
+   SubsetCreate ( sTargetDim, sTargetSub, nTemp );
+   nElement = 1;
+   WHILE ( nElement <= SubsetGetSize( sSourceDim, sSourceSub ) );
+      sElement = SubsetGetElementName( sSourceDim, sSourceSub, nElement );
+      IF ( DIMIX ( sTargetDim, sElement ) <> 0 );
+         SubsetElementInsert ( sTargetDim, sTargetSub, sElement, 1);
+      ENDIF;
+      nElement = nElement + 1;
+   END;
+   ViewSubsetAssign ( sTargetCube, sTargetView, sTargetDim, sTargetSub );
+ENDIF;
+
+sSourceDim = 'F_Company';  sTargetDim = 'Company';
+IF ( pMDXPeriod @<> '' );
+   SubsetCreate ( sTargetDim, sTargetSub, nTemp );
+   nElement = 1;
+   WHILE ( nElement <= SubsetGetSize( sSourceDim, sSourceSub ) );
+      sElement = SubsetGetElementName( sSourceDim, sSourceSub, nElement );
+      IF ( DIMIX ( sTargetDim, sElement ) <> 0 );
+         SubsetElementInsert ( sTargetDim, sTargetSub, sElement, 1);
+      ENDIF;
+      IF ( DIMIX ( sTargetDim, sElement | 'FAP_' ) <> 0 );
+         SubsetElementInsert ( sTargetDim, sTargetSub, sElement | 'FAP_', 1);
+      ENDIF;
+      nElement = nElement + 1;
+   END;
+   ViewSubsetAssign ( sTargetCube, sTargetView, sTargetDim, sTargetSub );
+ENDIF;
+
+sActualActualies = CellGetS( 'FAP Status', 'Value' , 'Actual Actualities' );
+sLatestActualPeriod = CellGetS( 'FAP Status', 'Value' , 'Latest Actual Period'  );
+
+#sTargetDim = 'R_Closing Version';
+#SUBSETCREATEBYMDX( sTargetSub, '{ EXCEPT ( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [R_Closing Version] )}, 0)}, {TM1FILTERBYPATTERN( {TM1SUBSETALL( [R_Closing Version] )}, "Manual Adjustment*")} )}', nTemp );
+#ViewSubsetAssign ( sTargetCube, sTargetView, sTargetDim, sTargetSub );
+
+BatchUpdateStart;
+ViewZeroOut ( sTargetCube, sTargetView  );
+ViewConstruct( sTargetCube, sTargetView  );
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sLocalCurrency = AttrS ( 'F_Company', vCompany, 'Local Currency' );
+
+#Add missing elements in case they have been added in FAP since the last IP or structure update
+IF ( DIMIX( 'Mgmt Analysis', vMgmtAnalysis ) = 0 ); DimensionElementInsertDirect ( 'Mgmt Analysis', '', vMgmtAnalysis, 'N' ); EndIf;
+IF ( DIMIX( 'Currency 2', vCurrency2 ) = 0 ); DimensionElementInsertDirect ( 'Currency 2', '', vCurrency2, 'N' ); EndIf;
+IF ( DIMIX( 'Currency', vCurrency ) = 0 ); DimensionElementInsertDirect ( 'Currency', '', vCurrency, 'N' ); EndIf;
+IF ( DIMIX( 'Closing Version', vClosVer ) = 0 ); DimensionElementInsertDirect ( 'Closing Version', '', vClosVer, 'N' ); EndIf;
+IF ( DIMIX( 'Contribution Version', vContVer ) = 0 ); DimensionElementInsertDirect ( 'Contribution Version', '', vContVer, 'N' ); EndIf;
+IF ( DIMIX( 'Account', vAccount ) = 0 ); DimensionElementInsertDirect ( 'Account', '', vAccount, 'N' ); EndIf;
+IF ( DIMIX( 'Actuality', vActuality ) = 0 ); DimensionElementInsertDirect ( 'Actuality', '', vActuality, 'N' ); EndIf;
+IF ( DIMIX( 'Company', vCompany ) = 0 ); DimensionElementInsertDirect ( 'Company', '', vCompany, 'N' ); EndIf;
+
+
+IF ( DIMIX ( 'Company', vCompany | 'FAP_' ) <> 0 );
+   vReportingCompany = vCompany | 'FAP_';
+ELSE;
+   vReportingCompany = vCompany;
+ENDIF;
+
+IF ( ELISANC ( 'Account', 'Form HC - Head Count', vAccount ) = 1 );
+   nSign = 1;
+ELSE;
+   nSign = -1;
+ENDIF;
+
+IF ( SCAN( vActuality, sActualActualies)<> 0 & SUBST( vAccount, 1,1) @= 'P' & vClosVer @= 'REPOBT' );
+  IF ( vPeriod @> sLatestActualPeriod );
+    sLatestActualPeriod = vPeriod;
+  ENDIF;
+ENDIF;
+
+
+IF(CellIsUpdateable ( sTargetCube,vMgmtAnalysis, vCurrency2, vCurrency,vClosVer,vContVer,vAccount,vActuality,vReportingCompany,vPeriod,'YTD' )=1);
+   CellPutN ( nSign * vValue,  sTargetCube,vMgmtAnalysis, vCurrency2, vCurrency,vClosVer,vContVer,vAccount,vActuality,vReportingCompany,vPeriod,'YTD' );
+ENDIF;
+
+IF ( vCurrency @= sLocalCurrency ); 
+   IF ( CellIsUpdateable ( sTargetCube,vMgmtAnalysis, vCurrency2, 'LC',vClosVer,vContVer,vAccount,vActuality,vReportingCompany,vPeriod,'YTD'  ) = 1 );
+      CellPutN( nSign * vValue,     sTargetCube,vMgmtAnalysis, vCurrency2, 'LC',vClosVer,vContVer,vAccount,vActuality,vReportingCompany,vPeriod,'YTD' );
+   ENDIF;
+ENDIF;
+
+
+#Import Data for accounts that are Counter Company 10100 only.
+s10100CounterPartyOnly = vAccount | ' - 10100';
+if ( DIMIX( 'Account', s10100CounterPartyOnly ) <> 0 );
+
+  nValue2 = CellGetN (sSourceCube,vMgmtAnalysis,vCounterDim,vCurrency2,vCurrency,vTransCurr,vConsPer,vClosVer,vContVer,vAccount,vActuality,vOriginComp,'10010',vCompany,vJournal,vPeriod, 'YTD' );
+
+  IF(CellIsUpdateable ( sTargetCube,vMgmtAnalysis, vCurrency2, vCurrency,vClosVer,vContVer,s10100CounterPartyOnly,vActuality,vReportingCompany,vPeriod,'YTD' )=1);
+     CellPutN ( nSign * nValue2,  sTargetCube,vMgmtAnalysis, vCurrency2, vCurrency,vClosVer,vContVer,s10100CounterPartyOnly,vActuality,vReportingCompany,vPeriod,'YTD' );
+  ENDIF;
+
+  IF ( vCurrency @= sLocalCurrency ); 
+     IF ( CellIsUpdateable ( sTargetCube,vMgmtAnalysis, vCurrency2, 'LC',vClosVer,vContVer,s10100CounterPartyOnly,vActuality,vReportingCompany,vPeriod,'YTD'  ) = 1 );
+        CellPutN( nSign * nValue2,     sTargetCube,vMgmtAnalysis, vCurrency2, 'LC',vClosVer,vContVer,s10100CounterPartyOnly,vActuality,vReportingCompany,vPeriod,'YTD' );
+     ENDIF;
+  ENDIF;
+
+endif;
+
+#endregion
+#region Epilog
+
+IF ( CellGetS( 'FAP Status', 'Value' , 'Latest Actual Period'  ) @< sLatestActualPeriod  );
+  CellPutS( sLatestActualPeriod, 'FAP Status', 'Value' , 'Latest Actual Period'  );
+  #Send Email
+  sRecipient = CellGetS ( 'zControl',  'Email Alert Address', 'Value' );
+  RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Latest period has been updated', 'pBody', 'Latest period is now ' | sLatestActualPeriod );  
+ENDIF;
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+BatchUpdateFinish(0);
+#endregion

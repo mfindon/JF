@@ -1,0 +1,53 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('m FAP Config')/Hierarchies('m FAP Config')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('m FAP Config')/Hierarchies('m FAP Config')/Elements('Value')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('FAP Config')/Hierarchies('FAP Config')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('FAP Config')/Hierarchies('FAP Config')/Elements('FAP ODBC Connection Name')"
+					},
+					{
+						"@id":"Dimensions('FAP Config')/Hierarchies('FAP Config')/Elements('FAP DB Username')"
+					},
+					{
+						"@id":"Dimensions('FAP Config')/Hierarchies('FAP Config')/Elements('FAP DB Password')"
+					},
+					{
+						"@id":"Dimensions('FAP Config')/Hierarchies('FAP Config')/Elements('FAP Datamart')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

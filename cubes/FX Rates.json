@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"FX Rates",
+	"Rules@Code.link":"FX Rates.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m FX Rates')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"FX Rates.views/Default.json"
+	]
+}

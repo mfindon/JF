@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Test Division",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Test Division')/Hierarchies('Test Division')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Test Division.hierarchies/Test Division.json"
+	]
+}

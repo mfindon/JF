@@ -1,0 +1,36 @@
+								Skipcheck;
+FEEDSTRINGS;
+
+[] = S: IF ( ELLEV( 'Company', !Company) = 0 &
+    ( ELLEV( 'Asset Category', !Asset Category) <> 0 % ELLEV( 'Capex Type', !Capex Type) <> 0 ),
+    DB('Capex Input', !Version, !Currency, !Company, !Period, !'Capex Input Rows', 'Description' ),
+    CONTINUE
+    );
+
+[] = S: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Asset Category') @<> !Asset Category, '', CONTINUE );
+
+['Unknown'] = S: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Capex Type' ) @= '',
+		DB('Capex Input', !Version, !Currency, !Company, !Period, !'Capex Input Rows', 'Description' ),
+		CONTINUE );
+[] = S: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Capex Type' ) @<> !Capex Type,
+		 '',
+		CONTINUE );
+
+
+['Description']= S: DB('Capex Input', !Version, !Currency, !Company, !Period, !'Capex Input Rows', 'Description' );
+
+['Unallocated','NA', 'Unknown'] = N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Reporting);
+['Unallocated','Value of Capex approved' ] = N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Reporting);
+['Unallocated','Value of Capex committed' ] = N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Reporting);
+
+[] = N: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Capex Type' ) @= '' & !Capex Type @<> 'Unknown',
+		 0,
+		CONTINUE );
+
+[] = N: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Asset Category') @<> !Asset Category, 0, CONTINUE );
+
+[]= N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Reporting);
+
+Feeders;
+
+['Capex Spend'] => DB( 'Capex Reporting', !Capex Type, !Version, !Currency, !Company, !'Asset Category', '_', !'Capex Input Rows', 'Description' );

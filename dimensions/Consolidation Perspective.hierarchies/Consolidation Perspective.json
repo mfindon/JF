@@ -1,0 +1,87 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Consolidation Perspective",
+	"Elements":
+	[
+		{
+			"Name":"PA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MG",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CT PA",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CT MN",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CT MG",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CT LE",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"@None",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LE",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"CT PA",
+			"ComponentName":"PA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT PA",
+			"ComponentName":"@None",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT MN",
+			"ComponentName":"MN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT MN",
+			"ComponentName":"@None",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT MG",
+			"ComponentName":"MG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT MG",
+			"ComponentName":"@None",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT LE",
+			"ComponentName":"@None",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT LE",
+			"ComponentName":"LE",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m zUserFilter",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m zUserFilter')/Hierarchies('m zUserFilter')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m zUserFilter.hierarchies/m zUserFilter.json"
+	]
+}

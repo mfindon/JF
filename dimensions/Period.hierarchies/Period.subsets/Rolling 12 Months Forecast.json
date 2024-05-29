@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Rolling 12 Months Forecast",
+	"Expression":"{[Period].[_],HEAD(FILTER(TM1SORT(TM1FILTERBYLEVEL(TM1SUBSETALL([Period]) , 0) , ASC) , [Period].CURRENTMEMBER.NAME >= [}ElementAttributes_Version].([}ElementAttributes_Version].[Start Period])) , 13)}"
+}
