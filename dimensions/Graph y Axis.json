@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Graph y Axis",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Graph y Axis')/Hierarchies('Graph y Axis')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Graph y Axis.hierarchies/Graph y Axis.json"
+	]
+}

@@ -1,0 +1,127 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+pDimension = 'Company';
+
+sSubsetName = GetProcessName() | '_Source ' | pDimension;
+
+sTotalConsolidation = 'PL.S1000';
+
+#Check dimensions exist
+IF ( DimensionExists ( pDimension ) = 0 ); ProcessQuit; ENDIF;
+
+SubsetCreatebyMDX ( sSubsetName, '{TM1DRILLDOWNMEMBER( { [' | pDimension  | '].[S1000] }, ALL, RECURSIVE )}', 1 );
+SubsetMDXSet ( pDimension, sSubsetName, '' );
+
+DimensionElementInsert ( pDimension, '', sTotalConsolidation,  'C' );
+
+#Unwind product Line consolidations.
+nElement = 1;
+nNoofElements = DIMSIZ( pDimension );
+
+WHILE ( nElement <= nNoofElements );
+    sElement = DIMNM ( pDimension, nElement );
+    IF ( ELLEV ( pDimension, sElement ) > 0 );
+        IF ( SUBST( sElement, 1, 3 ) @= 'PL.' );
+
+            WHILE ( ELCOMPN ( pDimension, sElement ) > 0  );
+                sElementChild = ELCOMP ( pDimension, sElement, 1 );
+                DimensionElementComponentDelete ( pDimension, sElement, sElementChild );
+            END;
+
+        ENDIF;
+    ENDIF;
+    nElement = nElement +1;
+END;
+
+DatasourceNameForServer = pDimension ;
+DataSourceType = 'SUBSET';
+DatasourceDimensionSubset = sSubsetName;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sIsTotal = AttrS (  pDimension, vElement, 'Is Product Line Total' );
+sIsProdLine = AttrS (  pDimension, vElement, 'Is Product Line' );
+
+#Get Product Line Total
+if ( sIsTotal @<> ''); 
+    sTotal = vElement;
+    sProductLine = '';
+    ItemSkip;
+endif;
+
+if ( sTotal @= ''); 
+    ItemSkip; 
+endif;
+
+#Get Product Line
+if ( sIsProdLine @<> ''); 
+    sProductLine = vElement;    
+    ItemSkip;
+endif;
+
+#Add Children
+if ( ELLEV( pDimension, vElement ) = 0 & ( sProductLine @<> '' % sTotal @<> '' )); 
+    if ( sProductLine @<> '' );
+        DimensionElementInsert ( pDimension, '', 'PL.' | sProductLine, 'C' );
+        DimensionElementComponentAdd ( pDimension, 'PL.' | sProductLine, vElement, 1 );
+        DimensionElementInsert ( pDimension, '', 'PL.' | sTotal, 'C' );
+        DimensionElementComponentAdd ( pDimension, 'PL.' | sTotal, 'PL.' |sProductLine, 1 );
+        DimensionElementComponentAdd ( pDimension, sTotalConsolidation, 'PL.' | sTotal,  1 );
+    else;
+        DimensionElementInsert ( pDimension, '', 'PL.' | sTotal, 'C' );
+        DimensionElementComponentAdd ( pDimension, 'PL.' | sTotal, vElement, 1 );
+        DimensionElementComponentAdd ( pDimension, sTotalConsolidation,  'PL.' | sTotal,  1 );
+    endif;
+
+endif;
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sIsTotal = AttrS (  pDimension, vElement, 'Is Product Line Total' );
+sIsProdLine = AttrS (  pDimension, vElement, 'Is Product Line' );
+
+#Get Product Line Total
+if ( sIsTotal @<> '' % sIsProdLine @<> '');
+    if ( DIMIX( pDimension, 'PL.' | vElement ) <> 0);
+
+        sName = ATTRS( pDimension, vElement, 'EN_Long' );
+        AttrPutS( sName, pDimension, 'PL.' | vElement, 'EN_Long' );
+        AttrPutS( 'PL. ' | vElement | ' - ' | sName, pDimension, 'PL.' | vElement, 'Long Name' );
+
+        sName = ATTRS( pDimension, vElement, 'EN_Short' );
+        AttrPutS( sName, pDimension, 'PL.' | vElement, 'EN_Short' );
+        AttrPutS( 'PL. ' | vElement | ' - ' | sName, pDimension, 'PL.' | vElement, 'Short Name' );
+
+    endif;
+endif;
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+vElement = 'S1000';
+
+sName = ATTRS( pDimension, vElement, 'EN_Long' );
+AttrPutS( sName, pDimension, 'PL.' | vElement, 'EN_Long' );
+AttrPutS( 'PL. ' | vElement | ' - ' | sName, pDimension, 'PL.' | vElement, 'Long Name' );
+sName = ATTRS( pDimension, vElement, 'EN_Short' );
+AttrPutS( sName, pDimension, 'PL.' | vElement, 'EN_Short' );
+AttrPutS( 'PL. ' | vElement | ' - ' | sName, pDimension, 'PL.' | vElement, 'Short Name' );
+
+
+
+
+
+
+#endregion

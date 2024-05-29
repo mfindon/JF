@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"DrillView",
+	"Expression":"{ [F_Company].[MN.2024-01.S5850] }"
+}

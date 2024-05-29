@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Reporting Input",
+	"Elements":
+	[
+		{
+			"Name":"Monthly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Full Year",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

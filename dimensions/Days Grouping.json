@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Days Grouping",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Days Grouping')/Hierarchies('Days Grouping')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Days Grouping.hierarchies/Days Grouping.json"
+	]
+}

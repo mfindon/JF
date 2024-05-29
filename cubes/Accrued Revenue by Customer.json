@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"Accrued Revenue by Customer",
+	"Rules@Code.link":"Accrued Revenue by Customer.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Division')"
+		},
+		{
+			"@id":"Dimensions('Days Grouping')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Customer Row')"
+		},
+		{
+			"@id":"Dimensions('m Accrued Revenue by Customer')"
+		}
+	],
+	"Views@Code.links":[]
+}

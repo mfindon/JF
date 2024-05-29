@@ -1,0 +1,40 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Trigger_Initial Publish if Required",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"FAP_Trigger_Initial Publish if Required.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"VariablesUIData":
+	[
+		"VarType=33€ColType=827€",
+		"VarType=33€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"kXrqw<j:uv:u[SzSAT9EexoBnu[gU\\<m_5fl?KQT]qxSdoF71=O_aG10m]g6zvV[wXhG;oJRho5:yGJxerrQI=\\l^i5Gw8RwP^[_<Q0g[SOv=s`yRqiwh_8hZeu199<g^jLdkyg9Xu4Pl,30\\2:DAJi=?3M\\rtOOmow3614Ts7ae=GOOGjXd~Xc3W;d`ToS5L?<;7w",
+		"query":"SELECT Status, StructStatus FROM NRTR_DATAMART WHERE TM1Server = 'FAP'",
+		"userName":"sa_cognos",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vStatus",
+			"Type":"Numeric",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vStructStatus",
+			"Type":"Numeric",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

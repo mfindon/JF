@@ -1,0 +1,123 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Relative Time Period",
+	"Elements":
+	[
+		{
+			"Name":"0",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"-11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Time Periods",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"0",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-1",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-2",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-3",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-4",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-5",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-6",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-7",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-8",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-9",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-10",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Time Periods",
+			"ComponentName":"-11",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,36 @@
+{
+	"@type":"Cube",
+	"Name":"Capex Input",
+	"Rules@Code.link":"Capex Input.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Capex Input Rows')"
+		},
+		{
+			"@id":"Dimensions('m Capex Input')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Capex Input.views/Actual Current Month.json",
+		"Capex Input.views/Default.json",
+		"Capex Input.views/Project Bigger than 500K.json",
+		"Capex Input.views/Commited and Approved view.json",
+		"Capex Input.views/Description Comparison.json",
+		"Capex Input.views/Input View.json",
+		"Capex Input.views/Report.json"
+	]
+}

@@ -1,0 +1,143 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+################################################################
+#                    Creates all posible variance consolidations in actulaities dimension
+################################################################
+
+sDimName = 'R_ActualityMonthly';
+
+sTopConsol = 'All Variances';
+
+DimensionElementInsert(sDimName, '', sTopConsol, 'C');
+
+nElem1 = 1;
+
+WHILE ( nElem1 <= DIMSIZ ( sDimName ) );
+   sElem1 = DIMNM ( sDimName, nElem1 );
+   sType = DTYPE ( sDimName, sElem1 );
+   IF ( sType @= 'C' & 
+      ( SCAN ( ' vs ', sElem1 ) <> 0 % SUBST ( sElem1, LONG ( sElem1 ), 1 ) @= '%' ) );
+      DimensionElementDelete( sDimName, sElem1 );
+   ELSE;
+      nElem1 = nElem1 + 1;
+   ENDIF;
+END;
+
+
+nElem1 = 1;
+
+WHILE ( nElem1 <= DIMSIZ ( sDimName ) );
+
+   sElem1 = DIMNM ( sDimName, nElem1 );
+
+   IF ( ELLEV ( sDimName, sElem1 ) = 0 );
+
+      nElem2 = 1;
+
+      WHILE ( nElem2 <= DIMSIZ ( sDimName ) );
+
+         sElem2 = DIMNM ( sDimName, nElem2 );
+
+             IF ( ELLEV ( sDimName, sElem2 ) = 0 );
+
+               sVarConsole = sElem1 | ' vs ' | sElem2;
+
+               #Create vs consolidation
+               #DimensionElementDelete(sDimName, sVarConsole );
+               DimensionElementInsert(sDimName, '', sVarConsole, 'C');
+
+               DimensionElementComponentAdd(sDimName, sTopConsol, sVarConsole, 0);
+               DimensionElementComponentAdd(sDimName, sVarConsole, sElem1, 1);
+               DimensionElementComponentAdd(sDimName, sVarConsole, sElem2, -1);
+
+               #Create vs % consolidation
+               #DimensionElementDelete(sDimName, sVarConsole  | ' %' );
+               DimensionElementInsert(sDimName, '', sVarConsole | ' %', 'C');
+
+               DimensionElementComponentAdd(sDimName, sTopConsol, sVarConsole | ' %', 0);
+               DimensionElementComponentAdd(sDimName, sVarConsole | ' %', sVarConsole, 1);
+               DimensionElementComponentAdd(sDimName, sVarConsole | ' %', sElem2, 1);
+
+               #Create AB YOY % consolidation
+               DimensionElementInsert(sDimName, '', sElem1 | ' YoY %', 'C');
+               DimensionElementInsert(sDimName, '', sElem1 | ' vs pYear AB', 'C');
+               DimensionElementComponentAdd(sDimName, sElem1 | ' YoY %', sElem1 | ' vs pYear AB', 1);
+               DimensionElementComponentAdd(sDimName, sElem1 | ' vs pYear AB', sElem1 ,1);
+               DimensionElementComponentAdd(sDimName, sElem1 | ' vs pYear AB', 'pYear AB', -1);
+
+               DimensionElementComponentAdd(sDimName, sElem1 | ' YoY %', 'pYear AB',1);
+
+
+            ENDIF;
+
+         nElem2 = nElem2 + 1;
+
+      END;
+
+   ENDIF;
+
+   nElem1 = nElem1 + 1;
+
+END;
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+### Populate format for % consolidations ###
+
+nElem1 = 1;
+
+WHILE ( nElem1 <= DIMSIZ ( sDimName ) );
+
+   sElem1 = DIMNM ( sDimName, nElem1 );
+   sElem1ShortName = AttrS ( sDimName, sElem1, 'Short Name' );  IF ( sElem1ShortName @= '' ); sElem1ShortName = sElem1; EndIf;
+
+   IF ( ELLEV ( sDimName, sElem1 ) = 0 );
+
+      nElem2 = 1;
+
+      WHILE ( nElem2 <= DIMSIZ ( sDimName ) );
+
+         sElem2 = DIMNM ( sDimName, nElem2 );
+         sElem2ShortName = AttrS ( sDimName, sElem2, 'Short Name' );  IF ( sElem2ShortName @= '' ); sElem2ShortName = sElem2; EndIf;
+
+             IF ( ELLEV ( sDimName, sElem2 ) = 0 );
+
+               sVarConsole = sElem1 | ' vs ' | sElem2;
+
+               #Populate format for % consolidations
+               AttrPutS (  'b:#.0%P|1|Y', sDimName, sVarConsole | ' %', 'Format' );
+               AttrPutS (  'b:#.0%P|1|Y', sDimName, sElem1 | ' YoY %',  'Format' );
+
+               #Populate Alias
+               AttrPutS (   sElem1ShortName | ' vs ' | sElem2ShortName | ' %', sDimName, sVarConsole | ' %', 'Short Name' );
+               AttrPutS (   sElem1ShortName | ' vs ' | sElem2ShortName, sDimName, sVarConsole, 'Short Name' );
+               AttrPutS (  sElem1ShortName | ' YoY %'  , sDimName, sElem1 | ' YoY %', 'Short Name'  );
+
+            ENDIF;
+
+         nElem2 = nElem2 + 1;
+
+      END;
+
+   ENDIF;
+
+   nElem1 = nElem1 + 1;
+
+END;
+#endregion

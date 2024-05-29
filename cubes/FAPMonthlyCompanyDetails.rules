@@ -1,0 +1,36 @@
+skipcheck;
+
+# If it's the first period, then use the YTD value
+['Monthly'] = N: if(ATTRN('F_PeriodMonthly', !F_PeriodMonthly, 'MonthNo') = 1, DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, !F_PeriodMonthly, 'YTD'), CONTINUE);
+
+# Else calculate the monthly value, i.e. current period YTD - previous period YTD
+['Monthly'] = N: DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, !F_PeriodMonthly, 'YTD')
+ -
+ DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, ATTRS('F_PeriodMonthly', !F_PeriodMonthly, '-1'), 'YTD');
+
+# YTD Month level. Handle non consolidated calc accounts
+# No non consolidated calc account is found
+
+# YTD Quarter level
+['YTD' ] = IF (ELLEV('F_PeriodMonthly', !F_PeriodMonthly) = 1,
+
+# If the current period is the first Q, then use the monthly measure, i.e. monthly values aggregated from January to March
+IF(ATTRN('F_PeriodMonthly', !F_PeriodMonthly, 'MonthNo') = 1, DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, !F_PeriodMonthly, 'Monthly'),
+
+# Else, calculate the correct accumulated value
+ DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, !F_PeriodMonthly, 'Monthly')
++
+ DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, ATTRS('F_PeriodMonthly', !F_PeriodMonthly, '-1'), 'YTD')), continue);
+
+# Year level
+['YTD' ] = IF (ELLEV('F_PeriodMonthly', !F_PeriodMonthly)=2, ['Monthly'], continue);
+
+feeders;
+['YTD'] => ['Monthly'], DB('FAPMonthlyCompanyDetails', !F_Mgmt Analysis, !F_Counter Dimension, !F_Dim 2, !F_Currency, !F_Transaction Currency, !F_Consolidation Perspective
+, !F_Closing Version, !F_Contribution Version, !F_Account, !F_ActualityMonthly, !F_Origin Company, !F_Counter Company, !F_Company, !F_Journal Number, ATTRS('F_PeriodMonthly', !F_PeriodMonthly, '+1'), 'Monthly');

@@ -1,0 +1,40 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Trigger_Structure Update if Required",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"FAP_Trigger_Structure Update if Required.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"VariablesUIData":
+	[
+		"VarType=33€ColType=827€",
+		"VarType=33€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"x_<GOCQ@btKb<Mx6]p6O@XScue;bJWS}Wpx2PUi5]Y8G[yacVzA5lEuPGa9k<IA{0GS?sFAr?T_T>8V4;S[ycR\\3Vir9dJJfcS32X7ONZU:5=oogftY`s^_\\KW4pdaZx?aA`;1j;_K8pVLut8aijJ4`rYE`0@Z=BIneoehhcOuSg<4@xON\\pBN>3K2d^ZIbWfrQUNtOu",
+		"query":"SELECT Status, StructStatus FROM NRTR_DATAMART WHERE Name = 'FAP'",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vStatus",
+			"Type":"Numeric",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vStructStatus",
+			"Type":"Numeric",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Account Graph Axis",
+	"Elements":
+	[
+		{
+			"Name":"OP",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

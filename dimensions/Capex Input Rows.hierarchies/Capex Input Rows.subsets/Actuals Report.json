@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Actuals Report",
+	"Expression":"{DESCENDANTS([Capex Input Rows].[Capex Input Rows].[All Capex Rows] , 99 , LEAVES),[Capex Input Rows].[Capex Input Rows].[YTD < X],[Capex Input Rows].[Capex Input Rows].[Total Capex incl < X]}"
+}

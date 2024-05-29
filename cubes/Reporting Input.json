@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"Reporting Input",
+	"Rules@Code.link":"Reporting Input.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Reporting Input Account')"
+		},
+		{
+			"@id":"Dimensions('m Reporting Input')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Reporting Input.views/Default.json"
+	]
+}

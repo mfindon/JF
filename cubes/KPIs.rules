@@ -1,0 +1,71 @@
+
+['YTD'] = N: IF ( DB('}ElementAttributes_KPI',!KPI,'YTD Calculation Method') @<> 'Input',
+		DB('KPIs',!Version,!Division,!KPI,!Period | ' YTD','Value'),
+		Continue );
+
+['Value'] = C: IF ( SUBST ( !Period, 8, 3 ) @= 'YTD',
+		IF ( DB('}ElementAttributes_KPI',!KPI,'YTD Calculation Method') @= 'Input',
+			DB('KPIs',!Version,!Division,!KPI, SUBST ( !Period, 1, 6 ),'YTD'),
+			Continue ),
+		Continue );
+
+['Value'] = IF ( DB('}ElementAttributes_KPI',!KPI,'Is KPI') @= '',
+		IF ( DIMIX ( 'Account', !KPI ) <> 0,
+			DB('Reporting','@Aggr_@TOT','@Aggr_@TOT','GBP', 'CL GR15','CO ALL', !KPI, DB('}ElementAttributes_Version',!Version,'Actuality'), !Division, !Period, 'Monthly' ) \ 1000000,
+			CONTINUE ),
+		CONTINUE );
+
+['Value'] = IF ( DB('}ElementAttributes_KPI',!KPI,'Numerator') @<> '',
+		DB('KPIs', !Version, !Division, DB('}ElementAttributes_KPI',!KPI,'Numerator'), !Period, !m KPIs ) \
+		DB('KPIs', !Version, !Division, DB('}ElementAttributes_KPI',!KPI,'Denominator'), !Period, !m KPIs ),
+		CONTINUE );
+
+
+['Value'] = IF ( DB('}ElementAttributes_KPI',!KPI,'KPI GL') @<> '',
+		DB('Reporting','@Aggr_@TOT','@Aggr_@TOT','GBP', 'CL GR15','CO ALL', DB('}ElementAttributes_KPI',!KPI,'KPI GL'),DB('}ElementAttributes_Version',!Version,'Actuality'), !Division, !Period, 'Monthly' ) \
+		IF ( DB('}ElementAttributes_KPI',!KPI,'Timing Measure') @= '£m', 1000000, 1 ),
+		CONTINUE );
+
+#YTD Calculation Method
+['Value'] = C: IF( ElementLevel( 'Period', 'Period', !Period) > 0,
+    IF( ATTRS( 'KPI', !KPI, 'YTD Calculation Method' ) @= 'N/A',
+      0,
+      CONTINUE),
+    CONTINUE );
+
+#YTD Calculation Method
+['Value'] = C: IF( ElementLevel( 'Period', 'Period', !Period) > 0,
+    IF( ATTRS( 'KPI', !KPI, 'YTD Calculation Method' ) @= 'Average',
+      ConsolidatedAvg( 2, 'KPIs', !Version, !Division, !KPI,!Period, !'m KPIs' ),
+      CONTINUE),
+    CONTINUE );
+
+
+['Actual', 'Responsible'] = S: '';
+['Responsible'] = S: DB ( 'KPI Division Mapping', !Division, !KPI, 'Responsible' );
+
+
+['Return on NOA'] = C: IF( SUBST (!Period, 8,3) @= 'YTD',
+  IF ( SUBST (!Period, 5,2) @= '01',
+    DB( 'KPIs', !Version, !Division, !KPI, SUBST (!Period, 1,6), !'m KPIs' ),
+    DB( 'KPIs', !Version, !Division, !KPI, DB( '}ElementAttributes_Period', SUBST(!Period, 1, 6 ), '-1'), !'m KPIs' )
+    ),
+  CONTINUE);
+
+['Actual','Is Red'] = N: IF ( SUBST ( !Period, 1, 6 ) @> DB ('Admin', 'Current Month', 'Input' ),  0, CONTINUE );
+['Actual','Is Green'] = N: IF ( SUBST ( !Period, 1, 6 ) @> DB ('Admin', 'Current Month', 'Input' ),  0, CONTINUE );
+
+['Actual','Is Green'] = IF ( ['Plan', 'Value'] = 0, 0, CONTINUE );
+
+
+['Actual','Is Red'] =
+  IF( ATTRS( 'KPI', !KPI, 'Actuals Should Be Lower' ) @= '',
+    IF ( ['Actual', 'Value'] < ['Plan', 'Value'] , 1, 0),
+    IF ( ['Actual', 'Value'] >= ['Plan', 'Value'] , 1, 0)
+    );
+
+['Actual','Is Green'] =
+  IF( ATTRS( 'KPI', !KPI, 'Actuals Should Be Lower' ) @= '',
+    IF (  ['Plan', 'Value'] <= ['Actual', 'Value'], 1, 0),
+    IF (  ['Plan', 'Value'] > ['Actual', 'Value'], 1, 0)
+    );

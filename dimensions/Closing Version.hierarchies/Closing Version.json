@@ -1,0 +1,1596 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Closing Version",
+	"Elements":
+	[
+		{
+			"Name":"CL REPO",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL RAUT",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL NHLC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL NHGR",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL LOCL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL LCL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL KPMG",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL IFLC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL IFJN",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL GRP1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL GRP",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL GR15",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL GR1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL COJL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL CO1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL CCJN",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL AUJN",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL ALL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL ALJL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL AL15",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"TP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RG",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"REPOBT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AU",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1F",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1E",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1D",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1C",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1B",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"IF",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GJ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Z",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"XG",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GR15 less AL15",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CL GPR less All",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"HG",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"IL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"XL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Non-underlying",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Statutory",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Underlying",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"CL REPO",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL RAUT",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL RAUT",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL RAUT",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL RAUT",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL RAUT",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL RAUT",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHLC",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"RG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"XG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL NHGR",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LOCL",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LCL",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL LCL",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"HG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"RG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"XG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL KPMG",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFLC",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL IFJN",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"HG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"RG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"TC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"TP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"XG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP1",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"HG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"TC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"TP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"XG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GRP",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"RG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"TC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"TP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR15",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"RG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"TC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"TP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"XG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GR1",
+			"ComponentName":"HG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL COJL",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL COJL",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL COJL",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL COJL",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL COJL",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL COJL",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL CO1",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL CCJN",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AUJN",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"TC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALL",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"AU",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"CC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"GT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"HG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"HL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"IF",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"RG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"SL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"TC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"TL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"TP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"XG",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"XL",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL ALJL",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"REPOBT",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"1B",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"1C",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"1D",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"1E",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"1F",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"GJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"JN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"KP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"RC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL AL15",
+			"ComponentName":"Z",
+			"Weight":1
+		},
+		{
+			"ParentName":"GR15 less AL15",
+			"ComponentName":"CL GR15",
+			"Weight":1
+		},
+		{
+			"ParentName":"GR15 less AL15",
+			"ComponentName":"CL AL15",
+			"Weight":-1
+		},
+		{
+			"ParentName":"CL GPR less All",
+			"ComponentName":"CL GRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"CL GPR less All",
+			"ComponentName":"CL ALL",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Statutory",
+			"ComponentName":"Non-underlying",
+			"Weight":1
+		},
+		{
+			"ParentName":"Statutory",
+			"ComponentName":"CL GRP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Underlying",
+			"ComponentName":"CL GRP",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

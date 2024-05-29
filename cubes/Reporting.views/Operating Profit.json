@@ -1,0 +1,293 @@
+{
+	"@type":"NativeView",
+	"Name":"Operating Profit",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Account')/Hierarchies('Account')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Operating profit + FX')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Company')/Hierarchies('Company')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('MN.2022-12.S1000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('MN.2022-12.S2000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('MN.2022-12.S3000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('MN.2022-12.S6000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('MN.2022-12.S9000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S1000FAP_')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S100GA')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_@TOT')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_1000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@TOT')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_1500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2200')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2600')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3250')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3400')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4600')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4700')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4800')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4900')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5200')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_6000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_6500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_CASH')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_FOR')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_@TOT')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('@Aggr_@TOT')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('@TOT')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('@TOT')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency')/Hierarchies('Currency')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('GBP')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('GBP')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Actuality')/Hierarchies('Actuality')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('FC')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('F1')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('BU')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('B2')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('B1')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AC')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AB')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AC')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Period')/Hierarchies('Period')/Subsets('Current Reporting Year Months and Total')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202404')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('YTD (k)')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Contribution Version')/Hierarchies('Contribution Version')"
+				},
+				"Expression":"TM1SubsetAll([Contribution Version])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Contribution Version')/Hierarchies('Contribution Version')/Elements('CO ALL')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Closing Version')/Hierarchies('Closing Version')"
+				},
+				"Expression":"TM1SubsetAll([Closing Version])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Closing Version')/Hierarchies('Closing Version')/Elements('CL GRP')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

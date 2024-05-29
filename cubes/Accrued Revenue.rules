@@ -1,0 +1,15 @@
+Skipcheck;
+
+['GBP' ] = N: ['LC'] \  DB('FX Rates','AC', DB('}ElementAttributes_Company', !Company, 'Local Currency'), !Period,'Rate');
+['GBP' ] = S: DB('Accrued Revenue','LC',!Company,!Days Grouping,!Period,!m Accrued Revenue);
+
+[ 'Days Grouping': 'Total', 'Accrued Revenue'] = -DB('Reporting','@Aggr_@TOT','@Aggr_@TOT',!Currency,'CL ALL','CO ALL','B254130','AC',
+			!Company,
+			!Period,
+			'YTD (k)' );
+
+['% of total accrued revenue'] = ['Accrued Revenue'] \ ['Total','Accrued Revenue'];
+
+FEEDERS;
+
+['LC' ] => ['GBP' ];

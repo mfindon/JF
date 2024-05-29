@@ -1,0 +1,57 @@
+{
+	"@type":"Cube",
+	"Name":"Reporting",
+	"Rules@Code.link":"Reporting.rules",
+	"DrillthroughRules@Code.link":"Reporting.drillthrough.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Mgmt Analysis')"
+		},
+		{
+			"@id":"Dimensions('Currency 2')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Closing Version')"
+		},
+		{
+			"@id":"Dimensions('Contribution Version')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Reporting.views/Balance Sheet.json",
+		"Reporting.views/KPI Calculation.json",
+		"Reporting.views/Operating Profit.json",
+		"Reporting.views/P and L.json",
+		"Reporting.views/2024 P&L Divisional View.json",
+		"Reporting.views/Balance Sheet Average Capital Employed.json",
+		"Reporting.views/Balance Sheet by Region.json",
+		"Reporting.views/Default.json",
+		"Reporting.views/Large View.json",
+		"Reporting.views/Large View test.json",
+		"Reporting.views/P and L by Company.json",
+		"Reporting.views/P and L by Energy Companies.json",
+		"Reporting.views/P and L Revenue by Division.json",
+		"Reporting.views/Tax Rates Movement.json",
+		"Reporting.views/Test Trickle Feed.json"
+	]
+}

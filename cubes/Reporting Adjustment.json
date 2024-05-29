@@ -1,0 +1,30 @@
+{
+	"@type":"Cube",
+	"Name":"Reporting Adjustment",
+	"Rules@Code.link":"Reporting Adjustment.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m Reporting Adjustment')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Reporting Adjustment.views/Default.json"
+	]
+}

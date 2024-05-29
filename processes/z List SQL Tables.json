@@ -1,0 +1,56 @@
+{
+	"@type":"Process",
+	"Name":"z List SQL Tables",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"z List SQL Tables.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€MeasuresDim=F_PeriodMonthly€MeasuresDimAction=As Is€MeasuresDimElemSortType=ByInput€MeasuresDimElemSortSense=DESCENDING€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"deB3uaQDY34=Yy@zV0X6B^TTA=rmu?RswnvollwJXyUS9qq@1Q:UR9hugY7zUD{LjJ:cmzh@E[D>3fwb\\ukYM>9rmuYf^TiaD<6OhNyLKEdu7kg6a]oIR<EE4@:=cp9Rcai{OZV3nsvFIJwHp0KHQi\\q9PdvGE[lbm?ABfCaQU824srFw?uaI^m[tiHrLBVV2=]rvoE",
+		"query":"SELECT \r\n    *\r\nFROM\r\n    information_schema.tables;",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"TABLE_CATALOG",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"TABLE_SCHEMA",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"TABLE_NAME",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"TABLE_TYPE",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

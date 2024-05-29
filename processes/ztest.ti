@@ -1,0 +1,29 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+sRecipient = 'martin.findon@sempreanalytics.com';
+RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'Test2', 'pBody', 'Test', 'pAttachment', 'Test 2.cma' );
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion

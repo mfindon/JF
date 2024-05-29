@@ -1,0 +1,56 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Commentary Page",
+	"Elements":
+	[
+		{
+			"Name":"Executive Summary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Gross Profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - SG&A costs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Working Capital Movement",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - DSO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Cap Ex",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Inflation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Key Successess and Issues",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KPI  Summary - Forward looking",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GFR Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GFR Operating profit",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

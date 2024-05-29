@@ -1,0 +1,3 @@
+
+['Capex Upload Outstanding'] = N: IF ( DB('zCompany Variables',!Version,!Company,!Period,'Capex Uploaded') = 1, 0, Continue );
+['Capex Upload Outstanding'] = N: IF ( DB('}ElementAttributes_Company',!Company,'For Capex Upload') = 0, 0, 1);

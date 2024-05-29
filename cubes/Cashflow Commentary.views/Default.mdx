@@ -1,0 +1,1 @@
+SELECT {[m Commentary].[m Commentary].MEMBERS}*{[m Cashflow].[m Cashflow].[Monthly (k)^Monthly],[m Cashflow].[m Cashflow].[YTD (k)^YTD]} ON 0, NON EMPTY {TM1SubsetToSet([Division].[Division],"Default","public")}*{[CF Account].[CF Account].MEMBERS}*{{TM1FILTERBYLEVEL(TM1SUBSETALL([Period].[Period]) , 0)}} ON 1 FROM [Cashflow Commentary]

@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m zUserFilter",
+	"Elements":
+	[
+		{
+			"Name":"Selection",
+			"Type":"String"
+		},
+		{
+			"Name":"Filter",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

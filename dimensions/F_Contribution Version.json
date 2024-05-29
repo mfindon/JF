@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"F_Contribution Version",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('F_Contribution Version')/Hierarchies('F_Contribution Version')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"F_Contribution Version.hierarchies/F_Contribution Version.json"
+	]
+}

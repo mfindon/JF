@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"DrillView",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('F_PeriodMonthly')/Hierarchies('F_PeriodMonthly')/Elements('202401')"
+		}
+	]
+}

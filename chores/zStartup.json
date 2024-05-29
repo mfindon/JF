@@ -1,0 +1,20 @@
+{
+	"@type":"Chore",
+	"Name":"zStartup",
+	"StartTime":"2023-06-14T23:00Z",
+	"DSTSensitive":false,
+	"Active":false,
+	"ExecutionMode":"MultipleCommit",
+	"Frequency":"P1DT00H00M00S",
+	"Tasks":
+	[
+		{
+			"Step":0,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('FAP_Trigger_IP')"
+			}
+		}
+	]
+}

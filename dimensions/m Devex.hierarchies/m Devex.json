@@ -1,0 +1,202 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Devex",
+	"Elements":
+	[
+		{
+			"Name":"Project name",
+			"Type":"String"
+		},
+		{
+			"Name":"Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"Historic cost - Opening balance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Historic cost - Additions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Historic cost - Transfers",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Historic cost - FX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Released to P&L",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Historic cost - Closing balance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Approved budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"% complete as at Year End",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation - Opening balance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation eliminated on disposal",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation - Provision",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation - Transfers",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation - Charge",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation - FX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amortisation - Closing balance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Opening NBV",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Closing NBV",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Project start date",
+			"Type":"String"
+		},
+		{
+			"Name":"Last transaction date",
+			"Type":"String"
+		},
+		{
+			"Name":"Expected completion date",
+			"Type":"String"
+		},
+		{
+			"Name":"Status",
+			"Type":"String"
+		},
+		{
+			"Name":"Gross revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross margin %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Development costs (at completion)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Surplus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product lifecycle (months)",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Historic cost - Closing balance",
+			"ComponentName":"Historic cost - Opening balance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Historic cost - Closing balance",
+			"ComponentName":"Historic cost - Additions",
+			"Weight":1
+		},
+		{
+			"ParentName":"Historic cost - Closing balance",
+			"ComponentName":"Historic cost - Transfers",
+			"Weight":1
+		},
+		{
+			"ParentName":"Historic cost - Closing balance",
+			"ComponentName":"Released to P&L",
+			"Weight":1
+		},
+		{
+			"ParentName":"Historic cost - Closing balance",
+			"ComponentName":"Historic cost - FX",
+			"Weight":1
+		},
+		{
+			"ParentName":"Amortisation - Closing balance",
+			"ComponentName":"Amortisation - Opening balance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Amortisation - Closing balance",
+			"ComponentName":"Amortisation eliminated on disposal",
+			"Weight":1
+		},
+		{
+			"ParentName":"Amortisation - Closing balance",
+			"ComponentName":"Amortisation - Provision",
+			"Weight":1
+		},
+		{
+			"ParentName":"Amortisation - Closing balance",
+			"ComponentName":"Amortisation - Transfers",
+			"Weight":1
+		},
+		{
+			"ParentName":"Amortisation - Closing balance",
+			"ComponentName":"Amortisation - Charge",
+			"Weight":1
+		},
+		{
+			"ParentName":"Amortisation - Closing balance",
+			"ComponentName":"Amortisation - FX",
+			"Weight":1
+		},
+		{
+			"ParentName":"Opening NBV",
+			"ComponentName":"Historic cost - Opening balance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Opening NBV",
+			"ComponentName":"Amortisation - Opening balance",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Closing NBV",
+			"ComponentName":"Historic cost - Closing balance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Closing NBV",
+			"ComponentName":"Amortisation - Closing balance",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,32 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Reset Sequence Number",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"FAP_Reset Sequence Number.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"VariablesUIData":
+	[
+		"VarType=33€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"ydE;sgGYe>>@PvLCVgRZwCR48uY[S0hu7Yw`S[xek;8ILxAklL;VKiGLamy<DXIkbyc5S;_Iu][D@>6cE25A[gb1;gyynF]_a2PZ_?MVc5oVRigg6fjW\\xqERK?onE9zZi1e;7TKor_tfAKqH0>4>Rxwjb_\\Hff4ZUhC`jc_R@?6dJ`W>7ohE^qcLP:kC2\\vBq?tCAu",
+		"query":"  SELECT  max (sequenceno) as seq\r\n  FROM Production_TRICKLE",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vseq",
+			"Type":"Numeric",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

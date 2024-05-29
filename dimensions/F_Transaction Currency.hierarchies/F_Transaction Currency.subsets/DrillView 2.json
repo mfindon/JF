@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"DrillView 2",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('F_Transaction Currency')/Hierarchies('F_Transaction Currency')/Elements('AllTransCurr')"
+		}
+	]
+}

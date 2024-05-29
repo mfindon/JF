@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"KPI Report",
+	"Expression":"{[Period].[_],STRTOMEMBER(\"Period].[\" + [Admin].([m zAdmin].[Input],[Admin Line].[Current Month YTD]) + \"]\"),TM1FILTERBYLEVEL(TM1DRILLDOWNMEMBER({STRTOMEMBER(\"Period].[\" + [Admin].([m zAdmin].[Input],[Admin Line].[Current Year]) + \"]\")} , ALL , RECURSIVE) , 0)}"
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m zCompany Variables",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m zCompany Variables')/Hierarchies('m zCompany Variables')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m zCompany Variables.hierarchies/m zCompany Variables.json"
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"zControl Account",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('zControl Account')/Hierarchies('zControl Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"zControl Account.hierarchies/zControl Account.json"
+	]
+}

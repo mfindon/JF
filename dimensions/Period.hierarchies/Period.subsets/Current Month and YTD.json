@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Current Month and YTD",
+	"Expression":"{STRTOMEMBER(\"Period].[\" + [Admin].([m zAdmin].[Input],[Admin Line].[Current Month]) + \"]\"),STRTOMEMBER(\"Period].[\" + [Admin].([m zAdmin].[Input],[Admin Line].[Current Month YTD]) + \"]\")}"
+}

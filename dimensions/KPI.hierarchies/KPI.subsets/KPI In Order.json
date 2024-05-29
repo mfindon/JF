@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"KPI In Order",
+	"Expression":"{ORDER( {FILTER( {TM1SUBSETALL( [KPI] )}, [KPI].[Is KPI] = \"Yes\")} , [KPI].[KPI].[Order])}"
+}

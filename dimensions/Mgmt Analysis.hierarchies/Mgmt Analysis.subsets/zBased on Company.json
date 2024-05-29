@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zBased on Company",
+	"Expression":"{ FILTER ( \r\r{TM1SUBSETALL( [Mgmt Analysis] )},\r\r[zManagement Analysis Mapping].(  [m zManagement Analysis Mapping].[Dashboard Mapping]  ) <> \"\"\r\r)}\r"
+}

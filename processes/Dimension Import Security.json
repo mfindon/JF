@@ -1,0 +1,59 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Import Security",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Import Security.ti",
+	"UIData":"_ParameterConstraints=e30=€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1CubeView",
+		"dataSourceNameForClient":"}ElementAttributes_F_Company",
+		"dataSourceNameForServer":"}ElementAttributes_F_Company",
+		"view":"Whole Cube"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimensionFrom",
+			"Prompt":"Dimension to copy security from",
+			"Value":"F_Company",
+			"Type":"String"
+		},
+		{
+			"Name":"PDimensionTo",
+			"Prompt":"Dimension to copy security to",
+			"Value":"Company",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vElement",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vGroup",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vSecurity",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

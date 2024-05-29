@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Devex Project",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Devex Project')/Hierarchies('Devex Project')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Devex Project.hierarchies/Devex Project.json"
+	]
+}

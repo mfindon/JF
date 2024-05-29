@@ -1,0 +1,902 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Contribution Version",
+	"Elements":
+	[
+		{
+			"Name":"CO LGAL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO JSC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J90",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J62",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J60",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J40",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J35",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J18",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO J1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO GRSS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO ELIM",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO BASE",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO AUTO",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO ALL",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"CO AJS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BASEET",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustments",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"97",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"95",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"90",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"82",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"81",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"80",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"75",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"70",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"68",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"67",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"66",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"65",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"62",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"61",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"60",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"50",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"46",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"38",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"37",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"36",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"35",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SC",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"BASEET",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"30",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"35",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"36",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"37",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"38",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"46",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"65",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"66",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"67",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"68",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"70",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"75",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"8",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"80",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"81",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"82",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"95",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO LGAL",
+			"ComponentName":"97",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO JSC",
+			"ComponentName":"SC",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J90",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J62",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J60",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J40",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J35",
+			"ComponentName":"35",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J18",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO J1",
+			"ComponentName":"1",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"BASEET",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"1",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"10",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"20",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"30",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"37",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"38",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"46",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"65",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"66",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"67",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"68",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"70",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"75",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"8",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"80",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"81",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"82",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"95",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO GRSS",
+			"ComponentName":"97",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"BASEET",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"1",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"10",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ELIM",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO BASE",
+			"ComponentName":"BASEET",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"1",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"20",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"35",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AUTO",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"Adjustments",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"BASEET",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"1",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"10",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"20",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"30",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"35",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"36",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"37",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"38",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"46",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"65",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"66",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"67",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"68",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"70",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"75",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"8",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"80",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"81",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"82",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"95",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO ALL",
+			"ComponentName":"97",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"1",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"10",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"20",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"30",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"35",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"36",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"37",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"38",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"46",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"60",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"61",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"62",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"65",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"66",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"67",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"68",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"70",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"75",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"8",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"80",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"81",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"82",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"90",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"95",
+			"Weight":1
+		},
+		{
+			"ParentName":"CO AJS",
+			"ComponentName":"97",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Contribution Version.subsets/Default.json"
+	]
+}

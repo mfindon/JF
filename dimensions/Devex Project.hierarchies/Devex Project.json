@@ -1,0 +1,285 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Devex Project",
+	"Elements":
+	[
+		{
+			"Name":"Total Projects",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"001",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"002",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"003",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"004",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"005",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"006",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"007",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"008",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"009",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"014",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"015",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"016",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"017",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"018",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"019",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"020",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"021",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"022",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"023",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"024",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"025",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"026",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"027",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"028",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"029",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"030",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"001",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"002",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"003",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"004",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"005",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"006",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"007",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"008",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"009",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"014",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"015",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"016",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"017",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"018",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"019",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"020",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"021",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"022",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"023",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"024",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"025",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"026",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"027",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"028",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"029",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Projects",
+			"ComponentName":"030",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

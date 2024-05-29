@@ -1,0 +1,54 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Region",
+	"Elements":
+	[
+		{
+			"Name":"All Regions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"UK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Europe",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Asia Pacific",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ME, Africa & Americas",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Regions",
+			"ComponentName":"UK",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Regions",
+			"ComponentName":"Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Regions",
+			"ComponentName":"Asia Pacific",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Regions",
+			"ComponentName":"ME, Africa & Americas",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Region.subsets/All Regions List.json"
+	]
+}

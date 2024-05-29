@@ -1,0 +1,38 @@
+{
+	"@type":"Cube",
+	"Name":"Reporting 2",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Mgmt Analysis')"
+		},
+		{
+			"@id":"Dimensions('Currency 2')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Closing Version')"
+		},
+		{
+			"@id":"Dimensions('Contribution Version')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Actuality')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m Reporting')"
+		}
+	],
+	"Views@Code.links":[]
+}

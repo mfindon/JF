@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"DrillView 2",
+	"Expression":"{ HEAD ( {TM1SORT( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [F_Company] )}, \"*.M1000*\")}, DESC)} ) }"
+}

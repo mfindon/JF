@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Capex Input",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Capex Input')/Hierarchies('m Capex Input')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Capex Input.hierarchies/m Capex Input.json"
+	]
+}

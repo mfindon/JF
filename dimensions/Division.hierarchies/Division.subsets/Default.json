@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{TM1SORT( {TM1SUBSETALL( [Division] )}, ASC)}"
+}

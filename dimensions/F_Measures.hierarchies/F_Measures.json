@@ -1,0 +1,40 @@
+{
+	"@type":"Hierarchy",
+	"Name":"F_Measures",
+	"Elements":
+	[
+		{
+			"Name":"YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Transaction YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Monthly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Weekly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Transaction Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"Comment Count",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"F_Measures.subsets/DrillView.json",
+		"F_Measures.subsets/DrillView 2.json"
+	]
+}

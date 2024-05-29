@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Company List",
+	"Expression":"{EXCEPT(EXCEPT(EXCEPT(UNION(DISTINCT({[Company].[Company].[S1000],DESCENDANTS([Company].[Company].[S1000] , 99 , LEAVES)}) , TM1FILTERBYLEVEL(TM1SUBSETALL([Company].[Company]) , 0)) , TM1FILTERBYPATTERN(TM1FILTERBYLEVEL(TM1SUBSETALL([Company].[Company]) , 0) , \"*FAP_*\" , \"Long Name\")) , TM1FILTERBYPATTERN(TM1FILTERBYLEVEL(TM1SUBSETALL([Company].[Company]) , 0) , \"Q.*\" , \"Long Name\")) , {[Company].[Company].[S1000]})}"
+}

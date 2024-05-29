@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Capex Input Rows",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Capex Input Rows.hierarchies/Capex Input Rows.json"
+	]
+}

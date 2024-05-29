@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Input KPI per Division",
+	"Expression":"{FILTER(ORDER(FILTER([KPI].[KPI].MEMBERS , [KPI Division Mapping].([m KPI Division Mapping].[Responsible]) <> \"\") , [KPI].[KPI].[Order]) , [KPI].[KPI].[Source] <> \"Cognos\")}"
+}

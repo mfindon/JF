@@ -1,0 +1,88 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Commentary Line",
+	"Elements":
+	[
+		{
+			"Name":"Line 01",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 02",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 03",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 04",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 05",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 06",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 07",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 08",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 09",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Line 20",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

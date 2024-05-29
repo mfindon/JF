@@ -1,0 +1,27 @@
+{
+	"@type":"Process",
+	"Name":"Dimension KPI Delete KPI",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension KPI Delete KPI.ti",
+	"UIData":"_ParameterConstraints=e30=€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pKPIName",
+			"Prompt":"KPI Name",
+			"Value":"0",
+			"Type":"String"
+		},
+		{
+			"Name":"pAreYouSure",
+			"Prompt":"Are you sure?",
+			"Value":"0",
+			"Type":"String"
+		}
+	],
+	"Variables":[]
+}

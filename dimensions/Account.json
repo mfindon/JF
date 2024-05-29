@@ -1,0 +1,14 @@
+{
+	"@type":"Dimension",
+	"Name":"Account",
+	"AllLeavesHierarchyName":"Leaves",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Account')/Hierarchies('Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Account.hierarchies/Account.json",
+		"Account.hierarchies/Account Graph Axis.json"
+	]
+}

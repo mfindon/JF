@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zDivision Match",
+	"Expression":"{ FILTER ( {TM1SUBSETALL( [Company] )}, [z Division Company Match].( [m z Division Company Match].[Match] ) <> 0 ) }"
+}

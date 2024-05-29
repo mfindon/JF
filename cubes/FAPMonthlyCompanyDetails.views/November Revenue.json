@@ -1,0 +1,155 @@
+{
+	"@type":"NativeView",
+	"Name":"November Revenue",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Measures')/Hierarchies('F_Measures')/Subsets('DrillView')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Consolidation Perspective')/Hierarchies('F_Consolidation Perspective')"
+				},
+				"Elements":[]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Company')/Hierarchies('F_Company')"
+				},
+				"Elements":[]
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Account')/Hierarchies('F_Account')/Subsets('DrillView')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Mgmt Analysis')/Hierarchies('F_Mgmt Analysis')"
+				},
+				"Elements":[]
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Dim 2')/Hierarchies('F_Dim 2')"
+				},
+				"Expression":"TM1SubsetAll([F_Dim 2])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('F_Dim 2')/Hierarchies('F_Dim 2')/Elements('@Aggr_@TOT')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Counter Dimension')/Hierarchies('F_Counter Dimension')/Subsets('DrillView')"
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Currency')/Hierarchies('F_Currency')/Subsets('DrillView')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('F_Currency')/Hierarchies('F_Currency')/Elements('GBP')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Transaction Currency')/Hierarchies('F_Transaction Currency')/Subsets('DrillView')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('F_Transaction Currency')/Hierarchies('F_Transaction Currency')/Elements('AllTransCurr')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Closing Version')/Hierarchies('F_Closing Version')/Subsets('DrillView')"
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Contribution Version')/Hierarchies('F_Contribution Version')/Subsets('DrillView')"
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_ActualityMonthly')/Hierarchies('F_ActualityMonthly')/Subsets('DrillView')"
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Origin Company')/Hierarchies('F_Origin Company')/Subsets('DrillView')"
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Counter Company')/Hierarchies('F_Counter Company')/Subsets('DrillView')"
+			},
+			"Selected":null
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_Journal Number')/Hierarchies('F_Journal Number')/Subsets('DrillView')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('F_Journal Number')/Hierarchies('F_Journal Number')/Elements('AllJournals')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('F_PeriodMonthly')/Hierarchies('F_PeriodMonthly')/Subsets('DrillView')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('F_PeriodMonthly')/Hierarchies('F_PeriodMonthly')/Elements('202401')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.00"
+}

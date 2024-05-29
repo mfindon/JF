@@ -1,0 +1,48 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Trickle Feed Check",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"FAP_Trickle Feed Check.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€MeasuresDim=F_Currency€MeasuresDimAction=As Is€MeasuresDimElemSortType=ByInput€MeasuresDimElemSortSense=DESCENDING€_ParameterConstraints=e30=€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"u@DH]2swMEx>GHh9TtJZUuIshfDyG@@qGj8hm5Ye@V^94x1R<qDwl9x2GkYwY;K{1Il=s=_k[CZ4d0fpFTyn7g>R^6xYNKMtlRtfdq6cMolljAkgfHOUKJe7zrKM>^@?c`Qe[Yv6JD^zVL=rX4Pec;4HTU?uX0di6[go@shSr@@s6T<]FU8x_HN9Kt`u_DRSF?0Lq;Ab",
+		"query":"WITH TrickleTable as (\r\nSELECT  '20' + SUBSTRING ( perakt, 1, 2) + SUBSTRING ( perakt, 3, 2) + SUBSTRING ( perakt, 5, 2) + bol as vLine\r\nFROM Production_TRICKLE\r\nWHERE sequenceno > ?pSequence? \r\nGroup by perakt, bol \r\n),\r\nLoadTable as (\r\nSELECT TRIM ( period ) + actuality +company as vLine2 FROM f_md_FAP\r\nGroup by period, actuality, company   \r\n) \r\nSelect TrickleTable.vLine as vResult, 'In trickle table not in load table' as vDesciption from TrickleTable where TrickleTable.vLine NOT IN  ( SELECT LoadTable.vLine2 FROM LoadTable )\r\nUNION\r\nSelect LoadTable.vLine2 as vResult, 'In load table not in trickle table' as vDesciption from LoadTable where LoadTable.vLine2 NOT IN  ( SELECT TrickleTable.vLine FROM TrickleTable )",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pSequence",
+			"Prompt":"Last Seqence Number",
+			"Value":"0",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vResult",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vDesciption",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m_zUserSelection",
+	"Elements":
+	[
+		{
+			"Name":"Capex Month",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

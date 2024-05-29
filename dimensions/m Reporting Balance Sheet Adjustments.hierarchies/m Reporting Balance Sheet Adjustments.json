@@ -1,0 +1,64 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Reporting Balance Sheet Adjustments",
+	"Elements":
+	[
+		{
+			"Name":"All Adjustments",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Loans <1yr",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ROU Leases",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LT Oth Rec",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Provisions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rounding",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Adjustments",
+			"ComponentName":"Loans <1yr",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Adjustments",
+			"ComponentName":"ROU Leases",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Adjustments",
+			"ComponentName":"LT Oth Rec",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Adjustments",
+			"ComponentName":"Provisions",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Adjustments",
+			"ComponentName":"Rounding",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

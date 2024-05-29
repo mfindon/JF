@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zSelect S2000",
+	"Expression":"{TM1DRILLDOWNMEMBER( { [Company].[S2000] }, ALL, RECURSIVE )}"
+}

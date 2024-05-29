@@ -1,0 +1,763 @@
+{
+	"@type":"NativeView",
+	"Name":"Actual Current Month",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Period')/Hierarchies('Period')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202309 YTD')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202309')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Company')/Hierarchies('Company')/Subsets('Product Line Hierarchy')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('NA')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A001')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A002')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A003')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A004')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A005')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A006')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A007')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A008')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A009')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A010')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A011')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A012')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A013')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A014')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A015')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A016')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A017')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A018')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A019')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A020')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A021')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A022')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A023')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A024')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A025')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A026')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A027')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A028')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A029')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A030')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A031')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A032')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A033')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A034')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A035')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A036')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A037')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A038')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A039')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A040')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A041')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A042')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A043')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A044')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A045')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A046')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A047')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A048')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A049')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A050')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A051')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A052')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A053')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A054')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A055')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A056')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A057')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A058')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A059')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A060')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A061')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A062')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A063')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A064')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A065')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A066')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A067')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A068')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A069')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A070')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A071')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A072')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A073')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A074')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A075')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A076')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A077')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A078')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A079')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A080')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A081')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A082')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A083')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A084')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A085')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A086')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A087')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A088')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A089')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A090')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A091')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A092')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A093')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A094')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A095')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A096')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A097')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A098')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A099')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('A100')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('001')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('002')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('003')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('004')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('005')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('006')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('007')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('008')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('009')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('010')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('011')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('012')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('013')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('014')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('015')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('016')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('017')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('018')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('019')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('020')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('021')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('022')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('023')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('024')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('025')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('026')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('027')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('028')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('029')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('030')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('031')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('032')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('033')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('034')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('035')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('036')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('037')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('038')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('039')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('040')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('041')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('042')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('043')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('044')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('045')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('046')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('047')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('048')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('049')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('050')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('051')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('052')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('053')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('054')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('055')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('056')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('057')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('058')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('059')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('060')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('061')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('062')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('063')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('064')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('065')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('066')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('067')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('068')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('069')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('070')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('071')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('072')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('073')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('074')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('075')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('076')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('077')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('078')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('079')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('080')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('081')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('082')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('083')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('084')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('085')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('086')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('087')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('088')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('089')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('090')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('091')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('092')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('093')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('094')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('095')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('096')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('097')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('098')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('099')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('100')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('YTD < X')"
+					},
+					{
+						"@id":"Dimensions('Capex Input Rows')/Hierarchies('Capex Input Rows')/Elements('Total Capex incl < X')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Plan')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actual')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202301')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202302')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202303')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202304')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202305')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202306')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202307')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202308')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202309')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202310')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202311')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast 202312')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actual')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency')/Hierarchies('Currency')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('GBP')"
+					},
+					{
+						"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('LC')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('GBP')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('m Capex Input')/Hierarchies('m Capex Input')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('m Capex Input')/Hierarchies('m Capex Input')/Elements('Capex Spend')"
+					},
+					{
+						"@id":"Dimensions('m Capex Input')/Hierarchies('m Capex Input')/Elements('Capex YTD < X')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('m Capex Input')/Hierarchies('m Capex Input')/Elements('Capex YTD < X')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"KPI Division List",
+	"Expression":"{ORDER(FILTER([KPI].[KPI].MEMBERS , [KPI Division Mapping].([m KPI Division Mapping].[Responsible]) <> \"\") , [KPI].[KPI].[Order])}"
+}

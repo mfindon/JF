@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m FAP Status",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m FAP Status')/Hierarchies('m FAP Status')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m FAP Status.hierarchies/m FAP Status.json"
+	]
+}

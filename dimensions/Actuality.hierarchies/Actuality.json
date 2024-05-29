@@ -1,0 +1,5759 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Actuality",
+	"Elements":
+	[
+		{
+			"Name":"All Actualities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"F4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"F3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"F2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"F1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BU",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"B2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"B1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AB",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PY AC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FB",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Variances",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v FC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F4",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F3",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v BU",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v B2",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v B1",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v AB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v PY AC",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v FB",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"All Variances %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FC v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F4 v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F3 v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F2 v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"F1 v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"BU v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B2 v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"B1 v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AC v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AB v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v FC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F4 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F3 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v F1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v BU %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v B2 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v B1 %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v AB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v PY AC %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FB v FB %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AC Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY FC Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY F4 Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY F3 Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY F2 Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY F1 Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY BU Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY B2 Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY B1 Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY AB Growth %",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"PY FB Growth %",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Actualities",
+			"ComponentName":"FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FC v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F4 v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F3 v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F2 v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"F1 v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"BU v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B2 v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"B1 v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AC v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"AB v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"PY AC v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v FC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v F4",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v F3",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v F2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v F1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v BU",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v B2",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v B1",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v AB",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances",
+			"ComponentName":"FB v FB",
+			"Weight":0
+		},
+		{
+			"ParentName":"FC v FC",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F4",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v F3",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v F2",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v F1",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v BU",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v B2",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v B1",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v AC",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v AB",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v PY AC",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FC v FB",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v FC",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v F4",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F3",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v F2",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v F1",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v BU",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v B2",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v B1",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v AC",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v AB",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v PY AC",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F4 v FB",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v FC",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v F4",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v F3",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F2",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v F1",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v BU",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v B2",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v B1",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v AC",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v AB",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v PY AC",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F3 v FB",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v FC",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v F4",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v F3",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v F2",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F1",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v BU",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v B2",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v B1",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v AC",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v AB",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v PY AC",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F2 v FB",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v FC",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v F4",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v F3",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v F2",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v F1",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v BU",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v B2",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v B1",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v AC",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v AB",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v PY AC",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"F1 v FB",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v FC",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v F4",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v F3",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v F2",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v F1",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v BU",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B2",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v B1",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v AC",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v AB",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v PY AC",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"BU v FB",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v FC",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v F4",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v F3",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v F2",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v F1",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v BU",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v B2",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v B1",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v AC",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v AB",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v PY AC",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B2 v FB",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v FC",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v F4",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v F3",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v F2",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v F1",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v BU",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v B2",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v B1",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AC",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v AB",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v PY AC",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"B1 v FB",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v FC",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v F4",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v F3",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v F2",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v F1",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v BU",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v B2",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v B1",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v AC",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v AB",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v PY AC",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AC v FB",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v FC",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v F4",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v F3",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v F2",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v F1",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v BU",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v B2",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v B1",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v AC",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v AB",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v PY AC",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"AB v FB",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v FC",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v F4",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v F3",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v F2",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v F1",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v BU",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v B2",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v B1",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v AC",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v AB",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AC v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FB",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FB",
+			"ComponentName":"FB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v FC",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v FC",
+			"ComponentName":"FC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v F4",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F4",
+			"ComponentName":"F4",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v F3",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F3",
+			"ComponentName":"F3",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v F2",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F2",
+			"ComponentName":"F2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v F1",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F1",
+			"ComponentName":"F1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v BU",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v BU",
+			"ComponentName":"BU",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v B2",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v B2",
+			"ComponentName":"B2",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v B1",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v B1",
+			"ComponentName":"B1",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v AC",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v AC",
+			"ComponentName":"AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v AB",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v AB",
+			"ComponentName":"AB",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v PY AC",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v PY AC",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"FB v FB",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FC v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F4 v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F3 v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F2 v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"F1 v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"BU v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B2 v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"B1 v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AC v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"AB v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"PY AC v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v FC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v F4 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v F3 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v F2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v F1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v BU %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v B2 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v B1 %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v AB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v PY AC %",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Variances %",
+			"ComponentName":"FB v FB %",
+			"Weight":0
+		},
+		{
+			"ParentName":"FC v FC %",
+			"ComponentName":"FC v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F4 %",
+			"ComponentName":"FC v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F3 %",
+			"ComponentName":"FC v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F2 %",
+			"ComponentName":"FC v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F1 %",
+			"ComponentName":"FC v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v BU %",
+			"ComponentName":"FC v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v B2 %",
+			"ComponentName":"FC v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v B1 %",
+			"ComponentName":"FC v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v AC %",
+			"ComponentName":"FC v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v AB %",
+			"ComponentName":"FC v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v PY AC %",
+			"ComponentName":"FC v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v FB %",
+			"ComponentName":"FC v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FC v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v FC %",
+			"ComponentName":"F4 v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F4 %",
+			"ComponentName":"F4 v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F3 %",
+			"ComponentName":"F4 v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F2 %",
+			"ComponentName":"F4 v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F1 %",
+			"ComponentName":"F4 v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v BU %",
+			"ComponentName":"F4 v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v B2 %",
+			"ComponentName":"F4 v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v B1 %",
+			"ComponentName":"F4 v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v AC %",
+			"ComponentName":"F4 v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v AB %",
+			"ComponentName":"F4 v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v PY AC %",
+			"ComponentName":"F4 v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v FB %",
+			"ComponentName":"F4 v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F4 v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v FC %",
+			"ComponentName":"F3 v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F4 %",
+			"ComponentName":"F3 v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F3 %",
+			"ComponentName":"F3 v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F2 %",
+			"ComponentName":"F3 v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F1 %",
+			"ComponentName":"F3 v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v BU %",
+			"ComponentName":"F3 v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v B2 %",
+			"ComponentName":"F3 v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v B1 %",
+			"ComponentName":"F3 v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v AC %",
+			"ComponentName":"F3 v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v AB %",
+			"ComponentName":"F3 v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v PY AC %",
+			"ComponentName":"F3 v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v FB %",
+			"ComponentName":"F3 v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F3 v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v FC %",
+			"ComponentName":"F2 v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F4 %",
+			"ComponentName":"F2 v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F3 %",
+			"ComponentName":"F2 v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F2 %",
+			"ComponentName":"F2 v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F1 %",
+			"ComponentName":"F2 v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v BU %",
+			"ComponentName":"F2 v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v B2 %",
+			"ComponentName":"F2 v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v B1 %",
+			"ComponentName":"F2 v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v AC %",
+			"ComponentName":"F2 v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v AB %",
+			"ComponentName":"F2 v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v PY AC %",
+			"ComponentName":"F2 v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v FB %",
+			"ComponentName":"F2 v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F2 v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v FC %",
+			"ComponentName":"F1 v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F4 %",
+			"ComponentName":"F1 v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F3 %",
+			"ComponentName":"F1 v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F2 %",
+			"ComponentName":"F1 v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F1 %",
+			"ComponentName":"F1 v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v BU %",
+			"ComponentName":"F1 v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v B2 %",
+			"ComponentName":"F1 v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v B1 %",
+			"ComponentName":"F1 v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v AC %",
+			"ComponentName":"F1 v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v AB %",
+			"ComponentName":"F1 v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v PY AC %",
+			"ComponentName":"F1 v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v FB %",
+			"ComponentName":"F1 v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"F1 v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v FC %",
+			"ComponentName":"BU v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F4 %",
+			"ComponentName":"BU v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F3 %",
+			"ComponentName":"BU v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F2 %",
+			"ComponentName":"BU v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F1 %",
+			"ComponentName":"BU v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v BU %",
+			"ComponentName":"BU v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B2 %",
+			"ComponentName":"BU v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B1 %",
+			"ComponentName":"BU v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v AC %",
+			"ComponentName":"BU v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v AB %",
+			"ComponentName":"BU v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v PY AC %",
+			"ComponentName":"BU v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v FB %",
+			"ComponentName":"BU v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"BU v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v FC %",
+			"ComponentName":"B2 v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F4 %",
+			"ComponentName":"B2 v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F3 %",
+			"ComponentName":"B2 v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F2 %",
+			"ComponentName":"B2 v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F1 %",
+			"ComponentName":"B2 v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v BU %",
+			"ComponentName":"B2 v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v B2 %",
+			"ComponentName":"B2 v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v B1 %",
+			"ComponentName":"B2 v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v AC %",
+			"ComponentName":"B2 v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v AB %",
+			"ComponentName":"B2 v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v PY AC %",
+			"ComponentName":"B2 v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v FB %",
+			"ComponentName":"B2 v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B2 v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v FC %",
+			"ComponentName":"B1 v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F4 %",
+			"ComponentName":"B1 v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F3 %",
+			"ComponentName":"B1 v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F2 %",
+			"ComponentName":"B1 v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F1 %",
+			"ComponentName":"B1 v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v BU %",
+			"ComponentName":"B1 v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v B2 %",
+			"ComponentName":"B1 v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v B1 %",
+			"ComponentName":"B1 v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AC %",
+			"ComponentName":"B1 v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AB %",
+			"ComponentName":"B1 v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v PY AC %",
+			"ComponentName":"B1 v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v FB %",
+			"ComponentName":"B1 v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"B1 v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v FC %",
+			"ComponentName":"AC v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F4 %",
+			"ComponentName":"AC v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F3 %",
+			"ComponentName":"AC v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F2 %",
+			"ComponentName":"AC v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F1 %",
+			"ComponentName":"AC v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v BU %",
+			"ComponentName":"AC v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v B2 %",
+			"ComponentName":"AC v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v B1 %",
+			"ComponentName":"AC v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v AC %",
+			"ComponentName":"AC v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v AB %",
+			"ComponentName":"AC v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v PY AC %",
+			"ComponentName":"AC v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v FB %",
+			"ComponentName":"AC v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AC v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v FC %",
+			"ComponentName":"AB v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F4 %",
+			"ComponentName":"AB v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F3 %",
+			"ComponentName":"AB v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F2 %",
+			"ComponentName":"AB v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F1 %",
+			"ComponentName":"AB v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v BU %",
+			"ComponentName":"AB v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v B2 %",
+			"ComponentName":"AB v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v B1 %",
+			"ComponentName":"AB v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v AC %",
+			"ComponentName":"AB v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v AB %",
+			"ComponentName":"AB v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v PY AC %",
+			"ComponentName":"AB v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v FB %",
+			"ComponentName":"AB v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"AB v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FC %",
+			"ComponentName":"PY AC v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F4 %",
+			"ComponentName":"PY AC v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F3 %",
+			"ComponentName":"PY AC v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F2 %",
+			"ComponentName":"PY AC v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F1 %",
+			"ComponentName":"PY AC v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v BU %",
+			"ComponentName":"PY AC v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v B2 %",
+			"ComponentName":"PY AC v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v B1 %",
+			"ComponentName":"PY AC v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v AC %",
+			"ComponentName":"PY AC v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v AB %",
+			"ComponentName":"PY AC v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v PY AC %",
+			"ComponentName":"PY AC v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FB %",
+			"ComponentName":"PY AC v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AC v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v FC %",
+			"ComponentName":"FB v FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v FC %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F4 %",
+			"ComponentName":"FB v F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F4 %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F3 %",
+			"ComponentName":"FB v F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F3 %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F2 %",
+			"ComponentName":"FB v F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F2 %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F1 %",
+			"ComponentName":"FB v F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v F1 %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v BU %",
+			"ComponentName":"FB v BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v BU %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v B2 %",
+			"ComponentName":"FB v B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v B2 %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v B1 %",
+			"ComponentName":"FB v B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v B1 %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v AC %",
+			"ComponentName":"FB v AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v AC %",
+			"ComponentName":"AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v AB %",
+			"ComponentName":"FB v AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v AB %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v PY AC %",
+			"ComponentName":"FB v PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v PY AC %",
+			"ComponentName":"PY AC",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v FB %",
+			"ComponentName":"FB v FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"FB v FB %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY AC Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY FC Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY F4 Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY F3 Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY F2 Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY F1 Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY BU Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY B2 Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY B1 Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY AB Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY Growth %",
+			"ComponentName":"PY FB Growth %",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY AC Growth %",
+			"ComponentName":"AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY AC Growth %",
+			"ComponentName":"PY AC",
+			"Weight":0
+		},
+		{
+			"ParentName":"PY FC Growth %",
+			"ComponentName":"FC",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY FC Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY F4 Growth %",
+			"ComponentName":"F4",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY F4 Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY F3 Growth %",
+			"ComponentName":"F3",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY F3 Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY F2 Growth %",
+			"ComponentName":"F2",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY F2 Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY F1 Growth %",
+			"ComponentName":"F1",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY F1 Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY BU Growth %",
+			"ComponentName":"BU",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY BU Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY B2 Growth %",
+			"ComponentName":"B2",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY B2 Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY B1 Growth %",
+			"ComponentName":"B1",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY B1 Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY AB Growth %",
+			"ComponentName":"AB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY AB Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		},
+		{
+			"ParentName":"PY FB Growth %",
+			"ComponentName":"FB",
+			"Weight":1
+		},
+		{
+			"ParentName":"PY FB Growth %",
+			"ComponentName":"PY AC",
+			"Weight":-1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Actuality.subsets/Default.json"
+	]
+}

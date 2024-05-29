@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Periods List Mmm-YYYY",
+	"Expression":"{TM1FILTERBYLEVEL(TM1SUBSETALL([Period].[Period]) , 0)}"
+}

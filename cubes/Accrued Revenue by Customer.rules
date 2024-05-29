@@ -1,0 +1,8 @@
+Skipcheck;
+
+['GBP' ] = N: ['LC'] \  DB('FX Rates','AC', DB('}ElementAttributes_Division', !Division, 'Local Currency'), !Period,'Rate');
+['GBP' ] = S: DB('Accrued Revenue by Customer','LC',!Division,!Days Grouping,!Period,!Customer Row,!m Accrued Revenue by Customer);
+
+FEEDERS;
+
+['LC' ] => ['GBP' ];

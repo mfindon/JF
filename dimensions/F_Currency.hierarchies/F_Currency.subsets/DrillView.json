@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"DrillView",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('F_Currency')/Hierarchies('F_Currency')/Elements('GBP')"
+		}
+	]
+}

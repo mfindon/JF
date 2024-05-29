@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m zCompany Variables",
+	"Elements":
+	[
+		{
+			"Name":"Capex Uploaded",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex Upload Outstanding",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

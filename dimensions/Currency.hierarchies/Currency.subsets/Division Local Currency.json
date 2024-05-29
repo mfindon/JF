@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Division Local Currency",
+	"Expression":"{STRTOMEMBER(\"[Currency].[\" + [}ElementAttributes_Division].([}ElementAttributes_Division].[Local Currency]) + \"]\")}"
+}

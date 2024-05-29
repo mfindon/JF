@@ -1,0 +1,28 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m KPIs",
+	"Elements":
+	[
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Responsible",
+			"Type":"String"
+		},
+		{
+			"Name":"Is Red",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"is Green",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

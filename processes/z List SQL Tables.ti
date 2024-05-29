@@ -1,0 +1,30 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+AsciiOutput ( 'SQL Tables', TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE );
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#endregion

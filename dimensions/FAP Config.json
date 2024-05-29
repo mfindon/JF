@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"FAP Config",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('FAP Config')/Hierarchies('FAP Config')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"FAP Config.hierarchies/FAP Config.json"
+	]
+}

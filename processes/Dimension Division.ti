@@ -1,0 +1,53 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+pDimensionFrom = 'Company';
+pDimensionTo = 'Division';
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+DimensionElementInsert ( pDimensionTo, '', vCompany, 'n' );
+
+
+
+#DimensionElementComponentAdd ( pDimensionTo, 'Current Reporting Structure', sElementChild, nWeight );
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+vLongName = AttrS ( pDimensionFrom, vCompany,'Long Name' );
+AttrPutS ( vLongName, pDimensionTo, vCompany,'Name' );
+
+vCurrency = AttrS ( pDimensionFrom, vCompany,'Local Currency' );
+AttrPutS ( vCurrency, pDimensionTo, vCompany,'Local Currency' );
+
+
+vName = AttrS ( pDimensionFrom, vCompany,'EN_Long' );
+AttrPutS ( vName, pDimensionTo, vCompany,'Name' );
+
+
+sSubset = 'zSelect ' | vCompany;
+IF ( SubsetExists (  pDimensionFrom, sSubset ) = 0 );
+    SubsetCreate (  pDimensionFrom, sSubset );
+ENDIF;
+
+SubsetAliasSet( pDimensionFrom, sSubset, 'Long Name' );
+SubsetMDXSet( pDimensionFrom, sSubset, '{TM1DRILLDOWNMEMBER( { [Company].[' | vCompany | '] }, ALL, RECURSIVE )}' );
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

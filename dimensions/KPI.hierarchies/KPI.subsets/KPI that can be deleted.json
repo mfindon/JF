@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"KPI that can be deleted",
+	"Expression":"{FILTER([KPI].[KPI].MEMBERS , [KPI].[KPI].[Do Not Delete] = \"\")}"
+}

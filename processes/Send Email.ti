@@ -1,0 +1,475 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+# Routine to send an email of your chosen subject and body to your choice of recipient (a single user, a list of users or existing server group).
+
+# By default it waits around to see if a success or failure log is created so that it can try a second time if it fails or times out the first time. 
+# If you need faster performance you can avoid this wait and second try including the string *NO WAIT* anywhere in the subject line 
+# (which is then stripped off so is not seen). This should be used only in very specific circumstances only, when the speed of the email 
+# routine is more important than the reliability, 
+# e.g. during loops or data tabs for progress reports, rapid ExecuteProcess sub-process calls, and email-reports-when-drilling.
+
+# This "sender" TI script calls a Poweshell script that does the actual emailing. Check that script for full documentation.
+# Any errors from the Powershell email routine are written to a log file in the TM1 data directory, the name of which is the Log file parameter plus "_Error".
+
+###################################################
+# Constants
+
+sEmailScriptName = 'TM1Emailer_v2.ps1';
+
+
+if (CubeExists('zControl') = 0);
+	iParameterCheckOK = 0;
+	ItemReject('Fatal error: the required zADMIN_Control cube is missing!');
+endif;
+
+sMachineName = CellGetS( 'zControl', 'Server Machine Name', 'Value' );
+#sMachineName = 'IEFS-DPAN01';
+
+sServerInstance = CellGetS( 'zControl', 'Server', 'Value' );
+#sServerInstance = 'FAP';
+
+# This is the email address that the server emails will be sent from. It is usally set up as a DoNotReply type address that does accept incoming emails.
+sFromAddress = CellGetS( 'zControl', 'TM1ServerEmailFromAddress', 'Value' );
+#sFromAddress = 'donotreply_solutions@sempreanalytics.com';
+
+# This is the corporate email server name and should very rarely change unless IT instruct so.
+sSMTPServer = CellGetS('zControl', 'SMTP Server', 'Value' );
+#sSMTPServer = 'smtp.gmail.com';
+
+# This is the email server port which is usually 25 but can occasionally be something else
+sSMTPServerPort = CellGetS('zControl', 'SMTP Server Port', 'Value');
+#sSMTPServerPort = '587';
+
+# Path (include the final backslash) to the Powershell script.
+sPS1Path = CellGetS('zControl', 'Root Path on Server', 'Value');
+#sPS1Path = 'E:\TM1DATA\FAP\BatchFiles\';
+
+# Location of images if you want to include any in your emails (e.g. your corporate logo in the email footer):
+# You can imgur.com for any internet-connected client. Just make a New Post, upload the image, then click Get Share Links and use BBCode one without the two [img] tags.
+# Logo URL. If blank it will not use a logo. e.g. https://i.imgur.com/3LnngPw.png
+sImagesLocation = trim(CellGetS('zControl', 'Email Logo URL', 'Value' ));
+#sImagesLocation = '';
+
+###################################################
+# Define variables. These can be changed if needed.
+
+# Internal status log file
+sStatusFile = 'Email Status Log for ' | pLogFilenameWithoutExtension | '.txt';
+
+# Use these to specify a more friendly wait time in seconds
+iWaitSec1 = 10;
+iWaitSec2 = 10;
+
+###################################################
+# Override any parameters here for quick testing purposes
+
+#pRecipient = 'tm1admin@ibmdemos.sempre.com';
+#pSubject = 'Test email subject';
+#pBody = 'Test email body.';
+
+##################################################
+# Check parameters for validity
+
+iParameterCheckOK = 1;
+
+if (trim(sMachineName) @= '');
+	iParameterCheckOK = 0;
+	ItemReject('Fatal error: the machine name, found in zTD_Info / Server Machine Name, is blank!');
+endif;
+
+if (trim(sServerInstance) @= '');
+	iParameterCheckOK = 0;
+	ItemReject('Fatal error: the server instance name, found in zTD_Info / Server, is blank!');
+endif;
+
+
+# Check if the Powershell script itself exists where it should be
+if (FileExists(sPS1Path | sEmailScriptName) = 0);
+	iParameterCheckOK = 0;
+	ItemReject('Fatal error: the emailer script itself, ' | sPS1Path | sEmailScriptName | ' could not be found!');
+endif;	
+
+# Single addresses or group names are easy enough but multiple addresses have a harder-to-figure-out format. 
+# For a direct command, put 3 double-quotes around each name and a comma in-between. e.g.
+# pRecipient = '"""jsmith@acme.com""","""bjones@acme.com"""';
+# But the more common usage of picking up the recipient string from a lookup cube like zUser Info is to store the recipient as "name1@acme.com","name2@acme.com","name3@acme.com"
+# ie one double quote before and after each address and a comma in between each address. 
+
+if ((pRecipient @<> 'X') & (SCAN('@', pRecipient) > 0));
+	sRecipient = pRecipient;
+else;
+	iParameterCheckOK = 0;
+	ItemReject('Invalid Recipient parameter [' | pRecipient | '].');
+endif;
+
+#DatasourceASCIIQuoteCharacter='';
+#asciioutput('test.txt', pRecipient );
+#asciioutput('test.txt', sRecipient );
+#DatasourceASCIIQuoteCharacter='';
+
+if (scan('  ', pLogFilenameWithoutExtension) > 0);
+	iParameterCheckOK = 0;
+	ItemReject('Double-space detected in log filename which is not allowed: ' | pLogFilenameWithoutExtension);
+endif;
+
+if (scan('.', pLogFilenameWithoutExtension) > 0);
+	iParameterCheckOK = 0;
+	ItemReject('Periods not allowed in log filename (do not include any extension): ' | pLogFilenameWithoutExtension);
+endif;
+
+if (pLogFilenameWithoutExtension @= 'X' % trim(pLogFilenameWithoutExtension) @= '');
+	sLogFileWithExtension = 'TM1EmailerLog.txt';
+else;
+	sLogFileWithExtension = pLogFilenameWithoutExtension | '.txt';
+endif;
+
+if (pLogFilenameWithoutExtension @= 'X' % trim(pLogFilenameWithoutExtension) @= '');
+	sErrorLogFileWithoutExtension = 'TM1EmailerErrorLog';
+else;
+	sErrorLogFileWithoutExtension = pLogFilenameWithoutExtension | '_ERROR';
+endif;
+
+sErrorLogFileWithExtension = sErrorLogFileWithoutExtension | '.txt';
+
+##################################################
+# Optional parameters can come through as anything or nothing so pass through 'X' if they are not needed.
+
+if (trim(pCC) @= '');
+	sCC = 'X';
+else;
+	sCC = pCC;
+endif;
+
+if (trim(pBCC) @= '');
+	sBCC = 'X';
+else;
+	sBCC = pBCC;
+endif;
+
+###################################################
+# Deal with any attachment(s).
+# You can leave out the path and just put the filename when attaching files from the TM1 data directory, if desired.
+# sAttachment = sUnusedAttachmentFilename | ''',''' | sUsedAttachmentFilename;
+# Or use all variables, e.g. 
+# sMidSeparator =  ''',''';
+# sMultiAttach = sReportName1 | sMidSeparator | sReportName2 | sMidSeparator | sReportName3;
+
+if (trim(pAttachment) @= '' % upper(trim(pAttachment)) @= 'X');
+	sAttachment = 'X';
+else;
+	sAttachment = pAttachment;
+endif;
+
+###################################################
+# Deal with optional paramter of priority - choices are Normal, High and Low. X or nothing means Normal.
+
+if (trim(upper(pPriority)) @= 'HIGH');
+	sPriority = 'High';
+elseif (trim(upper(pPriority)) @= 'LOW');
+	sPriority = 'Low';
+else;
+	sPriority= 'X';
+endif;
+
+###################################################
+# Tidy up subject line, if needed.
+
+# With the -BodyAsHTML flag set in the Powershell script you can include non standard ASCII characters
+# in the message body but you may still find restrictions apply to the subject line. 
+# e.g. &pound; which renders £ in the email body may not work in the subject line.
+
+# Spruce up the subject line if it was forgotten.
+if (trim(pSubject) @= '');
+	sSubject = '(No subject)';
+else;
+	sSubject = pSubject;
+endif;
+
+# If the string *NO WAIT* is included in the subject line then set the 'no wait' variable to 1 and strip out the string.
+sNoWaitTag = '*NO WAIT*';
+iNoWaitTagPosition = SCAN(sNoWaitTag, UPPER(sSubject));
+if (iNoWaitTagPosition > 0);
+	iWaitForLogs = 0;
+	sSubject = DELET(sSubject, iNoWaitTagPosition, LONG(sNoWaitTag));
+else;
+	iWaitForLogs = 1;
+endif;
+
+###################################################
+# Added 2nd April 2015. Including the logo is optional. 
+# The calling routine can not include a logo by including the phrase "NO LOGO' anywhere in the Subject so here it is spotted and stripped out of the subject string.
+
+sNoLogoTag = '*NO LOGO*';
+iNoLogoTagPosition = SCAN(sNoLogoTag, UPPER(sSubject));
+if (iNoLogoTagPosition > 0);
+	iIncludeLogo = 0;
+	sSubject = DELET(sSubject, iNoLogoTagPosition, LONG(sNoLogoTag));
+else;
+	iIncludeLogo = 1;
+endif;
+
+# And if there is no ImagesLocation value then do not include a logo
+if (sImagesLocation @= '');
+	iIncludeLogo = 0;
+endif;
+
+###################################################
+# With an HTML mail you can embed normal HTML tags into your body, e.g. URLs, pictures, rich text etc.
+# e.g. top the body with: sBody = '<font face=Arial size=2>';   and tail it with: sBody = sBody | '</font>';
+# There is some limit to the size of the ExecuteCommand function, around 32,768 characters so we avoid problems 
+# with over-long messages by curtailing the longest part, the body, to a length that should work.
+
+if (trim(pBody) @= 'X');
+	sBodyTmp = '(No message)';
+elseif (long(pBody) > 32000);
+	sBodyTmp = subst(pBody, 1, 32000);
+else;
+	sBodyTmp = pBody;
+endif;
+
+# Tidy up the typeface used compared to the default large Times New Roman one.
+sBody = '<font face=Arial size=2>';
+sBody = sBody | sBodyTmp | '</font>';
+
+###################################################
+# Tidy up body.
+# The body cannot contain a single-quote as this would confuse the parameter delimiting. Since some TM1 elements
+# could potentially include quotes we scan the body and simply delete any rather than let the email fail completely.
+
+sSingleQuote = char(39);
+sStrippedBody = '';
+iBodyLoopCounter = 0;
+iMaxBodyLoop = long(sBody);
+while (iBodyLoopCounter < iMaxBodyLoop);
+	iBodyLoopCounter = iBodyLoopCounter + 1;
+
+	sCharacterToCheck = SUBST(sBody, iBodyLoopCounter, 1);
+	if (sCharacterToCheck @= sSingleQuote);
+	else;
+		sStrippedBody = sStrippedBody | sCharacterToCheck;
+	endif;
+end;
+sBody = sStrippedBody;
+
+###################################################
+# Added 1st Nov 2014, add on the environment and machine name for information at the bottom.
+
+sFooter = '<font face=Arial size=1>'; 
+sFooter = sFooter | '<br><br><br><br><br><i>This email was sent by the ' | sServerInstance | ' server running on ' | sMachineName | '.</i>';
+sFooter = sFooter | '<br>Do not reply to this email as it was sent from an unattended mailbox. Instead, contact the TM1 administrator.';
+sFooter = sFooter | '</font>';
+
+if (iIncludeLogo = 1);
+	sFooter = sFooter | '<br><br><img src="' | sImagesLocation | '">';
+endif;
+
+###################################################
+# Split up the passed log filenames so we can insert a 'try1' and 'try2' substring.
+
+sLogFilenamePeriod = scan('.', sLogFileWithExtension);
+sLogFilenameBodyTry1 = subst(sLogFileWithExtension, 1, sLogFilenamePeriod - 1) | '_try1';
+sLogFilenameBodyTry2 = subst(sLogFileWithExtension, 1, sLogFilenamePeriod - 1) | '_try2';
+sLogFilenameExtension = subst(sLogFileWithExtension, sLogFilenamePeriod, long(sLogFileWithExtension) - sLogFilenamePeriod + 1);
+sLogFileTry1 = sPS1Path | sLogFilenameBodyTry1 | sLogFilenameExtension;
+sLogFileTry2 = sPS1Path | sLogFilenameBodyTry2 | sLogFilenameExtension;
+
+sErrorLogFilenamePeriod = scan('.',  sErrorLogFileWithExtension);
+sErrorLogFilenameBodyTry1 = subst(sErrorLogFileWithExtension, 1, sErrorLogFilenamePeriod - 1) | '_try1';
+sErrorLogFilenameBodyTry2 = subst(sErrorLogFileWithExtension, 1, sErrorLogFilenamePeriod - 1) | '_try2';
+sErrorLogFilenameExtension = subst(sErrorLogFileWithExtension, sErrorLogFilenamePeriod, long(sErrorLogFileWithExtension) - sErrorLogFilenamePeriod + 1);
+sErrorLogFileTry1 = sPS1Path | sErrorLogFilenameBodyTry1 | sErrorLogFilenameExtension;
+sErrorLogFileTry2 = sPS1Path | sErrorLogFilenameBodyTry2 | sErrorLogFilenameExtension;
+
+##################################################
+# Send the email - try 1
+
+if (iParameterCheckOK = 1);
+	# Delete any previous log files, which will let us detect if this send routine has worked or not
+	if (FileExists(sLogFileTry1) = 1);
+		asciidelete(sLogFileTry1);
+	endif;
+	if (FileExists(sErrorLogFileTry1) = 1);
+		asciidelete(sErrorLogFileTry1);
+	endif;
+
+#~~ The new statement below will now allow the command to work, even if the script being called by powershell.exe has whitespaces within the path. {notice that the command is embraced at the start AND at the end}
+#~~	THIS WORKS: 		powershell.exe E:\TM1\TST_Global\Cubes\TM1Emailer.ps1 		 -pSubject 'TEST SUBJECT'		 -pBody 'TEST BODY'		 -pRecipient 'bob@acme.com'		 -pCC 'X'		 -pBCC 'X'		 -pAttachment 'X'		 -pServer '015-smtp-out.aviva.com'		 -pLog 'E:\TM1\TST_Global\TESTlog.txt'		 -pErrorLog 'E:\TM1\TST_Global\Cubes\TESTerror.txt'
+#~~	THIS DOES NOT WORK: 	powershell.exe C:\Program Files\ibm\cognos\tm1_64\samples\tm1\SData\TM1Emailer.ps1    ...ETC
+#~~	NOW
+#~~	THIS WORKS:		powershell.exe -command "& {&'C:\Program Files\ibm\cognos\tm1_64\samples\tm1\SData\TM1Emailer.ps1' 		 -pSubject 'TEST2'		 -pBody 'TEST BODY'		 -pRecipient 'bob@acme.com'		 -pCC 'X'		 -pBCC 'X'		 -pAttachment 'X'		 -pServer '015-smtp-out.aviva.com'		 -pLog 'E:\Check Broken Hierarchy email log_try1.txt'		 -pErrorLog 'E:\Check Broken Hierarchy email error log_try1.txt'}"
+#~~
+	# Construct the main calling command to the emailer Powershell script.
+	sEmailCommandLineTry1 =  
+		'powershell.exe ' | '-executionpolicy bypass -command ' | '"& {&' | '''' | sPS1Path | sEmailScriptName | '''' | 
+#		'powershell.exe ' | '-executionpolicy bypass -command '''  | sPS1Path | sEmailScriptName | '''' | 
+		' -pServer ' | '''' | sSMTPServer | '''
+		 -pPort ' | '''' | sSMTPServerPort | '''
+		 -pUser ' | '''' | 'donotreply_solutions@sempreanalytics.com' | '''
+		 -pPassword ' | '''' | 'GotDatWee9$' | '''
+		 -pSubject ' | '''' | sSubject | '''
+		 -pFrom ' | '''' | sFromAddress | '''
+#		 -pRecipient ' | '''' | sRecipient | '''
+		 -pRecipient ' | sRecipient | ' 
+		 -pCC ' | '''' | sCC | '''
+		 -pBCC ' | '''' | sBCC | '''
+		 -pAttachment ' | '''' | sAttachment | '''
+		 -pLog ' | '''' | sLogFileTry1 | '''
+		 -pPriority ' | '''' | sPriority | '''
+		 -pBody ' | '''' | sBody 
+		;
+
+	asciioutput(sStatusFile, 'Length of original command before footer added: ' | numbertostring(long(sEmailCommandLineTry1)));
+
+	if (long(sEmailCommandLineTry1) > (32600 - long(sFooter)));
+		sEmailCommandLineTry1 = subst(sEmailCommandLineTry1, 1, (32600 - long(sFooter))) | ' ' | sFooter | ''' }"  ';
+		asciioutput(sStatusFile, 'Command was too long for the footer to be added so it had to be reduced.');
+	else;
+		sEmailCommandLineTry1 = sEmailCommandLineTry1 | ' ' | sFooter | ''' }"  ';
+		asciioutput(sStatusFile, 'Command length was fine so it was not reduced.');
+	endif;
+
+	asciioutput(sStatusFile, 'Length of final command: ' | numbertostring(long(sEmailCommandLineTry1)));
+	asciioutput(sStatusFile, '');
+	asciioutput(sStatusFile, 'Trying to send email the first time, at ' | TIMST(NOW(), '\h:\i:\s'));
+	asciioutput(sStatusFile, '');
+	asciioutput(sStatusFile, 'This is the command being sent to the command line for Try1:');
+	asciioutput(sStatusFile, sEmailCommandLineTry1);
+	asciioutput(sStatusFile, '');
+
+	# --------------------------------------------------------------------------------------------------------
+	# Execute the DOS command to send the email. Do NOT wait for execution to complete.
+	# Adding a Wait parameter of 1 to the ExecuteCommand is dangerous in that some failures in the Powershell script can leave TM1 locked forever.
+
+	ExecuteCommand(sEmailCommandLineTry1, 0);
+
+	# --------------------------------------------------------------------------------------------------------
+	# Assuming the 'No Wait' tag wasn't used we will now wait for an error or success log file to appear so we know what happened.
+	if (iWaitForLogs = 1);
+		# Assume the email failed to send, only switch it to success if it definitely finds a success log file.
+		sResult1stTry = 'START OF TRY 1';
+
+		asciioutput(sStatusFile , '');
+		asciioutput(sStatusFile, 'On Try 1, looking for a log called', sPS1Path | sLogFilenameBodyTry1 | '*');
+
+		# Look for result log files for controllable period of time 
+		# If no log is seen by then we'll assume it will fail and go ahead and try to resend the email again - better to get two than none.
+
+		iStop = NOW + iWaitSec1 / 86400; 
+		While( NOW < iStop ); 
+			# Now the email command has been issued, search for log files even if it has a dollar symbol in meaning it hasn't quite been committed yet.
+			sSuccessLogSearchResult1 = WildcardFileSearch(sPS1Path | sLogFilenameBodyTry1 | '*', '');
+			sErrorLogSearchResult1 = WildcardFileSearch(sPS1Path | sErrorLogFilenameBodyTry1 | '*', '');
+
+			if (sSuccessLogSearchResult1 @<> '');
+				asciioutput(sStatusFile, 'A success log for Try1 was found from the first try at ' | TIMST(NOW(), '\h:\i:\s'));
+				asciioutput(sStatusFile , '');
+				sResult1stTry = 'SUCCESS';
+				break;
+			elseif (sErrorLogSearchResult1 @<> '');
+				asciioutput(sStatusFile, 'Oh dear. An error log (' | sErrorLogSearchResult1 | ') was found from the 1st try at ' | TIMST(NOW(), '\h:\i:\s'));
+				asciioutput(sStatusFile , '');
+				sResult1stTry = 'FAILURE';
+				break;
+			endif;
+		end;
+
+		asciioutput(sStatusFile , 'Now outside the first loop at ' | TIMST(NOW(), '\h:\i:\s'), 'sResult1stTry = ' | sResult1stTry);
+
+		# if it failed the first time do exactly the thing a second time .
+		if (sResult1stTry @<> 'SUCCESS');
+			asciioutput(sStatusFile, '');
+			asciioutput(sStatusFile, 'Because try #1 failed, will now send the email for a second time at ' | TIMST(NOW(), '\h:\i:\s'));
+
+			asciioutput(sStatusFile , '');
+			asciioutput(sStatusFile, 'On Try 2, looking for a log called', sPS1Path | sLogFilenameBodyTry2 | '*');
+
+			sResult2ndTry = 'START OF TRY 2';
+
+			if (FileExists(sLogFileTry2) = 1);
+				asciidelete(sLogFileTry2);
+			endif;
+			if (FileExists(sErrorLogFileTry2) = 1);
+				asciidelete(sErrorLogFileTry2);
+			endif;
+
+			# --------------------------------------------------------------------------------------------------------
+			#  Send a second email in the hope that the first error was transient and it will now work.
+
+			# Construct the main calling command to the emailer Powershell script.
+			sEmailCommandLineTry2 =  sEmailCommandLineTry1;
+
+			if (long(sEmailCommandLineTry2) > (32600 - long(sFooter)));
+				sEmailCommandLineTry2 = subst(sEmailCommandLineTry2, 1, (32600 - long(sFooter))) | ' ' | sFooter | ''' }"  ';
+			else;
+				sEmailCommandLineTry2 = sEmailCommandLineTry2 | ' ' | sFooter | ''' }"  ';
+			endif;
+
+			asciioutput(sStatusFile, '');
+			asciioutput(sStatusFile, 'This is the command being sent to the command line for Try2:');
+			asciioutput(sStatusFile, sEmailCommandLineTry2);
+			asciioutput(sStatusFile, '');
+
+			ExecuteCommand(sEmailCommandLineTry2, 0);
+
+			# --------------------------------------------------------------------------------------------------------
+
+			iStop = NOW + iWaitSec2 / 86400; 
+			While( NOW < iStop ); 
+			iLoopCounter2 = 0;
+				sErrorLogSearchResult2  = WildcardFileSearch(sErrorLogFilenameBodyTry2 | '*', '');
+				sSuccessLogSearchResult2 = WildcardFileSearch(sLogFilenameBodytry2 | '*', '');
+
+				if (sSuccessLogSearchResult2 @<> '');
+					asciioutput(sStatusFile, 'A success log was found from the second try at ' | TIMST(NOW(), '\h:\i:\s'));
+					asciioutput(sStatusFile , '');
+					sResult2ndTry = 'SUCCESS';
+					break;
+				elseif (sErrorLogSearchResult2 @<> '');
+					asciioutput(sStatusFile, 'Oh dear again. An error log (' | sErrorLogSearchResult2 | ') was found from the 2nd try at ' | TIMST(NOW(), '\h:\i:\s'));
+					asciioutput(sStatusFile, 'So will send it a third time but will not wait to check to see how that goes. So it is possible NO EMAIL WAS SENT.');
+					asciioutput(sStatusFile , '');
+					sResult2ndTry = 'FAILURE';
+
+					# --------------------------------------------------------------------------------------------------------
+					# Try a THIRD time in the hope that the problems were transient and it will now work. Re-use first command. No more waiting around.
+
+					ExecuteCommand(sEmailCommandLineTry1, 0);
+
+					# --------------------------------------------------------------------------------------------------------
+
+					break;
+				endif;
+			end;
+
+			asciioutput(sStatusFile , 'Outside second loop at ' | TIMST(NOW(), '\h:\i:\s'), 'sResult2ndTry = ' | sResult2ndTry);
+
+		endif;
+	else;
+		asciioutput(sStatusFile , 'The No Wait tag was found in the Subject so the email command was issued just once and the then we exited immediately.');
+	endif;
+endif;
+
+asciioutput(sStatusFile, '');
+asciioutput(sStatusFile, 'Exiting Send Email process at ' | TIMST(NOW(), '\h:\i:\s'));
+
+##################################################
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

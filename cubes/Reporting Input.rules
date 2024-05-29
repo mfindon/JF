@@ -1,0 +1,37 @@
+Skipcheck;
+
+
+  [ {'Shares - Current Number of Shares for James Fisher PLC Basic','Shares - Diluted Number of Shares'}, 'Monthly'] =
+    IF ( LONG ( !Period ) = 4 & ELLEV ( 'Period', !Period ) > 0,
+      IF ( SUBST ( !Period, 1, 4 ) @=  SUBST ( DB('Admin','Current Month','Input'), 1, 4 ),
+        DB ( 'Reporting Input', !Actuality, STR ( MIN ( NUMBR (!Period | '12' ), Numbr ( DB('Admin','Current Month','Input') ) ), 6, 0 ), !'Reporting Input Account', 'Full Year' ),
+        DB ( 'Reporting Input', !Actuality, !Period | '12', !'Reporting Input Account', 'Full Year' )
+       ),
+    CONTINUE );
+
+  [ {'Shares - Current Number of Shares for James Fisher PLC Basic','Shares - Diluted Number of Shares'}] =
+    IF ( ELLEV ( 'Period', !Period ) > 0,
+        DB ( 'Reporting Input', !Actuality, ELCOMP ( 'Period', !Period, ELCOMPN ( 'Period', !Period ) ), !'Reporting Input Account', !m Reporting Input ),
+    CONTINUE );
+
+
+Feeders;
+
+['Tax Movement', 'YTD'] => DB('Reporting','@TOT','@TOT','GBP','REPOBT','BASEET','P800100',!Actuality,'S100GA',!Period,'YTD');
+['Tax Movement', 'YTD'] => DB('Reporting','@TOT','@TOT','GBP','REPOBT','BASEET','P750400',!Actuality,'S100GA',!Period,'YTD');
+
+#['Tax Movement', 'YTD'] => DB('Reporting','@TOT','@TOT','GBP','Non-underlying','BASEET','P800100',!Actuality,'S100GA',!Period,'YTD');
+#['Tax Movement', 'YTD'] => DB('Reporting','@TOT','@TOT','GBP','Non-underlying','BASEET','P750400',!Actuality,'S100GA',!Period,'YTD');
+
+[{ 'Amortisation of Acquired Intangibles', 'Impairment Charges / (Reversals)','Refinancing', 'Litigation','Restructuring Charges', 'Business Disposals & assets','Other'},'Monthly'] => 
+DB('Reporting','@TOT','@TOT','GBP','Non-underlying','BASEET',!Reporting Input Account,!Actuality,'S100GA',!Period,'YTD');
+[{ 'Amortisation of Acquired Intangibles', 'Impairment Charges / (Reversals)','Refinancing', 'Litigation','Restructuring Charges', 'Business Disposals & assets','Other'},'Monthly'] => 
+DB('Reporting','@TOT','@TOT','GBP','Non-underlying','BASEET',!Reporting Input Account,!Actuality,'S100GA',!Period | 'YTG','YTD');
+
+
+['Operating Cash Flow', 'YTD'] => DB('Reporting','@TOT','@TOT','GBP','Non-underlying','BASEET',!Reporting Input Account,!Actuality,'S100GA',!Period,'YTD');
+['Operating Cash Flow Conversion (%)', 'YTD'] => DB('Reporting','@TOT','@TOT','GBP','Non-underlying','BASEET',!Reporting Input Account,!Actuality,'S100GA',!Period,'YTD');
+
+
+
+

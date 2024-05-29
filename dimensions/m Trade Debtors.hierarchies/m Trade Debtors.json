@@ -1,0 +1,44 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Trade Debtors",
+	"Elements":
+	[
+		{
+			"Name":"Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Trade debtors",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Invoiced",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Outstanding £000",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Outstanding %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Retentions & credit balances",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fair view",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Specific",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Invoices",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

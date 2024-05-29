@@ -1,0 +1,46 @@
+{
+	"@type":"Chore",
+	"Name":"Daily Chore",
+	"StartTime":"2023-05-23T22:45Z",
+	"DSTSensitive":false,
+	"Active":false,
+	"ExecutionMode":"SingleCommit",
+	"Frequency":"P1DT00H00M00S",
+	"Tasks":
+	[
+		{
+			"Step":0,
+			"Parameters":
+			[
+				{
+					"Name":"pYearFrom",
+					"Value":2018
+				},
+				{
+					"Name":"pYearTo",
+					"Value":0
+				}
+			],
+			"Process":
+			{
+				"@id":"Processes('Dimension Period')"
+			}
+		},
+		{
+			"Step":1,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('Cube FAP to Reporting by Actuality')"
+			}
+		},
+		{
+			"Step":2,
+			"Parameters":[],
+			"Process":
+			{
+				"@id":"Processes('Cube }ClientGroups Copy Security')"
+			}
+		}
+	]
+}

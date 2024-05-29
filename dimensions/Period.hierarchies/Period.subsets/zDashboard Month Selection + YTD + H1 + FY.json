@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zDashboard Month Selection + YTD + H1 + FY",
+	"Expression":"{STRTOMEMBER(\"[Period].[\" + [zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Dashboard Month],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) + \"]\"),STRTOMEMBER(\"[Period].[\" + [zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Dashboard Month],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) + \" YTD\" + \"]\"),STRTOMEMBER(\"[Period].[\" + RIGHT([zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Dashboard Month],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) , 4) + \"H1\" + \"]\"),STRTOMEMBER(\"[Period].[\" + RIGHT([zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Dashboard Month],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) , 4) + \"]\")}"
+}

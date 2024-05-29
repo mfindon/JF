@@ -1,0 +1,152 @@
+{
+	"@type":"Hierarchy",
+	"Name":"zADMIN_Control Account",
+	"Elements":
+	[
+		{
+			"Name":"Actual.",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget.",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Dashboard Version",
+			"Type":"String"
+		},
+		{
+			"Name":"Dashboard Versus 1",
+			"Type":"String"
+		},
+		{
+			"Name":"Dashboard Versus 2",
+			"Type":"String"
+		},
+		{
+			"Name":"Enrolment Week.",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Forecast Open",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Week",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Planning Week",
+			"Type":"String"
+		},
+		{
+			"Name":"Enrolment - AY start for Forecast roll of last month of AY",
+			"Type":"String"
+		},
+		{
+			"Name":"JDE Export Path",
+			"Type":"String"
+		},
+		{
+			"Name":"JDE ST ID Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Report Start Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Report Start Date.",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Report End Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Report End Date.",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Report Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Report Period.",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"iSAMS - Update Financial Dashboard Day",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Forecast Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolment Budget Version",
+			"Type":"String"
+		},
+		{
+			"Name":"Last import from DW",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Update Enrolment Dashboard",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capex Size Version",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Server Machine Name",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Server",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TM1ServerEmailFromAddress",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SMTP Server",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SMTP Server Port",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Root Path on Server",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Email Logo URL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Email Alert Address",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolments Update Data Warehouse",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Enrolments Updated TM1",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"zUser Actual + Version 1",
+	"Expression":"{[Version].[Actual],\rSTRTOMEMBER(\"[Version].[\" + [zUserSelection].([m zUserFilter].[m zUserFilter].[Filter],[m zUserSelection].[m zUserSelection].[Capex Version 1],STRTOMEMBER(\"[}Clients].[\" + USERNAME + \"]\")) + \"]\")\r}"
+}

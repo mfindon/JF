@@ -1,0 +1,54 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Capex Type",
+	"Elements":
+	[
+		{
+			"Name":"All Capex Types",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Unknown",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Maintenance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Defensive",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Growth",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Capex Types",
+			"ComponentName":"Unknown",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Types",
+			"ComponentName":"Maintenance",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Types",
+			"ComponentName":"Defensive",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Types",
+			"ComponentName":"Growth",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Capex Type.subsets/Capex Type List.json"
+	]
+}

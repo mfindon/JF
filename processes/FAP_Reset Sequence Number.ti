@@ -1,0 +1,53 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+####################################################################
+# Updates TM1 with the latest sequnce number from the trickle feed
+#####################################################################
+
+sDataSourceConfigCube = 'FAP Config' ;
+
+sODBC = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP ODBC Connection Name' );
+sUserId = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Username' );
+sPasswd = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Password'  );
+sDataMart = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP Datamart' );
+
+DataSourceType='ODBC'; 
+DatasourceNameForServer = sODBC;
+DatasourceUserName = sUserId ; 
+DatasourcePassword = sPasswd ; 
+
+
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+CellPutN ( vseq, 'FAP Status', 'Value', 'Last Sequence No' );
+
+
+
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion

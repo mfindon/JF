@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Commentary",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Commentary')/Hierarchies('m Commentary')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Commentary.hierarchies/m Commentary.json"
+	]
+}

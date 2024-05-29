@@ -1,0 +1,19 @@
+Skipcheck;
+FEEDSTRINGS;
+
+[] = S: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Asset Category') @<> !Asset Category, '', CONTINUE );
+['Description']= S: DB('Capex Input', !Version, !Currency, !Company, !Period, !'Capex Input Rows', 'Description' );
+
+
+['Unallocated','Value of Capex approved' ] = N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Summary);
+['Unallocated','Value of Capex committed' ] = N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Summary);
+['Unallocated','NA'] = N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Summary);
+
+[] = N: IF ( DB('Capex Input',!Version,!Currency,!Company,'_',!Capex Input Rows,'Asset Category') @<> !Asset Category, 0, CONTINUE );
+
+[]= N: DB('Capex Input',!Version,!Currency,!Company,!Period,!Capex Input Rows,!m Capex Summary);
+
+Feeders;
+
+
+['Capex Spend'] => DB( 'Capex Summary', !Version, !Currency, !Company, !'Asset Category', '_', !'Capex Input Rows', 'Description' );

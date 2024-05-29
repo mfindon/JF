@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Admin Line",
+	"Elements":
+	[
+		{
+			"Name":"Current Month",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Month YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Plan Year",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"AddNonInteractiveAccount",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"AddNonInteractiveAccount.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30=€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

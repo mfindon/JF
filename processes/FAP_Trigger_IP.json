@@ -1,0 +1,13 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Trigger_IP",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"FAP_Trigger_IP.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

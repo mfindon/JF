@@ -1,0 +1,40 @@
+{
+	"@type":"Hierarchy",
+	"Name":"zControl Account",
+	"Elements":
+	[
+		{
+			"Name":"Server",
+			"Type":"String"
+		},
+		{
+			"Name":"Server Machine Name",
+			"Type":"String"
+		},
+		{
+			"Name":"TM1ServerEmailFromAddress",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SMTP Server",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SMTP Server Port",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Email Logo URL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Email Alert Address",
+			"Type":"String"
+		},
+		{
+			"Name":"Root Path on Server",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

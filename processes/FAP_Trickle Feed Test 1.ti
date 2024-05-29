@@ -1,0 +1,51 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+####################################################################
+
+#####################################################################
+Synchronized('FAP');
+
+#sDataSourceConfigCube = '}HA_ADMIN_DataSourceConfig' ;
+
+#----------------------------------------------------------
+#-- Use relevant Controller Details
+#---------------------------------------------------------
+
+#sODBC = CELLGETS ( sDataSourceConfigCube, 'FAP ODBC Connection Name', 'ValueString' ) ;
+#sUserId = CELLGETS ( sDataSourceConfigCube, 'FAP DB Username', 'ValueString' ) ;
+#sPasswd = CELLGETS ( sDataSourceConfigCube, 'FAP DB Password', 'ValueString' ) ;
+
+#DataSourceType='ODBC'; 
+#DatasourceNameForServer = sODBC;
+#DatasourceUserName = sUserId ; 
+#DatasourcePassword = sPasswd ; 
+
+
+ASCIIOutput( 'Test trickle Feed', vPeriod, vActuality, vCompany );
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#endregion

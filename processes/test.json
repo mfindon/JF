@@ -1,0 +1,48 @@
+{
+	"@type":"Process",
+	"Name":"test",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"test.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€MeasuresDim=F_PeriodMonthly€MeasuresDimAction=As Is€MeasuresDimElemSortType=ByInput€MeasuresDimElemSortSense=DESCENDING€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"auL?r_0>2DUgki4NoVyEFa0qTcdoe8Xw:HX78N4C1f@wxQxD][Qk[bjbdipLcM[G=w3siCmq^[d\\=f;cycGv;]^F[syEmg?Q3tBKTQb<q\\W=:`gFggRidR4u3jNRXTT6nA`;`Ctc[R|6gMXEKKaH]uGPLsq@dKaQe_c[c3Cn0m6Di4Il1RhI>P4aXf8BBR63NJW<y6",
+		"query":"select s.name as schema_name, \r\n    s.schema_id,\r\n    u.name as schema_owner\r\nfrom sys.schemas s\r\n    inner join sys.sysusers u\r\n        on u.uid = s.principal_id\r\norder by s.name",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"schema_name",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"schema_id",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"schema_owner",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

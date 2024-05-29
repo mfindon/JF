@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Company Backup 20240314",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Company Backup 20240314')/Hierarchies('Company Backup 20240314')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Company Backup 20240314.hierarchies/Company Backup 20240314.json"
+	]
+}

@@ -1,0 +1,37 @@
+{
+	"@type":"Process",
+	"Name":"Dimension Company Copy",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"Dimension Company Copy.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30=€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"TM1DimensionSubset",
+		"dataSourceNameForClient":"Account",
+		"dataSourceNameForServer":"Account",
+		"subset":"All"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"pDimensionTo",
+			"Prompt":"Target dimension",
+			"Value":"Company",
+			"Type":"String"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"vElement",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

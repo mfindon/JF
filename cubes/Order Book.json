@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"Order Book",
+	"Rules@Code.link":"Order Book.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Order Book Row')"
+		},
+		{
+			"@id":"Dimensions('m Order Book')"
+		}
+	],
+	"Views@Code.links":[]
+}

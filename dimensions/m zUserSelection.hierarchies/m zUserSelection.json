@@ -1,0 +1,32 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m zUserSelection",
+	"Elements":
+	[
+		{
+			"Name":"Capex Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Actual Capex Year",
+			"Type":"String"
+		},
+		{
+			"Name":"Capex Version 1",
+			"Type":"String"
+		},
+		{
+			"Name":"Capex Version 2",
+			"Type":"String"
+		},
+		{
+			"Name":"Dashboard Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Dashboard Company Prefix",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

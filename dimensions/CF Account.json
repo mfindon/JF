@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"CF Account",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('CF Account')/Hierarchies('CF Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"CF Account.hierarchies/CF Account.json"
+	]
+}

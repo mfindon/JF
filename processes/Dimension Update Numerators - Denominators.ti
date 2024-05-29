@@ -1,0 +1,64 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sDim = 'KPI';
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+sNumerator = AttrS ( sDim, vKPI, 'Numerator' );
+sDenominator = AttrS ( sDim, vKPI, 'Denominator' );
+
+if ( sNumerator @<> '' );
+   DimensionElementInsert ( sDim, '', sNumerator, 'n' );
+   DimensionElementComponentAdd ( sDim, vKPI, sNumerator, 1 );
+endif;
+
+
+if ( sDenominator @<> '' );
+   DimensionElementInsert ( sDim, '', sDenominator, 'n' );
+   DimensionElementComponentAdd ( sDim, vKPI, sDenominator, 1 );
+endif;
+
+#Remove old numerator / denominators
+IF ( ELLEV ( sDim, vKPI ) <> 0 );
+   nChild = ELCOMPN ( sDim, vKPI );
+   WHILE ( nChild > 0 );
+      sChild = ELCOMP ( sDim, vKPI, nChild );
+      IF ( sChild @<> sNumerator & sChild @<> sDenominator );
+         DimensionElementComponentDelete ( sDim, vKPI , sChild );
+      ENDIF;
+      nChild = nChild -1;
+   END;
+ENDIF;
+
+#Convert KPI to N if numerator and denominators have been removed
+IF ( DTYPE ( sDim, vKPI ) @= 'C'  & ELCOMPN ( sDim, vKPI ) = 0 );
+   DimensionElementDelete ( sDim, vKPI );
+   DimensionElementInsert ( sDim, '', vKPI, 'n' );
+ENDIF;
+
+
+
+
+
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+#endregion

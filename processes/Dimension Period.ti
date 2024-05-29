@@ -1,0 +1,547 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sDim = 'Period';
+
+
+vAttrToCheck = 'Month Name'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'Month Name Long'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'s'); ENDIF;
+
+vAttrToCheck = 'MMM-YYYY'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'a'); ENDIF;
+vAttrToCheck = 'MMM-YY'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'a'); ENDIF;
+vAttrToCheck = 'MMMM YYYY'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'a'); ENDIF;
+vAttrToCheck = 'YYMM'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'a'); ENDIF;
+vAttrToCheck = 'Start Date'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'End Date'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'Quarter'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'s'); ENDIF;
+
+
+vAttrToCheck = '-12'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-11'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-12', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-10'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-11', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-9';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-10', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-8';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-9',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-7';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-8',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-6';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-7',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-5';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-6',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-4';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-5',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-3';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-4',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-2';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-3',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '-1';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-2', vAttrToCheck ,'s'); ENDIF;
+
+
+vAttrToCheck = '+1';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'-1',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+2';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+1',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+3';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+2',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+4';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+3',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+5';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+4',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+6';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+5',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+7';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+6',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+8';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+7',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+9';  IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+8',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+10'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+9',  vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+11'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+10', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = '+12'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+11', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'Last Year'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'+12', vAttrToCheck ,'s'); ENDIF;
+vAttrToCheck = 'Next Year'; IF ( DIMIX ('}ElementAttributes_' | sDim, vAttrToCheck ) = 0); ATTRINSERT ( sDim,'Last Year', vAttrToCheck ,'s'); ENDIF;
+
+
+#If "to year" is not supplied assume next year
+if ( pYearTo = 0);
+ pYearTo = StringToNumber( SUBST (TODAY(1), 1, 4) ) + 2;
+endif;
+
+nNoOfPeriods = ( pYearTo -  pYearFrom +1 ) * 12;
+nYear = pYearFrom;
+
+
+DimensionElementInsert( sDim, '', '_', 'N' );
+
+
+##################################################
+#Year / Qrt Period Hierarchy #
+##################################################
+sHierName = sDim;
+if ( DimensionExists(sDim) = 0 );
+	DimensionCreate(sDim);
+else;
+#	DimensionDeleteAllElements(sDim);
+endif;
+
+sAllConsol = 'All Periods';
+DimensionElementInsert( sDim, '', sAllConsol, 'C' );
+#Add Period Elements, Qts, and Years
+nPeriod = 1;
+WHILE ( nPeriod <= nNoOfPeriods );
+
+	nYearIndex =( nPeriod - 1 - MOD ( nPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    nMonthNo = nPeriod - 12 * (  nYearIndex );
+    
+    sMonthNo = FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( nMonthNo );
+	sMonth = sYear | sMonthNo;
+   
+    nQtr = -INT( -nMonthNo /3 );
+    sQtr = sYear | 'Q' | NumberToString( nQtr );
+    
+    DimensionElementInsert( sDim, '', sYear, 'C' );
+    DimensionElementComponentAdd( sDim, sAllConsol, sYear, 1 );
+    
+    DimensionElementInsert( sDim, '', sQtr, 'C' );
+    DimensionElementComponentAdd( sDim, sYear, sQtr,  1 );
+ 
+    DimensionElementInsert( sDim, '', sMonth, 'N' );
+    DimensionElementComponentAdd( sDim, sQtr, sMonth, 1 );
+	
+	nPeriod = nPeriod + 1;
+END;
+
+#Add YTD Elements
+nYTDPeriod = 1;
+sYTDTopConsol = 'YTDs';
+DimensionElementInsert( sDim, '', sYTDTopConsol, 'C' );
+
+WHILE ( nYTDPeriod <= nNoOfPeriods );
+
+	nYearIndex =( nYTDPeriod - 1 - MOD ( nYTDPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    
+    nYTDMonthNo = nYTDPeriod - 12 * (  nYearIndex );
+    
+    sYTDMonthNo = FILL( '0', 2- LONG ( NumberToString ( nYTDMonthNo ) ) ) |  NumberToString ( nYTDMonthNo );
+	sYTDMonth = sYear | sYTDMonthNo | ' YTD';    
+
+	DimensionElementInsert( sDim, '', sYTDMonth, 'C' );
+    DimensionElementComponentAdd( sDim, sYTDTopConsol, sYTDMonth, 1 );
+
+    nMonthNo = 1;
+    
+    while ( nMonthNo <= nYTDMonthNo );
+      sMonth = NumberToString (  pYearFrom +  nYearIndex )  | FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( NMonthNo );
+      DimensionElementComponentAdd( sDim, sYTDMonth, sMonth, 1 );
+      nMonthNo = nMonthNo + 1;
+    end;
+
+	nYTDPeriod = nYTDPeriod + 1;
+end;
+
+
+#Add YTG Elements
+nYTGPeriod = 1;
+sYTGTopConsol = 'YTGs';
+DimensionElementInsert( sDim, '', sYTGTopConsol, 'C' );
+
+WHILE ( nYTGPeriod <= nNoOfPeriods );
+
+	nYearIndex =( nYTGPeriod - 1 - MOD ( nYTGPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    
+    nYTGMonthNo = nYTGPeriod - 12 * (  nYearIndex );
+    
+    sYTGMonthNo = FILL( '0', 2- LONG ( NumberToString ( nYTGMonthNo ) ) ) |  NumberToString ( nYTGMonthNo );
+	sYTGMonth = sYear | sYTGMonthNo | ' YTG';    
+
+#DimensionElementDelete( sDim, sYTGMonth );
+
+    DimensionElementInsert( sDim, '', sYTGMonth, 'C' );
+    DimensionElementComponentAdd( sDim, sYTGTopConsol, sYTGMonth, 1 );
+
+
+
+    nMonthNo = nYTGMonthNo + 1;
+    
+    while ( nMonthNo <= 12 );
+      sMonth = NumberToString (  pYearFrom +  nYearIndex )  | FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( NMonthNo );
+      DimensionElementComponentAdd( sDim, sYTGMonth, sMonth, 1 );
+      nMonthNo = nMonthNo + 1;
+    end;
+
+    nYTGPeriod = nYTGPeriod + 1;
+end;
+
+#Add To Date Elements
+nTDPeriod = 1;
+sTDTopConsol = 'To Date';
+DimensionElementInsert( sDim, '', sTDTopConsol, 'C' );
+
+WHILE ( nTDPeriod <= nNoOfPeriods );
+
+    nYearIndex =( nTDPeriod - 1 - MOD ( nTDPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    
+    nTDMonthNo = nTDPeriod - 12 * (  nYearIndex );
+    
+    sTDMonthNo = FILL( '0', 2- LONG ( NumberToString ( nTDMonthNo ) ) ) |  NumberToString ( nTDMonthNo );
+    sTDMonth = sYear | sTDMonthNo | ' To Date';    
+
+    DimensionElementInsert( sDim, '', sTDMonth, 'C' );
+    DimensionElementComponentAdd( sDim, sTDTopConsol, sTDMonth, 1 );
+
+    nPeriod = 1;
+    
+    while ( nPeriod <= nTDPeriod );
+
+      nYearIndex2 =( nPeriod - 1 - MOD ( nPeriod - 1, 12 ) ) / 12 ;
+      sYear2 = NumberToString (  pYearFrom +  nYearIndex2 );
+
+      nMonthNo = nPeriod - 12 * (  nYearIndex2 );
+
+      sMonthNo = FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( nMonthNo );
+      sMonth = sYear2 | sMonthNo;    
+
+      DimensionElementComponentAdd( sDim, sTDMonth, sMonth, 1 );
+
+
+      nPeriod = nPeriod + 1;
+    end;
+
+    nTDPeriod = nTDPeriod + 1;
+end;
+
+
+#Add LTM Elements
+nLTMPeriod = 13;
+sLTMTopConsol = 'LTMs';
+DimensionElementInsert( sDim, '', sLTMTopConsol, 'C' );
+
+WHILE ( nLTMPeriod <= nNoOfPeriods );
+
+	nYearIndex = ( nLTMPeriod - 1 - MOD ( nLTMPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    
+    nLTMMonthNo = nLTMPeriod - 12 * (  nYearIndex );
+    
+    sLTMMonthNo = FILL( '0', 2- LONG ( NumberToString ( nLTMMonthNo ) ) ) |  NumberToString ( nLTMMonthNo );
+	sLTMMonth = sYear | sLTMMonthNo | ' LTM';    
+
+	DimensionElementInsert( sDim, '', sLTMMonth, 'C' );
+    DimensionElementComponentAdd( sDim, sLTMTopConsol, sLTMMonth, 1 );
+
+    nChildPeriod = nLTMPeriod - 11;
+    
+    while ( nChildPeriod <= nLTMPeriod );
+
+      nChildYearIndex =  ( nChildPeriod - 1 - MOD ( nChildPeriod - 1, 12 ) ) / 12 ;
+      sChildYear = NumberToString (  pYearFrom +  nChildYearIndex );
+
+      nMonthNo = nChildPeriod - 12 * (  nChildYearIndex );
+      sMonth = NumberToString (  pYearFrom +  nChildYearIndex )  | FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( NMonthNo );
+
+      DimensionElementComponentAdd( sDim, sLTMMonth, sMonth, 1 );
+      nChildPeriod = nChildPeriod + 1;
+    end;
+
+	nLTMPeriod = nLTMPeriod + 1;
+end;
+
+
+#Add HY Elements
+nHYPeriod = 1;
+sHYTopConsol = 'Half Years';
+DimensionElementInsert( sDim, '', sHYTopConsol, 'C' );
+
+WHILE ( nHYPeriod <= nNoOfPeriods );
+
+	nYearIndex = ( nHYPeriod - 1 - MOD ( nHYPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    
+    nHYMonthNo = nHYPeriod - 12 * (  nYearIndex );
+    
+    sHYMonthNo = FILL( '0', 2- LONG ( NumberToString ( nHYMonthNo ) ) ) |  NumberToString ( nHYMonthNo );
+	sHYMonth = sYear | sHYMonthNo;
+    
+    if ( nHYMonthNo < 7 );
+      nHYNo = 1;
+    else;
+      nHYNo = 2;
+    endif;
+    
+    sHY = sYear | 'H' |  NumberToString( nHYNo );
+
+
+	DimensionElementInsert( sDim, '', sHY, 'C' );
+    DimensionElementComponentAdd( sDim, sHYTopConsol, sHY, 1 );
+    DimensionElementComponentAdd( sDim, sHY, sHYMonth, 1 );
+    
+	nHYPeriod = nHYPeriod + 1;
+end;
+
+
+#Add QTD Elements
+nQTDPeriod = 1;
+sQTDTopConsol = 'QTDs';
+DimensionElementInsert( sDim, '', sQTDTopConsol, 'C' );
+
+WHILE ( nQTDPeriod <= nNoOfPeriods );
+
+	nYearIndex = ( nQTDPeriod - 1 - MOD ( nQTDPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    
+    nQTDMonthNo = nQTDPeriod - 12 * (  nYearIndex );
+    
+    sQTDMonthNo = FILL( '0', 2- LONG ( NumberToString ( nQTDMonthNo ) ) ) |  NumberToString ( nQTDMonthNo );
+	sQTDMonth = sYear | sQTDMonthNo | ' QTD';    
+
+	DimensionElementInsert( sDim, '', sQTDMonth, 'C' );
+
+
+
+    DimensionElementComponentAdd( sDim, sQTDTopConsol, sQTDMonth, 1 );
+
+    nQtr = -INT( -nQTDMonthNo /3 );
+    nQtrMonthStart = ( nQtr-1 ) * 3 + 1;
+
+    nChildPeriod = nQTDPeriod - ( nQTDMonthNo - nQtrMonthStart );
+    
+     while ( nChildPeriod <= nQTDPeriod );
+
+       nChildYearIndex =  ( nChildPeriod - 1 - MOD ( nChildPeriod - 1, 12 ) ) / 12 ;
+       sChildYear = NumberToString (  pYearFrom +  nChildYearIndex );
+
+       nMonthNo = nChildPeriod - 12 * (  nChildYearIndex );
+       sMonth = NumberToString (  pYearFrom +  nChildYearIndex )  | FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( NMonthNo );
+
+       DimensionElementComponentAdd( sDim, sQTDMonth, sMonth, 1 );
+
+       #AsciiOutput ( 'test', sDim, sQTDMonth, sMonth, NumberToString ( nQtr ),  NumberToString (  nQtrMonthStart ),  NumberToString (  nQTDMonthNo)  );
+ 
+       nChildPeriod = nChildPeriod + 1;
+     end;
+
+	nQTDPeriod = nQTDPeriod + 1;
+end;
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+sPriorMonth = '';
+
+#Add Attributes
+nPeriod = 1;
+WHILE ( nPeriod <= nNoOfPeriods );
+
+	nYearIndex =( nPeriod - 1 - MOD ( nPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    nMonthNo = nPeriod - 12 * (  nYearIndex );
+    sMonthNo = FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( nMonthNo );
+	sMonth = sYear | sMonthNo;
+   
+    nQtr = -INT( -nMonthNo /3 );
+    sQtr = sYear | 'Q' | NumberToString( nQtr );
+    
+    sStartDate = sYear | '-' | sMonthNo | '-01';
+    nStartDate = DAYNO( sStartDate );
+    sMonthName = CAPIT( TIMST( nStartDate,'\M' ) );
+
+    IF ( nMonthNo = 1 );
+       sMonthNameLong = 'January';
+    ELSEIF ( nMonthNo = 2 );
+       sMonthNameLong = 'February';
+    ELSEIF ( nMonthNo = 3 );
+       sMonthNameLong = 'March';
+    ELSEIF ( nMonthNo = 4 );
+       sMonthNameLong = 'April';
+    ELSEIF ( nMonthNo = 5 );
+       sMonthNameLong = 'May';
+    ELSEIF ( nMonthNo = 6 );
+       sMonthNameLong = 'June';
+    ELSEIF ( nMonthNo = 7 );
+       sMonthNameLong = 'July';
+    ELSEIF ( nMonthNo = 8 );
+       sMonthNameLong = 'August';
+    ELSEIF ( nMonthNo = 9 );
+       sMonthNameLong = 'September';
+    ELSEIF ( nMonthNo = 10 );
+       sMonthNameLong = 'October';
+    ELSEIF ( nMonthNo = 11 );
+       sMonthNameLong = 'November';
+    ELSE;
+       sMonthNameLong = 'December';
+    ENDIF;
+ 
+    sLastOfTheMonth = Timst( DayNo( Dates( Year( sStartDate ) + If( Month( sStartDate ) = 12, 1, 0 ), If( Month( sStartDate ) = 12, 1, Month( sStartDate ) + 1 ), 1)) - 1, '\Y-\m-\d' ); 
+
+    AttrPutS( sQtr, sDim, sMonth, 'Quarter' );
+    
+    AttrPutS( sStartDate, sDim, sMonth, 'Start Date' );
+   
+    AttrPutS( sLastOfTheMonth, sDim, sMonth, 'End Date' );
+
+    AttrPutS( sMonthName, sDim, sMonth, 'Month Name' );
+    AttrPutS( sMonthName | ' YTD', sDim, sMonth | ' YTD', 'Month Name' );
+    IF ( nPeriod > 12 );
+       AttrPutS( sMonthName | ' YTD', sDim, sMonth | ' LTM', 'Month Name' );
+    ENDIF;
+
+    AttrPutS( sMonthNameLong, sDim, sMonth, 'Month Name Long' );
+    AttrPutS( sMonthNameLong | ' YTD', sDim, sMonth | ' YTD', 'Month Name Long' );
+    AttrPutS( sMonthNameLong | ' YTG', sDim, sMonth | ' YTG', 'Month Name Long' );
+    AttrPutS( sMonthNameLong | ' QTD', sDim, sMonth | ' QTD', 'Month Name Long' );
+    AttrPutS( sMonthNameLong | ' To Date', sDim, sMonth | ' To Date', 'Month Name Long' );
+    IF ( nPeriod > 12 );
+       AttrPutS( sMonthNameLong | ' LTD', sDim, sMonth | ' LTM', 'Month Name Long' );
+    ENDIF;
+
+    AttrPutS( sMonthName | '-' | sYear, sDim, sMonth, 'MMM-YYYY' );
+    AttrPutS( sMonthName | '-' | sYear | ' YTD', sDim, sMonth | ' YTD', 'MMM-YYYY' );
+    AttrPutS( sMonthName | '-' | sYear | ' YTG', sDim, sMonth | ' YTG', 'MMM-YYYY' );
+    AttrPutS( sMonthName | '-' | sYear | ' QTD', sDim, sMonth | ' QTD', 'MMM-YYYY' );
+    AttrPutS( sMonthName | '-' | sYear | ' To Date', sDim, sMonth | ' TO Date', 'MMM-YYYY' );
+    if ( nPeriod > 12);
+      AttrPutS( sMonthName | '-' | sYear | ' LTM', sDim, sMonth | ' LTM', 'MMM-YYYY' );   
+    endif;
+
+    AttrPutS( sMonthName | '-' | SUBST (sYear, 3, 2), sDim, sMonth, 'MMM-YY' );
+    AttrPutS( sMonthName | '-' | SUBST (sYear, 3, 2) | ' YTD', sDim, sMonth | ' YTD', 'MMM-YY' );
+    AttrPutS( sMonthName | '-' | SUBST (sYear, 3, 2) | ' YTG', sDim, sMonth | ' YTG', 'MMM-YY' );
+    AttrPutS( sMonthName | '-' | SUBST (sYear, 3, 2) | ' QTD', sDim, sMonth | ' QTD', 'MMM-YY' );
+    AttrPutS( sMonthName | '-' | SUBST (sYear, 3, 2) | ' To Date', sDim, sMonth | ' TO Date', 'MMM-YY' );
+    if ( nPeriod > 12);
+      AttrPutS( sMonthName | '-' | sYear | ' LTM', sDim, sMonth | ' LTM', 'MMM-YY' );   
+    endif;
+
+    AttrPutS( sMonthNameLong | ' ' | sYear, sDim, sMonth, 'MMMM YYYY' );
+    AttrPutS( sMonthNameLong | ' ' | sYear | ' YTD', sDim, sMonth | ' YTD', 'MMMM YYYY' );
+    AttrPutS( sMonthNameLong | ' ' | sYear | ' YTG', sDim, sMonth | ' YTG', 'MMMM YYYY' );
+    AttrPutS( sMonthNameLong | ' ' | sYear | ' QTD', sDim, sMonth | ' QTD', 'MMMM YYYY' );
+    AttrPutS( sMonthNameLong | ' ' | sYear | ' To Date', sDim, sMonth | ' To Date', 'MMMM YYYY' );
+    if ( nPeriod > 12);
+      AttrPutS( sMonthNameLong | ' ' | sYear | ' LTM', sDim, sMonth | ' LTM', 'MMMM YYYY' );   
+    endif;
+    
+    AttrPutS( SUBST ( sYear, 3, 2 ) | sMonthNo, sDim, sMonth, 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | sMonthNo | ' YTD', sDim, sMonth | ' YTD', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | sMonthNo | ' YTG', sDim, sMonth | ' YTG', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | sMonthNo | ' QTD', sDim, sMonth | ' QTD', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | sMonthNo | ' To Date', sDim, sMonth | ' To Date', 'YYMM' );
+    IF ( nPeriod > 12 );
+       AttrPutS( SUBST ( sYear, 3, 2 ) | sMonthNo | ' LTM', sDim, sMonth | ' LTM', 'YYMM' );
+    ENDIF;
+
+    AttrPutS( SUBST ( sYear, 3, 2 ), sDim, sYear, 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | 'Q1', sDim, sYear | 'Q1', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | 'Q2', sDim, sYear | 'Q2', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | 'Q3', sDim, sYear | 'Q3', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | 'Q4', sDim, sYear | 'Q4', 'YYMM' );
+    
+    AttrPutS( SUBST ( sYear, 3, 2 ) | 'H1', sDim, sYear | 'H1', 'YYMM' );
+    AttrPutS( SUBST ( sYear, 3, 2 ) | 'H2', sDim, sYear | 'H2', 'YYMM' );
+    
+    AttrPutS( sMonthNameLong | ' ' | sYear, sDim, sMonth, 'MMMM YYYY' );
+    AttrPutS( sPriorMonth, sDim, sMonth, '-1' );
+    
+    if ( sPriorMonth @<> '');
+       AttrPutS( sMonth, sDim, sPriorMonth, '+1' );
+    endif;
+
+   	nPeriod = nPeriod + 1;
+    sPriorMonth = sMonth;
+END;
+
+#Future Periods
+nPeriod = 1;
+WHILE ( nPeriod <= nNoOfPeriods );
+
+	nYearIndex =( nPeriod - 1 - MOD ( nPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    nMonthNo = nPeriod - 12 * (  nYearIndex );
+    sMonthNo = FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( nMonthNo );
+	sMonth = sYear | sMonthNo;
+    sMonthNext = AttrS( sDim, sMonth, '+1' );
+
+    nFuturePeriod = 2;
+    while( nFuturePeriod <= 12);
+      sFuturePeriod = '+' | NumberToString( nFuturePeriod );
+ 
+      if( DIMIX( sDim, sMonthNext ) <> 0 );
+        sMonthNext = AttrS( sDim, sMonthNext, '+1' );      
+      endif;
+      if( DIMIX( sDim, sMonthNext ) <> 0 );
+        AttrPutS( sMonthNext, sDim, sMonth, sFuturePeriod );
+      endif;
+      
+      nFuturePeriod = nFuturePeriod + 1;
+    end;
+    
+   	nPeriod = nPeriod + 1;
+END;
+  
+#Prior Periods
+nPeriod = 1;
+WHILE ( nPeriod <= nNoOfPeriods );
+
+	nYearIndex =( nPeriod - 1 - MOD ( nPeriod - 1, 12 ) ) / 12 ;
+    sYear = NumberToString (  pYearFrom +  nYearIndex );
+    nMonthNo = nPeriod - 12 * (  nYearIndex );
+    sMonthNo = FILL( '0', 2- LONG ( NumberToString ( nMonthNo ) ) ) |  NumberToString ( nMonthNo );
+	sMonth = sYear | sMonthNo;
+    sMonthPrior = AttrS( sDim, sMonth, '-1' );
+
+    nPriorPeriod = 2;
+    while( nPriorPeriod <= 12 );
+      sPriorPeriod = '-' | NumberToString( nPriorPeriod );
+ 
+      if( DIMIX( sDim, sMonthPrior ) <> 0 );
+        sMonthPrior = AttrS( sDim, sMonthPrior, '-1' );      
+      endif;
+      if( DIMIX( sDim, sMonthPrior ) <> 0 );
+        AttrPutS( sMonthPrior, sDim, sMonth, sPriorPeriod );
+      endif;
+      
+      nPriorPeriod = nPriorPeriod + 1;
+    end;
+    
+   	nPeriod = nPeriod + 1;
+END;
+
+
+############## Relative Quarter Periods ##############
+
+nQtrYear = pYearFrom;
+WHILE ( nQtrYear <= pYearTo );
+
+     sYear = NumberToString ( nQtrYear );
+
+     nRelativeQtr= 1;
+
+    WHILE (  nRelativeQtr <= 12 );
+
+        sRelativeQtr = NumberToString ( nRelativeQtr );
+       
+        nQtr = 1;
+
+        WHILE ( nQtr <= 4 );
+           sQtr = NumberToString ( nQtr );
+           nNextQtr = IF ( MOD( nQtr + nRelativeQtr ,4) = 0, 4, MOD( nQtr + nRelativeQtr ,4) );
+           nNextQtrYear = nQtrYear + INT ( ( nQtr +  nRelativeQtr - 0.0001 ) / 4);
+
+          AttrPutS( NumberToString ( nNextQtrYear ) | 'Q' | NumberToString ( nNextQtr ), sDim, sYear | 'Q' | sQtr, '+' | sRelativeQtr );
+
+          nQtr = nQtr + 1;
+
+       END;
+        nRelativeQtr = nRelativeQtr + 1;
+
+     END;
+
+    nQtrYear = nQtrYear + 1;
+
+END;
+
+#endregion

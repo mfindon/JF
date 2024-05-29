@@ -1,0 +1,84 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Order Book",
+	"Elements":
+	[
+		{
+			"Name":"Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Order book b/f",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders received",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders fulfilled",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Order book c/f",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Orders overdue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FY+1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FY+2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Month 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Month 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Month 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Month 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Month 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Month 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Due in 6-12 months",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Due in 1-2 years",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Due in over 2 years",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

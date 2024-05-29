@@ -1,0 +1,95 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('m Reporting Input')/Hierarchies('m Reporting Input')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('m Reporting Input')/Hierarchies('m Reporting Input')/Elements('Monthly')"
+					},
+					{
+						"@id":"Dimensions('m Reporting Input')/Hierarchies('m Reporting Input')/Elements('YTD')"
+					},
+					{
+						"@id":"Dimensions('m Reporting Input')/Hierarchies('m Reporting Input')/Elements('Full Year')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Actuality')/Hierarchies('Actuality')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AC')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('FC')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('BU')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AC')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Period')/Hierarchies('Period')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202211')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202111')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Reporting Input Account')/Hierarchies('Reporting Input Account')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Reporting Input Account')/Hierarchies('Reporting Input Account')/Elements('Shares - Current Number of Shares for James Fisher PLC Basic')"
+					},
+					{
+						"@id":"Dimensions('Reporting Input Account')/Hierarchies('Reporting Input Account')/Elements('Shares - Diluted Number of Shares')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"#,##0"
+}

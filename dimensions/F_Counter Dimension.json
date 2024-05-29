@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"F_Counter Dimension",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('F_Counter Dimension')/Hierarchies('F_Counter Dimension')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"F_Counter Dimension.hierarchies/F_Counter Dimension.json"
+	]
+}

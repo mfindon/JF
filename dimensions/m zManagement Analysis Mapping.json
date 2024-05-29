@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m zManagement Analysis Mapping",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m zManagement Analysis Mapping')/Hierarchies('m zManagement Analysis Mapping')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m zManagement Analysis Mapping.hierarchies/m zManagement Analysis Mapping.json"
+	]
+}

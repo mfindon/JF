@@ -1,0 +1,8 @@
+SKIPCHECK;
+
+
+FEEDERS;
+
+['Total Adjustments']=>DB('Reporting','@TOT','@TOT',!Currency,'REPOBT','Adjustments',!Account,!Actuality,!Company,!Period,'Monthly');
+['Total Adjustments']=>DB('Reporting','@TOT','@TOT',!Currency,'REPOBT','Adjustments',!Account,!Actuality,!Company,!Period, 'YTD');
+['Total Adjustments']=>DB('Reporting','@TOT','@TOT',!Currency,'REPOBT','Adjustments',!Account,!Actuality,!Company,!Period | ' YTG', 'YTD');

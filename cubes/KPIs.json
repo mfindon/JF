@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"KPIs",
+	"Rules@Code.link":"KPIs.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Division')"
+		},
+		{
+			"@id":"Dimensions('KPI')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('m KPIs')"
+		}
+	],
+	"Views@Code.links":[]
+}

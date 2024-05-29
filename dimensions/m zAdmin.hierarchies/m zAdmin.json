@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m zAdmin",
+	"Elements":
+	[
+		{
+			"Name":"Input",
+			"Type":"String"
+		},
+		{
+			"Name":"Calculated",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

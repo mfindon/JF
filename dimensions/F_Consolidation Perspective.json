@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"F_Consolidation Perspective",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('F_Consolidation Perspective')/Hierarchies('F_Consolidation Perspective')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"F_Consolidation Perspective.hierarchies/F_Consolidation Perspective.json"
+	]
+}

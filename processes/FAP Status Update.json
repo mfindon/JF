@@ -1,0 +1,40 @@
+{
+	"@type":"Process",
+	"Name":"FAP Status Update",
+	"HasSecurityAccess":true,
+	"Code@Code.link":"FAP Status Update.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€_ParameterConstraints=e30€",
+	"VariablesUIData":
+	[
+		"VarType=33€ColType=827€",
+		"VarType=33€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"yPa9R?`ub4>@W3Pi1ewRemv1bu;9sZk{Whbb<9Uuy7IN\\p1PR<>B0_qU9bYlr[H{^ga0c9zgBD\\DP:vh[os7vYD4_:qYSIYBd:N<2[PEZqEJg;agvNmdm<bg6@Jc_ieeajQik6>Yb:<p6ut80s>@v;E85nkw]um[1n_nxis?m8>5d;=^tQfKMN16`MXiAbRFUiH[tJa",
+		"query":"SELECT Status, StructStatus FROM NRTR_DATAMART WHERE Name = 'FAP'",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vStatus",
+			"Type":"Numeric",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vStructStatus",
+			"Type":"Numeric",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

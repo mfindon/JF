@@ -1,0 +1,8 @@
+Skipcheck;
+
+['GBP' ] = N: ['LC'] \  DB('FX Rates','AC', DB('}ElementAttributes_Division', !Division, 'Local Currency'), !Period,'Rate');
+['GBP' ] = S:  DB('Trade Debtors by Customer','LC',!Division,!Days Grouping,!Period,!Customer Row,!m Trade Debtors by Customer);
+
+FEEDERS;
+
+['LC' ] => ['GBP' ];

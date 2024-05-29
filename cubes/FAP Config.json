@@ -1,0 +1,17 @@
+{
+	"@type":"Cube",
+	"Name":"FAP Config",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('m FAP Config')"
+		},
+		{
+			"@id":"Dimensions('FAP Config')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"FAP Config.views/Default.json"
+	]
+}

@@ -1,0 +1,112 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m Reporting",
+	"Elements":
+	[
+		{
+			"Name":"YTD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Monthly",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"QTD",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD (k)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Monthly (k)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"QTD (k)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"YTD (m)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Monthly (m)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"QTD (m)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"LTM",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"LTM (m)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"LTM (k)",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"QTD",
+			"ComponentName":"YTD",
+			"Weight":1
+		},
+		{
+			"ParentName":"YTD (k)",
+			"ComponentName":"YTD",
+			"Weight":0.00100000000000000002
+		},
+		{
+			"ParentName":"Monthly (k)",
+			"ComponentName":"Monthly",
+			"Weight":0.00100000000000000002
+		},
+		{
+			"ParentName":"QTD (k)",
+			"ComponentName":"QTD",
+			"Weight":0.00100000000000000002
+		},
+		{
+			"ParentName":"YTD (m)",
+			"ComponentName":"YTD",
+			"Weight":9.99999999999999955e-07
+		},
+		{
+			"ParentName":"Monthly (m)",
+			"ComponentName":"Monthly",
+			"Weight":9.99999999999999955e-07
+		},
+		{
+			"ParentName":"QTD (m)",
+			"ComponentName":"QTD",
+			"Weight":9.99999999999999955e-07
+		},
+		{
+			"ParentName":"LTM",
+			"ComponentName":"YTD",
+			"Weight":1
+		},
+		{
+			"ParentName":"LTM (m)",
+			"ComponentName":"YTD",
+			"Weight":1
+		},
+		{
+			"ParentName":"LTM (k)",
+			"ComponentName":"YTD",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"m Reporting.subsets/Default.json"
+	]
+}

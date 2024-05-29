@@ -1,0 +1,47 @@
+{
+	"@type":"NativeView",
+	"Name":"Default Values",
+	"Columns":[],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('}Clients')/Hierarchies('}Clients')"
+				},
+				"Expression":"TM1SubsetAll([}Clients])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('m zUserFilter')/Hierarchies('m zUserFilter')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('m zUserFilter')/Hierarchies('m zUserFilter')/Elements('Filter')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('m zUserSelection')/Hierarchies('m zUserSelection')"
+				},
+				"Expression":"TM1SubsetAll([m zUserSelection])"
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

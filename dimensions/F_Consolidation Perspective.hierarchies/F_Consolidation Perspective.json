@@ -1,0 +1,37 @@
+{
+	"@type":"Hierarchy",
+	"Name":"F_Consolidation Perspective",
+	"Elements":
+	[
+		{
+			"Name":"@None",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CT MN",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"MN",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"CT MN",
+			"ComponentName":"MN",
+			"Weight":1
+		},
+		{
+			"ParentName":"CT MN",
+			"ComponentName":"@None",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"F_Consolidation Perspective.subsets/DrillView.json",
+		"F_Consolidation Perspective.subsets/DrillView 2.json"
+	]
+}

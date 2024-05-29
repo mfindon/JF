@@ -1,0 +1,14 @@
+{
+	"@type":"Cube",
+	"Name":"zControl",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('zControl Account')"
+		},
+		{
+			"@id":"Dimensions('m zControl')"
+		}
+	],
+	"Views@Code.links":[]
+}

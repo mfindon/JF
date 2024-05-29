@@ -1,0 +1,28 @@
+{
+	"@type":"Cube",
+	"Name":"Devex",
+	"Rules@Code.link":"Devex.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Company')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Devex Project')"
+		},
+		{
+			"@id":"Dimensions('m Devex')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Devex.views/Default.json",
+		"Devex.views/Devex Summary.json"
+	]
+}

@@ -1,0 +1,553 @@
+{
+	"@type":"NativeView",
+	"Name":"Balance Sheet",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Period')/Hierarchies('Period')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202301')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202302')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202303')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202304')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202305')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202306')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202307')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202308')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202309')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202310')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202311')"
+					},
+					{
+						"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('202312')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Account')/Hierarchies('Account')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B100000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B111000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B112000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B121000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B122000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B130000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B200000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B200100')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B200200')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B200300')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B200400')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B200500')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B250000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B251000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B252000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B253000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B254000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B254130')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B255100')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B001000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B300000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('K005500')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B301000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B302000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B303000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B304000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B305000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B400000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B401000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404100')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B402000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B403000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404500')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404110')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404115')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404125')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404130')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404135')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404145')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404150')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404160')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404170')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404215')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404225')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404235')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404245')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404300')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404310')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B404320')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('S119500')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('P603000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B500000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B501000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B502150')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B502200')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B502450')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B500100')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('B900000')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Average NOA')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('DSO including accrued income')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('DSO excluding accrued income')"
+					},
+					{
+						"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Creditor days')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_@TOT')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_1000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@TOT')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_1500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2200')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_2600')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3250')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3400')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_3500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4600')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4700')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4800')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_4900')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5200')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5300')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_5500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_6000')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_6500')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_CASH')"
+					},
+					{
+						"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_FOR')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Mgmt Analysis')/Hierarchies('Mgmt Analysis')/Elements('@Aggr_@TOT')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('@Aggr_@TOT')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('AED')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('@TOT')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('AUS')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('BRL')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('CAD')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('EUR')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('GBP')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('MYR')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('NOK')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('OTH')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('SEK')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('SGD')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('USD')"
+					},
+					{
+						"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('ZAR')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency 2')/Hierarchies('Currency 2')/Elements('@Aggr_@TOT')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Closing Version')/Hierarchies('Closing Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Closing Version')/Hierarchies('Closing Version')/Elements('CL GR15')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Closing Version')/Hierarchies('Closing Version')/Elements('CL GR15')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Contribution Version')/Hierarchies('Contribution Version')"
+				},
+				"Expression":"TM1SubsetAll([Contribution Version])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Contribution Version')/Hierarchies('Contribution Version')/Elements('CO ALL')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Currency')/Hierarchies('Currency')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('GBP')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Currency')/Hierarchies('Currency')/Elements('GBP')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Company')/Hierarchies('Company')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S6050')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S1000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S2000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S3000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S6000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S9000')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S1000FAP_')"
+					},
+					{
+						"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S100GA')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Company')/Hierarchies('Company')/Elements('S6050')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('m Reporting')/Hierarchies('m Reporting')/Elements('YTD (k)')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Actuality')/Hierarchies('Actuality')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AC')"
+					},
+					{
+						"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('B1')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Actuality')/Hierarchies('Actuality')/Elements('AC')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

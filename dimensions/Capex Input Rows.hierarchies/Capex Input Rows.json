@@ -1,0 +1,1862 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Capex Input Rows",
+	"Elements":
+	[
+		{
+			"Name":"All Capex Rows",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Capex spend under £x",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"NA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A001",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A002",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A003",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A004",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A005",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A006",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A007",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A008",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A009",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A014",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A015",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A016",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A017",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A018",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A019",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A020",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A021",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A022",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A023",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A024",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A025",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A026",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A027",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A028",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A029",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A030",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A031",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A032",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A033",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A034",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A035",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A036",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A037",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A038",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A039",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A040",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A041",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A042",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A043",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A044",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A045",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A046",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A047",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A048",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A049",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A050",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A051",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A052",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A053",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A054",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A055",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A056",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A057",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A058",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A059",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A060",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A061",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A062",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A063",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A064",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A065",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A066",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A067",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A068",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A069",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A070",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A071",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A072",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A073",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A074",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A075",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A076",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A077",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A078",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A079",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A080",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A081",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A082",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A083",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A084",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A085",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A086",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A087",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A088",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A089",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A090",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A091",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A092",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A093",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A094",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A095",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A096",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A097",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A098",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A099",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"A100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"001",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"002",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"003",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"004",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"005",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"006",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"007",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"008",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"009",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"010",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"011",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"012",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"013",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"014",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"015",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"016",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"017",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"018",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"019",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"020",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"021",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"022",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"023",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"024",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"025",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"026",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"027",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"028",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"029",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"030",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"031",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"032",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"033",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"034",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"035",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"036",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"037",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"038",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"039",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"040",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"041",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"042",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"043",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"044",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"045",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"046",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"047",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"048",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"049",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"050",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"051",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"052",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"053",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"054",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"055",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"056",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"057",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"058",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"059",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"060",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"061",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"062",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"063",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"064",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"065",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"066",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"067",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"068",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"069",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"070",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"071",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"072",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"073",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"074",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"075",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"076",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"077",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"078",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"079",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"080",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"081",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"082",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"083",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"084",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"085",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"086",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"087",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"088",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"089",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"090",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"091",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"092",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"093",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"094",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"095",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"096",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"097",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"098",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"099",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"100",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Value of Capex approved",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Value of Capex committed",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"YTD < X",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Capex incl < X",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"001",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"002",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"003",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"004",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"005",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"006",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"007",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"008",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"009",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"010",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"011",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"012",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"013",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"014",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"015",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"016",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"017",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"018",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"019",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"020",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"021",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"022",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"023",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"024",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"025",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"026",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"027",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"028",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"029",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"030",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"031",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"032",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"033",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"034",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"035",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"036",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"037",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"038",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"039",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"040",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"041",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"042",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"043",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"044",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"045",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"046",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"047",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"048",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"049",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"050",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"051",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"052",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"053",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"054",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"055",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"056",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"057",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"058",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"059",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"060",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"061",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"062",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"063",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"064",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"065",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"066",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"067",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"068",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"069",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"070",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"071",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"072",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"073",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"074",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"075",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"076",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"077",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"078",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"079",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"080",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"081",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"082",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"083",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"084",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"085",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"086",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"087",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"088",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"089",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"090",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"091",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"092",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"093",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"094",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"095",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"096",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"097",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"098",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"099",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"100",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Capex Rows",
+			"ComponentName":"Capex spend under £x",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"NA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A001",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A002",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A003",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A004",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A005",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A006",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A007",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A008",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A009",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A010",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A011",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A012",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A013",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A014",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A015",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A016",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A017",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A018",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A019",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A020",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A021",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A022",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A023",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A024",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A025",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A026",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A027",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A028",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A029",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A030",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A031",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A032",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A033",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A034",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A035",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A036",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A037",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A038",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A039",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A040",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A041",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A042",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A043",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A044",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A045",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A046",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A047",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A048",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A049",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A050",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A051",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A052",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A053",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A054",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A055",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A056",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A057",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A058",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A059",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A060",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A061",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A062",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A063",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A064",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A065",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A066",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A067",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A068",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A069",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A070",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A071",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A072",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A073",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A074",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A075",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A076",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A077",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A078",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A079",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A080",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A081",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A082",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A083",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A084",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A085",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A086",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A087",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A088",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A089",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A090",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A091",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A092",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A093",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A094",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A095",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A096",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A097",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A098",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A099",
+			"Weight":1
+		},
+		{
+			"ParentName":"Capex spend under £x",
+			"ComponentName":"A100",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Capex incl < X",
+			"ComponentName":"All Capex Rows",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Capex incl < X",
+			"ComponentName":"YTD < X",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Capex Input Rows.subsets/Actuals Report.json"
+	]
+}

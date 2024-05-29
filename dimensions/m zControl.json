@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m zControl",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m zControl')/Hierarchies('m zControl')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m zControl.hierarchies/m zControl.json"
+	]
+}

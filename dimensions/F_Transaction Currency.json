@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"F_Transaction Currency",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('F_Transaction Currency')/Hierarchies('F_Transaction Currency')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"F_Transaction Currency.hierarchies/F_Transaction Currency.json"
+	]
+}

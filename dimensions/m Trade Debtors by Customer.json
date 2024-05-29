@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Trade Debtors by Customer",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Trade Debtors by Customer')/Hierarchies('m Trade Debtors by Customer')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Trade Debtors by Customer.hierarchies/m Trade Debtors by Customer.json"
+	]
+}

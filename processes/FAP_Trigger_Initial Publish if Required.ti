@@ -1,0 +1,54 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+####################################################################
+
+#####################################################################
+
+sDataSourceConfigCube = 'FAP Config' ;
+
+sODBC = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP ODBC Connection Name' );
+sUserId = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Username' );
+sPasswd = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP DB Password'  );
+sDataMart = CELLGETS ( sDataSourceConfigCube, 'Value', 'FAP Datamart' );
+
+DataSourceType='ODBC'; 
+DatasourceNameForServer = sODBC;
+DatasourceUserName = sUserId ; 
+DatasourcePassword = sPasswd ; 
+
+sSQL = 'SELECT Status, StructStatus FROM NRTR_DATAMART WHERE name= ''' | sDataMart | ''' ' ;
+
+DatasourceQuery = sSQL ;
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+IF ( vStatus = 60 );
+   ExecuteProcess ( 'FAP_Trigger_IP' );
+ENDIF;
+
+
+LogOutput( 'INFO', 'FAP Status: '  | NumberToString ( vStatus ) );
+
+
+
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

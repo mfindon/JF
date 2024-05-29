@@ -1,0 +1,57 @@
+#region Prolog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+
+Synchronized('FAP');
+
+#RunProcess ( 'FAP Status Update' );
+
+#ExecuteProcess ( 'FAP_Reset Sequence Number' );
+
+
+###############  Process Data to Reporting Cube ###############
+IF ( 1= 0 ) ;
+sDimension = 'F_PeriodMonthly';
+sSubsetName = GetProcessName() | ' All Years';
+SubsetCreatebyMDX ( sSubsetName,  '{TM1SORT( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [F_PeriodMonthly] )}, 2)}, DESC)}', 1 );
+nElement = 1;
+nNoofElements = SubsetGetSize( sDimension,  sSubsetName );
+WHILE ( nElement <= nNoofElements );
+   sElement = SubsetGetElementName ( sDimension, sSubsetName, nElement );
+   LogOutput( 'INFO', 'Loading ' | sElement | ' into Reporting cube' );
+   ExecuteProcess ( 'Cube FAP to Reporting', 'pMDXPeriod', ' {TM1FILTERBYLEVEL( {TM1DRILLDOWNMEMBER( { [F_PeriodMonthly].[' | sElement | '] }, ALL, RECURSIVE )}, 0)} ', 'pMDXCompany', '', 'pMDXActuality', '' , 'pSeq', '0' );
+   nElement = nElement +1;
+END;
+ENDIF;
+
+ExecuteProcess ( 'Cube FAP to Reporting by Actuality' );
+
+#####################################################
+
+CellPutS ( TIMST ( NOW(), '\Y-\m-\d \h:\i:\s' ) , 'FAP Status', 'Value', 'Last Initial Publish' );
+
+
+#RunProcess ( 'FAP Status Update' );
+
+
+#Send Email
+sRecipient = CellGetS ( 'zControl',  'Email Alert Address', 'Value' );
+#RunProcess ( 'Send Email', 'pRecipient',sRecipient, 'pSubject', 'FAP - Initial Publish Completed', 'pBody', 'An initial publish has finished' );
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

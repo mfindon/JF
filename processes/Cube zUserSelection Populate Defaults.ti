@@ -1,0 +1,12 @@
+#region Prolog
+
+sCube = 'zUserSelection';
+#endregion
+#region Data
+
+if ( CellGetS( sCube, vClient, 'Selection', vSelection ) @= '' ); 
+    CellPutS( vValue, sCube, vClient, 'Selection', vSelection );
+endif;
+
+
+#endregion

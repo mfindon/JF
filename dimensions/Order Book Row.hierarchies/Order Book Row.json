@@ -1,0 +1,285 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Order Book Row",
+	"Elements":
+	[
+		{
+			"Name":"Total Order book",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"01",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"02",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"03",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"04",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"05",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"06",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"07",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"08",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"09",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"24",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"26",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"27",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"28",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"29",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"30",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"01",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"02",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"03",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"04",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"05",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"06",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"07",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"08",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"09",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"10",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"11",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"12",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"13",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"14",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"15",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"16",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"17",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"18",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"19",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"20",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"22",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"23",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"24",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"25",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"26",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"27",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"28",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"29",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Order book",
+			"ComponentName":"30",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

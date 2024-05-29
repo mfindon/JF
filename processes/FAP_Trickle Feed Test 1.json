@@ -1,0 +1,56 @@
+{
+	"@type":"Process",
+	"Name":"FAP_Trickle Feed Test 1",
+	"HasSecurityAccess":false,
+	"Code@Code.link":"FAP_Trickle Feed Test 1.ti",
+	"UIData":"CubeAction=1511€DataAction=1503€CubeLogChanges=0€MeasuresDim=F_Currency€MeasuresDimAction=As Is€MeasuresDimElemSortType=ByInput€MeasuresDimElemSortSense=DESCENDING€_ParameterConstraints=e30=€",
+	"VariablesUIData":
+	[
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€",
+		"VarType=32€ColType=827€"
+	],
+	"DataSource":
+	{
+		"Type":"ODBC",
+		"dataSourceNameForClient":"FAP",
+		"dataSourceNameForServer":"FAP",
+		"password":"bhu<RKz=N4MkEc<L:GsW@<a;dRS;x0l~gD]5Puh3vIZyGw1UA2_]NY7EldY;:BJ[j9:;3R3n^2^T59VS9vfh;4gKhAwiS7EgvGX]ia<LQx7b5CbgV>n:wMdb<IszxwfWghqaKLOoe9bqVPCzh6PcqKa@6:7w`:]9qSh_POm3[9qB?dTFf@9uOL^nWD\\qIFBRfDZzI1aI",
+		"query":"SELECT period as vPeriod, actuality as vActuality, company as vCompany, max ( sequenceno ) as vseq\r\nFROM f_md_FAP\r\n/*WHERE sequenceno < ?pSequence? */\r\nGROUP BY period, actuality, company",
+		"userName":"fapuser",
+		"usesUnicode":true
+	},
+	"Parameters":[],
+	"Variables":
+	[
+		{
+			"Name":"vperiod",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vactuality",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vcompany",
+			"Type":"String",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"vseq",
+			"Type":"String",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

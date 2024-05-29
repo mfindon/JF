@@ -1,0 +1,105 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Days Grouping",
+	"Elements":
+	[
+		{
+			"Name":"Total",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Day Groupings",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Unaccrued",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"0 - 30 Days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"31 - 60 Days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"61- 90 Days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"90 - 180 Days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"> 180 Days",
+			"Type":"Numeric"
+		},
+		{
+			"Name":">30 days",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Day Groupings",
+			"ComponentName":"0 - 30 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Day Groupings",
+			"ComponentName":"31 - 60 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Day Groupings",
+			"ComponentName":"61- 90 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Day Groupings",
+			"ComponentName":"90 - 180 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Day Groupings",
+			"ComponentName":"> 180 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unaccrued",
+			"ComponentName":"Total",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unaccrued",
+			"ComponentName":"All Day Groupings",
+			"Weight":-1
+		},
+		{
+			"ParentName":">30 days",
+			"ComponentName":"31 - 60 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":">30 days",
+			"ComponentName":"61- 90 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":">30 days",
+			"ComponentName":"90 - 180 Days",
+			"Weight":1
+		},
+		{
+			"ParentName":">30 days",
+			"ComponentName":"> 180 Days",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Days Grouping.subsets/Default.json"
+	]
+}

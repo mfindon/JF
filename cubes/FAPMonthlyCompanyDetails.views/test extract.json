@@ -1,0 +1,187 @@
+{
+	"@type":"NativeView",
+	"Name":"test extract",
+	"Columns":[],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Mgmt Analysis')/Hierarchies('F_Mgmt Analysis')"
+				},
+				"Expression":"TM1SubsetAll([F_Mgmt Analysis])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Counter Dimension')/Hierarchies('F_Counter Dimension')"
+				},
+				"Expression":"TM1SubsetAll([F_Counter Dimension])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Dim 2')/Hierarchies('F_Dim 2')"
+				},
+				"Expression":"TM1SubsetAll([F_Dim 2])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Currency')/Hierarchies('F_Currency')"
+				},
+				"Expression":"TM1SubsetAll([F_Currency])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Transaction Currency')/Hierarchies('F_Transaction Currency')"
+				},
+				"Expression":"TM1SubsetAll([F_Transaction Currency])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Consolidation Perspective')/Hierarchies('F_Consolidation Perspective')"
+				},
+				"Expression":"TM1SubsetAll([F_Consolidation Perspective])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Closing Version')/Hierarchies('F_Closing Version')"
+				},
+				"Expression":"TM1SubsetAll([F_Closing Version])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Contribution Version')/Hierarchies('F_Contribution Version')"
+				},
+				"Expression":"TM1SubsetAll([F_Contribution Version])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Account')/Hierarchies('F_Account')"
+				},
+				"Expression":"TM1SubsetAll([F_Account])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_ActualityMonthly')/Hierarchies('F_ActualityMonthly')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('F_ActualityMonthly')/Hierarchies('F_ActualityMonthly')/Elements('AC')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Origin Company')/Hierarchies('F_Origin Company')"
+				},
+				"Expression":"TM1SubsetAll([F_Origin Company])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Counter Company')/Hierarchies('F_Counter Company')"
+				},
+				"Expression":"TM1SubsetAll([F_Counter Company])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Company')/Hierarchies('F_Company')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('F_Company')/Hierarchies('F_Company')/Elements('50031')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Journal Number')/Hierarchies('F_Journal Number')"
+				},
+				"Expression":"TM1SubsetAll([F_Journal Number])"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_PeriodMonthly')/Hierarchies('F_PeriodMonthly')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('F_PeriodMonthly')/Hierarchies('F_PeriodMonthly')/Elements('202303')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('F_Measures')/Hierarchies('F_Measures')"
+				},
+				"Expression":"TM1SubsetAll([F_Measures])"
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

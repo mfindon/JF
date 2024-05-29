@@ -1,0 +1,54 @@
+
+
+#Consolidations in Period dimension
+[] = S:
+    IF ( ELLEV( 'Period', !Period) > 0,
+      db('Company Date Lookup', !Company, ELCOMP( 'Period', !Period, ELCOMPN( 'Period', !Period) ), !'m Company Date LookUp' ),
+      CONTINUE );
+
+#Leaf Levels are not date stamped
+[] = S:
+    IF ( ELLEV( 'Company', !Company ) = 0,
+      !Company,
+      CONTINUE );
+
+####################
+#  Current Period
+####################
+
+#Non date stamped structure 
+['m Company Date LookUp':'Current Period'] = S:
+    IF ( ELISANC( 'Company', 'Current Reporting Structure', !Company) = 1,
+      'MN.'| SUBST( !Period, 1, 4 ) | '-' | SUBST( !Period, 5, 2 ) | '.' | SUBST( !Company, 1, 99 ),
+      CONTINUE );
+
+#Company Structures that have the date stamp
+['m Company Date LookUp':'Current Period'] = S:
+    IF ( ELISANC( 'Company', 'All Company Structures', !Company) = 1 % ELISANC( 'Company', 'All Company Structures Excl', !Company) = 1,
+      SUBST( !Company, 1, 3 ) | SUBST( !Period, 1, 4 ) | '-' | SUBST( !Period, 5, 2 ) | '.' | SUBST( !Company, 12, 99 ),
+      CONTINUE );
+
+####################
+#  Prior Year
+####################
+['m Company Date LookUp':'Prior Year'] = S:
+SUBST ( DB( 'Company Date Lookup', !Company, !Period, 'Current Period'  ), 1, 3 ) |
+STR ( NUMBR ( SUBST ( DB( 'Company Date Lookup', !Company, !Period, 'Current Period'  ), 4, 4 ) ) - 1, 4, 0 ) |
+SUBST ( DB( 'Company Date Lookup', !Company, !Period, 'Current Period'  ), 8, 99 ) ;
+
+####################
+# Last Year end
+####################
+
+#Non date stamped structure 
+['m Company Date LookUp':'Prior Year End'] = S:
+    IF ( ELISANC( 'Company', 'Current Reporting Structure', !Company) = 1,
+      'MN.'| STR ( NUMBR(SUBST( !Period, 1, 4 )) - 1, 4, 0 ) | '-' |  '12' | '.' | SUBST( !Company, 1, 99 ),
+      CONTINUE );
+
+#Company Structures that have the date stamp
+['m Company Date LookUp':'Prior Year End'] = S:
+    IF ( ELISANC( 'Company', 'All Company Structures', !Company) = 1  % ELISANC( 'Company', 'All Company Structures Excl', !Company) = 1,
+      SUBST( !Company, 1, 3 ) | STR ( NUMBR(SUBST( !Period, 1, 4 )) - 1, 4, 0 ) | '-' | '12'  | '.' | SUBST( !Company, 12, 99 ),
+      CONTINUE );
+

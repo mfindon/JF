@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"m Accrued Revenue",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('m Accrued Revenue')/Hierarchies('m Accrued Revenue')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"m Accrued Revenue.hierarchies/m Accrued Revenue.json"
+	]
+}

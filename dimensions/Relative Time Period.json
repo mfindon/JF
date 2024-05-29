@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Relative Time Period",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Relative Time Period')/Hierarchies('Relative Time Period')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Relative Time Period.hierarchies/Relative Time Period.json"
+	]
+}

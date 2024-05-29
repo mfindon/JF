@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"m FX Rates",
+	"Elements":
+	[
+		{
+			"Name":"Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Average Rate",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

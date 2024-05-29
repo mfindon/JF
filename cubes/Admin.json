@@ -1,0 +1,18 @@
+{
+	"@type":"Cube",
+	"Name":"Admin",
+	"Rules@Code.link":"Admin.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Admin Line')"
+		},
+		{
+			"@id":"Dimensions('m zAdmin')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Admin.views/Default.json"
+	]
+}
